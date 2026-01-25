@@ -89,6 +89,8 @@ public class NomadController : MonoBehaviour
         transform.localScale = scale;
 
 
+        Console.WriteLine("Test log");
+
     }
 
 
