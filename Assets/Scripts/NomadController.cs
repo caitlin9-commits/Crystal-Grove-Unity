@@ -62,10 +62,16 @@ public class NomadController : MonoBehaviour
         rb.linearVelocity = moveDir*speed;
 
 
+        if(!chopping && canChop && Input.GetKey(KeyCode.Space))
+        {
+            SoundEffectManager.Play("Chopping");
+        }
+
         //CHOPPING
         chopping = canChop && Input.GetKey(KeyCode.Space);
         myAnim.SetBool("Chopping",chopping);
 
+        
 
 
 
@@ -89,7 +95,7 @@ public class NomadController : MonoBehaviour
         transform.localScale = scale;
 
 
-        Console.WriteLine("Test log");
+        // Console.WriteLine("Test log");
 
     }
 
