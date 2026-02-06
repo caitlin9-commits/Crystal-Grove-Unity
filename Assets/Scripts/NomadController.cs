@@ -14,6 +14,7 @@ public class NomadController : MonoBehaviour
     public SpriteRenderer sr;
     private bool canChop;
 
+    private int chopSoundCounter;
 
     public Animator myAnim;
     [SerializeField] bool backTurned;
@@ -23,6 +24,8 @@ public class NomadController : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody>();
         myAnim = gameObject.GetComponent<Animator>();
+
+        chopSoundCounter = 300;
 
     }
 
@@ -62,9 +65,15 @@ public class NomadController : MonoBehaviour
         rb.linearVelocity = moveDir*speed;
 
 
-        if(!chopping && canChop && Input.GetKey(KeyCode.Space))
+        if(canChop && Input.GetKey(KeyCode.Space))
         {
-            SoundEffectManager.Play("Chopping");
+            chopSoundCounter++;
+            if (chopSoundCounter > 300)
+            {
+                SoundEffectManager.Play("Chopping");
+                chopSoundCounter = 0;    
+            }
+            
         }
 
         //CHOPPING
@@ -114,6 +123,12 @@ public class NomadController : MonoBehaviour
         {
             canChop = false;
         }
+    }
+
+    public void TreeFell()
+    {
+        canChop = false;
+        Debug.Log("TREE FELL");
     }
 
 
