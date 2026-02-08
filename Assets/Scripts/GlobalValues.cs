@@ -74,6 +74,7 @@ public class GlobalValues : MonoBehaviour
         myGlobalValues.coinAmountText.text = myGlobalValues.coinsAmount.ToString();
 
     }
+    
 
     public static void sellWood()
     {
