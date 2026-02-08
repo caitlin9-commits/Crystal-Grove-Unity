@@ -22,7 +22,7 @@ public class OldManController : MonoBehaviour
         }
         else
         {
-            myAnim.SetBool("isTree",true);
+            // myAnim.SetBool("isTree",true);
         }
 
         if(counter > 2000)

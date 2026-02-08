@@ -91,6 +91,7 @@ public class Tree : MonoBehaviour
 
         SoundEffectManager.Play("Success");
         GlobalValues.treesCutIncrememt();
+        GlobalValues.changeWoodAmount(5);
         Destroy(gameObject);
         
         int treesCut = GlobalValues.getTreesCut();
