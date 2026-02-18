@@ -76,6 +76,7 @@ public class NomadController : MonoBehaviour
 
             Vector3 moveDir = new Vector3(x,0,y);
             rb.linearVelocity = moveDir*speed;
+            
 
             Vector3 scale = transform.localScale;
 
