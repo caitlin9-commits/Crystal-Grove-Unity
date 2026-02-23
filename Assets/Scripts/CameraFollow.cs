@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;
+    public Transform target; //this allows me to set the tagret of the camera eg. the nomad
     public Vector3 offset;
     public float smoothSpeed = 5f;
 
