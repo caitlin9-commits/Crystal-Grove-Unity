@@ -10,6 +10,8 @@ public class Tree : MonoBehaviour
     private float currentHealth;
     private NomadController nomad;
 
+    
+
     [Header("UI")]
     public Image healthFill; // drag the fill image here
     public Animator myAnim;
@@ -22,6 +24,11 @@ public class Tree : MonoBehaviour
         myAnim = gameObject.GetComponent<Animator>();
         currentHealth = maxHealth;
         UpdateHealthBar();
+
+
+        int cutCount = GlobalValues.getTreesCut();
+        Debug.Log("CUT COUNT " + cutCount);
+        myAnim.SetInteger("CutCount", cutCount);
     }
 
     void Update()
@@ -33,7 +40,7 @@ public class Tree : MonoBehaviour
             currentHealth -= chopDamagePerSecond * Time.deltaTime;
             UpdateHealthBar();
 
-            Debug.Log("Tree is being chopped! Health: " + currentHealth);
+            // Debug.Log("Tree is being chopped! Health: " + currentHealth);
 
             if (currentHealth <= 0)
             {
@@ -88,7 +95,17 @@ public class Tree : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         SoundEffectManager.Play("Success");
+        GlobalValues.treesCutIncrememt();
+
+        GlobalValues.changeWoodAmount(5);
         Destroy(gameObject);
+
+        TreeSpawner.SpawnTrees();
+        
+        int treesCut = GlobalValues.getTreesCut();
+        Debug.Log("Tree cut count: " + treesCut);
+        nomad.TreeFell();
+
     }
 
 }
