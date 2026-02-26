@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e31f1599683a24f0aa8f0a1b0ffbddf6
+guid: 433eb2313011142da8c145c7b816ebc6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: protestor_0
+      name: "Bla\u0301ithi\u0301n_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -125,14 +125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82bab501770be462cb50dca79b190aaa
-      internalID: -205388998
+      spriteID: 58db0d991f4c247d98a246ff7191afb7
+      internalID: 2135592370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protestor_1
+      name: "Bla\u0301ithi\u0301n_1"
       rect:
         serializedVersion: 2
         x: 32
@@ -147,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73482098d4a9d48aa8c761a647505574
-      internalID: 1833205376
+      spriteID: 262bfac0453254ca6acafcad9e298443
+      internalID: 1077423705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protestor_2
+      name: "Bla\u0301ithi\u0301n_2"
       rect:
         serializedVersion: 2
         x: 64
@@ -169,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f9d0277489564cb58709569ad8f9be4
-      internalID: -625316934
+      spriteID: c10b532b60ad84e4580670ec04791f8f
+      internalID: -982133637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protestor_3
+      name: "Bla\u0301ithi\u0301n_3"
       rect:
         serializedVersion: 2
         x: 96
@@ -191,14 +191,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e511216042ef430d8f4c57832adb62e
-      internalID: -414321193
+      spriteID: 9c3c646dfcca04df2be9813fa07a5847
+      internalID: 771878026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protestor_4
+      name: "Bla\u0301ithi\u0301n_4"
       rect:
         serializedVersion: 2
         x: 128
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bc64ff5def16412eacc69e63c7599b6
-      internalID: 24735269
+      spriteID: 2b99778156201430cbe21e0d7525a033
+      internalID: 940721604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protestor_5
+      name: "Bla\u0301ithi\u0301n_5"
       rect:
         serializedVersion: 2
         x: 160
@@ -235,8 +235,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88e5c1eb4fd23419396e76452d063f9a
-      internalID: -1505092191
+      spriteID: bdb8ff6d7946d4d94bb3df52e95ab0d6
+      internalID: -1581914190
       vertices: []
       indices: 
       edges: []
@@ -245,7 +245,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 987030b9b66e04ee2ab0d3bdaf0eccd3
+    spriteID: 1a837b7fcb95b421ea771fc9e8103b51
     internalID: 0
     vertices: []
     indices: 
@@ -257,12 +257,12 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      protestor_0: -205388998
-      protestor_1: 1833205376
-      protestor_2: -625316934
-      protestor_3: -414321193
-      protestor_4: 24735269
-      protestor_5: -1505092191
+      "Bla\u0301ithi\u0301n_0": 2135592370
+      "Bla\u0301ithi\u0301n_1": 1077423705
+      "Bla\u0301ithi\u0301n_2": -982133637
+      "Bla\u0301ithi\u0301n_3": 771878026
+      "Bla\u0301ithi\u0301n_4": 940721604
+      "Bla\u0301ithi\u0301n_5": -1581914190
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
