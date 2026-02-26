@@ -33,7 +33,7 @@ Material:
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
-  m_LockedProperties: 
+  m_LockedProperties: _rippledensity
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -54,8 +54,8 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _basecolour: {r: 0.18867916, g: 0.36625966, b: 0.75471693, a: 1}
-    - _ripplecolour: {r: 0.6407861, g: 1.747035, b: 2.66366, a: 1}
+    - _basecolour: {r: 0.1647059, g: 0.48235294, b: 0.33424345, a: 1}
+    - _ripplecolour: {r: 0.7716272, g: 0.43213788, b: 0.069155246, a: 1}
     - _rippledensity: {r: 8.84, g: -4.14, b: 0.78, a: 0}
     - _ripplespeed: {r: 0.81, g: 0.36, b: 0, a: 0}
   m_BuildTextureStacks: []
