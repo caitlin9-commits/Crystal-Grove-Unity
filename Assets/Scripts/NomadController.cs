@@ -173,7 +173,7 @@ public class NomadController : MonoBehaviour
 
     public static void sendToTent()
     {
-        // myNomad.rb.position.x = d
+        myNomad.transform.position =  new Vector3(x,y,z);
     }
 
     async void RunFade()
