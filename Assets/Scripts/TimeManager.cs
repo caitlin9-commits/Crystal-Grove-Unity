@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
  
 public class TimeManager : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private Material skyboxDay;
     [SerializeField] private Material skyboxSunset;
 
+    public TMP_Text dayText;
+    public TMP_Text timeText;
  
     // [SerializeField] private Gradient graddientNightToSunrise;
     // [SerializeField] private Gradient graddientSunriseToDay;
@@ -17,10 +21,13 @@ public class TimeManager : MonoBehaviour
     // [SerializeField] private Gradient graddientSunsetToNight;
  
     [SerializeField] private Light globalLight;
+
+    private static TimeManager myTimeManager;
+
  
-    private int minutes;
+    private double minutes;
  
-    public int Minutes
+    public double Minutes
     { get { return minutes; } set { minutes = value; OnMinutesChange(value); } }
  
     private int hours = 5;
@@ -34,11 +41,28 @@ public class TimeManager : MonoBehaviour
     { get { return days; } set { days = value; } }
  
     private float tempSecond;
+
+    private void Awake()
+    {
+        if(myTimeManager == null)
+        {
+            myTimeManager = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
  
     private void Start()
     {
+        Days = 1;
         RenderSettings.skybox = skyboxNight;
         DynamicGI.UpdateEnvironment();
+        displayDay();
+        displayTime(); 
+
     }
 
 
@@ -48,12 +72,13 @@ public class TimeManager : MonoBehaviour
  
         if (tempSecond >= 1)
         {
-            Minutes += 100;
+            Minutes += 10.6; //1 second equals to 1.6 minutes in game
+            //this equates to the day being 15min long
             tempSecond = 0;
         }
     }
  
-    private void OnMinutesChange(int value)
+    private void OnMinutesChange(double value)
     {
 
         // Debug.Log("MINUTES CHANGE " +value);
@@ -68,8 +93,16 @@ public class TimeManager : MonoBehaviour
         {
             Hours = 0;
             Days++;
+
+            displayDay();
+
+            //collapse
+            
         }
+
+        displayTime();
     }
+
  
     private void OnHoursChange(int value)
     {
@@ -95,6 +128,9 @@ public class TimeManager : MonoBehaviour
             StartCoroutine(TransitionSkybox(skyboxSunset, skyboxNight, 10f));
             // StartCoroutine(LerpLight(graddientSunsetToNight, 10f));
         }
+
+
+        
     }
  
     private IEnumerator LerpSkybox(Texture2D a, Texture2D b, float time)
@@ -141,5 +177,57 @@ public class TimeManager : MonoBehaviour
             RenderSettings.fogColor = globalLight.color;
             yield return null;
         }
+    }
+
+
+
+    private void displayTime()
+    {
+               
+        bool isAM = true;
+        int formattedHours = Hours;
+        if(formattedHours>12)
+        {
+            formattedHours-=12;
+            isAM = false;
+        }
+        if(formattedHours==12){isAM=false;}
+
+        string hoursStr = formattedHours.ToString();
+        if(formattedHours<10){hoursStr="0"+hoursStr;}
+
+        string minutesStr = "00";
+        if(Minutes<15){minutesStr = "00";}
+        else if(Minutes<30){minutesStr = "15";}
+        else if(Minutes<45){minutesStr = "30";}
+        else if(Minutes<60){minutesStr = "45";}
+ 
+        timeText.text = hoursStr+":"+minutesStr+ " "+(isAM?"AM":"PM");
+
+    }
+
+    private void displayDay()
+    {
+        switch (Days)
+        {
+            case 1: dayText.text = "Mon. 1"; break;
+            case 2: dayText.text = "Tue. 2"; break;
+            case 3: dayText.text = "Wed. 3"; break;
+            case 4: dayText.text = "Thu. 4"; break;
+            case 5: dayText.text = "Fri. 5"; break;
+
+        }
+
+    }
+
+
+    public static void sleep()
+    {
+        myTimeManager.minutes = 0;
+        myTimeManager.Hours = 5;
+        myTimeManager.Days++;
+
+        myTimeManager.displayDay();
+        myTimeManager.displayTime();
     }
 }

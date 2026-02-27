@@ -171,14 +171,23 @@ public class NomadController : MonoBehaviour
         myNomad.canWalk = walkingEnabled;
     }
 
+    public static void sendToTent()
+    {
+        // myNomad.rb.position.x = d
+    }
+
     async void RunFade()
     {
+        canWalk = false;
         Debug.Log("FADING: ");
         fading = true;
         await ScreenFader.Instance.FadeOut();
-        await Task.Delay(1000);
+        await Task.Delay(1000); 
+        TimeManager.sleep();
         await ScreenFader.Instance.FadeIn();
         fading = false;
+        canWalk = true;
+
     }
 
 }

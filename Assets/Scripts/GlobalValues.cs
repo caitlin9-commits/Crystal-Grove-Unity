@@ -8,11 +8,17 @@ public class GlobalValues : MonoBehaviour
 
     private static GlobalValues myGlobalValues;
 
+
     private int treesCut;
     private int woodAmount;
     private int coinsAmount;
 
-    public TMP_Text treeCutText;
+
+    private bool spokeToOldMan;
+
+
+
+    // public TMP_Text treeCutText;
     public TMP_Text woodAmountText;
     public TMP_Text coinAmountText;
 
@@ -35,7 +41,7 @@ public class GlobalValues : MonoBehaviour
         woodAmount = 0;
         coinsAmount = 0;
 
-        treeCutText.text = treesCut.ToString();
+        // treeCutText.text = treesCut.ToString();
         woodAmountText.text = woodAmount.ToString();
         coinAmountText.text = coinsAmount.ToString();
     }
@@ -44,7 +50,7 @@ public class GlobalValues : MonoBehaviour
     public static void treesCutIncrememt()
     {
         myGlobalValues.treesCut++;
-        myGlobalValues.treeCutText.text = myGlobalValues.treesCut.ToString();
+        // myGlobalValues.treeCutText.text = myGlobalValues.treesCut.ToString();
     }
 
     public static int getTreesCut()
