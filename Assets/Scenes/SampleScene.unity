@@ -1194,6 +1194,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   sr: {fileID: 0}
   canWalk: 1
+  canSleep: 0
   fading: 0
   myAnim: {fileID: 0}
   backTurned: 0
@@ -1996,7 +1997,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 949284724}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: getBasicAxe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 1
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
@@ -3796,18 +3809,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 18
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":158.894653,"yPos":111.761963},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Agree
-    to help","parentUIDs":[11],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":476.892822,"yPos":109.762085},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Passionately
-    decline","parentUIDs":[11],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":-58.6765137,"yPos":586.718445},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Cash
-    in","parentUIDs":[13],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":196.1803,"yPos":589.575745},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
-    wood","parentUIDs":[13],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"hasSpoken","CheckType":0,"RequiredValue":false}],"NodeUID":11},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"hasSpoken","CheckType":0,"RequiredValue":true},{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"woodCount","CheckType":0,"RequiredValue":0}],"NodeUID":12},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"hasSpoken","CheckType":0,"RequiredValue":true},{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"woodCount","CheckType":2,"RequiredValue":0}],"NodeUID":13}],"EditorInfo":{"isRoot":true,"xPos":346.75,"yPos":-120},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":154.894775,"yPos":210.094727},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"okay
-    ill get you wood ","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Nomad","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":485.94043,"yPos":235.473267},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"no
-    money for you then","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"woodCount","CheckType":2,"RequiredValue":0}],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":146.894775,"yPos":325.473267},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Perfect,
-    our village has yet to incorporate a minimum wage, so I will pay you 1 coin.","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":348.892822,"yPos":-5.7142334},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    am a feeble old man, can you cut down wood?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":624.462769,"yPos":-9.571411},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    have no wood, get chopping boy!","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":14},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":145.323486,"yPos":462.42804},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"It
-    appears you have some wood. I will buy it at 1 coin per piece of wood.","parentUIDs":[0,8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":200.608887,"yPos":680.148865},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    will get that wood off you eventually boy!","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-51.6765137,"yPos":666.006042},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":325.858948,"yPos":253.190536},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Agree
+    to help","parentUIDs":[11],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":643.8571,"yPos":251.762085},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Passionately
+    decline","parentUIDs":[11],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":108.287781,"yPos":728.718445},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Cash
+    in","parentUIDs":[13],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":363.1446,"yPos":731.575745},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
+    wood","parentUIDs":[13],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"hasSpoken","CheckType":0,"RequiredValue":false}],"NodeUID":11},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"hasSpoken","CheckType":0,"RequiredValue":true},{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"woodCount","CheckType":0,"RequiredValue":0}],"NodeUID":12},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"hasSpoken","CheckType":0,"RequiredValue":true},{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"woodCount","CheckType":2,"RequiredValue":0}],"NodeUID":13}],"EditorInfo":{"isRoot":true,"xPos":513.7143,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":321.85907,"yPos":352.094727},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"okay
+    ill get you wood ","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Nomad","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":652.9047,"yPos":377.473267},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"no
+    money for you then","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"woodCount","CheckType":2,"RequiredValue":0}],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":313.85907,"yPos":467.473267},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Perfect,
+    here is an axe to chop trees. I will pay you for any wood your return to me.","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":515.8571,"yPos":136.285767},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    am a feeble old man, can you cut down wood?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":791.427063,"yPos":132.428589},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    have no wood, get chopping boy!","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":14},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":312.287781,"yPos":604.999451},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"It
+    appears you have some wood. I will buy it at 1 coin per piece of wood.","parentUIDs":[0,8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":367.573181,"yPos":822.148865},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    will get that wood off you eventually boy!","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":115.287781,"yPos":808.006042},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
     doing business with you!","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1}]}'
   saveVersion: 110
   DefaultName: 
@@ -3974,7 +3987,6 @@ GameObject:
   - component: {fileID: 377291821}
   - component: {fileID: 377291824}
   - component: {fileID: 377291823}
-  - component: {fileID: 377291822}
   m_Layer: 0
   m_Name: BrianGO
   m_TagString: Untagged
@@ -3997,19 +4009,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 243882149}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &377291822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377291820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 260ae6ea02b3d1c4bbf84a0afd63b813, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  myAnim: {fileID: 0}
 --- !u!95 &377291823
 Animator:
   serializedVersion: 7
@@ -7498,7 +7497,6 @@ GameObject:
   - component: {fileID: 650453232}
   - component: {fileID: 650453235}
   - component: {fileID: 650453234}
-  - component: {fileID: 650453233}
   m_Layer: 0
   m_Name: "Bl\xE1ith\xEDnGO"
   m_TagString: Untagged
@@ -7521,19 +7519,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1768796894}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &650453233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650453231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 260ae6ea02b3d1c4bbf84a0afd63b813, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  myAnim: {fileID: 0}
 --- !u!95 &650453234
 Animator:
   serializedVersion: 7
@@ -7626,7 +7611,6 @@ GameObject:
   - component: {fileID: 659229031}
   - component: {fileID: 659229034}
   - component: {fileID: 659229033}
-  - component: {fileID: 659229032}
   m_Layer: 0
   m_Name: "Odhr\xE1nGO"
   m_TagString: Untagged
@@ -7649,19 +7633,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 137584546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &659229032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659229030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 260ae6ea02b3d1c4bbf84a0afd63b813, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  myAnim: {fileID: 0}
 --- !u!95 &659229033
 Animator:
   serializedVersion: 7
@@ -7857,6 +7828,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   sr: {fileID: 0}
   canWalk: 0
+  canSleep: 0
   fading: 0
   myAnim: {fileID: 0}
   backTurned: 0
@@ -10429,9 +10401,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 949284722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27aabcc3d843343e492054727521475a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e7a3cdf4f337fb4eb2fa704e0984654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  axeImage: {fileID: 1145305468}
+  rodImage: {fileID: 743963377}
+  fishImage: {fileID: 451217024}
+  fishAmountText: {fileID: 519608915}
 --- !u!1 &956335108
 GameObject:
   m_ObjectHideFlags: 0
@@ -10920,8 +10896,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 51, y: -336}
-  m_SizeDelta: {x: 534.5943, y: 50}
+  m_AnchoredPosition: {x: 65.93191, y: -336}
+  m_SizeDelta: {x: 719.0482, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &977484657
 MonoBehaviour:
@@ -13253,7 +13229,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   woodAmountText: {fileID: 334536873}
+  woodImage: {fileID: 42206529}
   coinAmountText: {fileID: 464781433}
+  instructionText: {fileID: 977484657}
 --- !u!4 &1173419232
 Transform:
   m_ObjectHideFlags: 0
