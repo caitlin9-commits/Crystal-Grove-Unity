@@ -20,7 +20,10 @@ public class GlobalValues : MonoBehaviour
 
     // public TMP_Text treeCutText;
     public TMP_Text woodAmountText;
+    public Image woodImage;
+
     public TMP_Text coinAmountText;
+    public TMP_Text instructionText;
 
     private void Awake()
     {
@@ -42,8 +45,10 @@ public class GlobalValues : MonoBehaviour
         coinsAmount = 0;
 
         // treeCutText.text = treesCut.ToString();
-        woodAmountText.text = woodAmount.ToString();
+        woodImage.enabled = false;
+        woodAmountText.text = "";//woodAmount.ToString();
         coinAmountText.text = coinsAmount.ToString();
+        instructionText.text = "";
     }
 
 
@@ -72,6 +77,7 @@ public class GlobalValues : MonoBehaviour
     {
         myGlobalValues.woodAmount+=change;
         myGlobalValues.woodAmountText.text = myGlobalValues.woodAmount.ToString();
+        myGlobalValues.woodImage.enabled = true;
 
     }
     public static void changeCoinsmount(int change)
@@ -86,9 +92,25 @@ public class GlobalValues : MonoBehaviour
     {
         myGlobalValues.coinsAmount+=myGlobalValues.woodAmount;
         myGlobalValues.woodAmount=0;
-        myGlobalValues.woodAmountText.text = myGlobalValues.woodAmount.ToString();
+        myGlobalValues.woodImage.enabled = false;
+        myGlobalValues.woodAmountText.text = "";
         myGlobalValues.coinAmountText.text = myGlobalValues.coinsAmount.ToString();
 
+        
     }
    
+    public static void setInstructionText(string keyAction,string key, string action)
+    {
+        myGlobalValues.instructionText.text = keyAction+" '"+key+"' to "+action;
+    }
+    public static void setInstructionTextString(string text)
+    {
+        myGlobalValues.instructionText.text = text;
+    }
+
+    public static void clearInstructionText()
+    {
+        myGlobalValues.instructionText.text = "";
+    }
+
 }

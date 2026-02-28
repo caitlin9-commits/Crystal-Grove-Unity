@@ -11,12 +11,14 @@ public class NomadController : MonoBehaviour
     public float groundDist;
     public bool chopping;
 
+    private bool fainted;
 
     public LayerMask terrainLayer;
     public Rigidbody rb;
     public SpriteRenderer sr;
     private bool canChop;
     public bool canWalk;
+    public bool canSleep;
     public bool fading;
 
     private int chopSoundCounter;
@@ -32,8 +34,10 @@ public class NomadController : MonoBehaviour
 
         chopSoundCounter = 300;
         canWalk = true;
+        canSleep = false;
         fading = false;
         myNomad = this;
+        fainted = false;
 
     }
 
@@ -111,6 +115,12 @@ public class NomadController : MonoBehaviour
             
         }
 
+        if(canSleep && Input.GetKey(KeyCode.Z))
+        {
+            canSleep = false;
+            GoToSleep();
+        }
+
         
 
         //CHOPPING
@@ -143,11 +153,22 @@ public class NomadController : MonoBehaviour
     {
         if (other.CompareTag("Tree"))
         {
-            canChop = true;
+            bool hasAxe = InventoryManager.checkForAxe();
+            if (hasAxe)
+            {
+                canChop = true;
+                GlobalValues.setInstructionText("Hold","Spacebar","chop tree");    
+            }
+            else
+            {
+                GlobalValues.setInstructionText("Go to","Old Man","get axe for chopping trees");    
+            }
+            
         }
-        if (other.CompareTag("Tent"))
+        if (other.CompareTag("Tent") && !fainted)
         {
-            RunFade();
+            canSleep = true;
+            GlobalValues.setInstructionText("Press","Z","sleep");
         }
     }
 
@@ -156,6 +177,12 @@ public class NomadController : MonoBehaviour
         if (other.CompareTag("Tree"))
         {
             canChop = false;
+            GlobalValues.clearInstructionText();
+        }
+        if (other.CompareTag("Tent"))
+        {
+            canSleep = false;
+            GlobalValues.clearInstructionText();
         }
     }
 
@@ -173,11 +200,18 @@ public class NomadController : MonoBehaviour
 
     public static void sendToTent()
     {
+        myNomad.fainted = true;
+        Debug.Log("Sending to tent: ");
+        float x = 5.8f;
+        float y = 0.53f;
+        float z = 23.8f;
         myNomad.transform.position =  new Vector3(x,y,z);
+        myNomad.GoToSleep();
     }
 
-    async void RunFade()
+    async void GoToSleep()
     {
+        GlobalValues.clearInstructionText();
         canWalk = false;
         Debug.Log("FADING: ");
         fading = true;
@@ -187,7 +221,11 @@ public class NomadController : MonoBehaviour
         await ScreenFader.Instance.FadeIn();
         fading = false;
         canWalk = true;
-
+        if(fainted)
+        {
+            GlobalValues.setInstructionTextString("You fainted.");
+            fainted = false;
+        }
     }
 
 }

@@ -42,6 +42,8 @@ public class TimeManager : MonoBehaviour
  
     private float tempSecond;
 
+    private bool clockActive ;
+
     private void Awake()
     {
         if(myTimeManager == null)
@@ -57,6 +59,7 @@ public class TimeManager : MonoBehaviour
  
     private void Start()
     {
+        clockActive = true;
         Days = 1;
         RenderSettings.skybox = skyboxNight;
         DynamicGI.UpdateEnvironment();
@@ -68,13 +71,16 @@ public class TimeManager : MonoBehaviour
 
     public void Update()
     {
-        tempSecond += Time.deltaTime;
- 
-        if (tempSecond >= 1)
+        if(clockActive)
         {
-            Minutes += 10.6; //1 second equals to 1.6 minutes in game
-            //this equates to the day being 15min long
-            tempSecond = 0;
+            tempSecond += Time.deltaTime;
+    
+            if (tempSecond >= 1)
+            {
+                Minutes += 100.6; //1 second equals to 1.6 minutes in game
+                //this equates to the day being 15min long
+                tempSecond = 0;
+            }
         }
     }
  
@@ -91,13 +97,14 @@ public class TimeManager : MonoBehaviour
         }
         if (Hours >= 24)
         {
-            Hours = 0;
-            Days++;
+            // Hours = 0;
+            // Days++;
 
             displayDay();
-
             //collapse
-            
+            clockActive = false;
+            NomadController.sendToTent();
+
         }
 
         displayTime();
@@ -108,7 +115,7 @@ public class TimeManager : MonoBehaviour
     {
         // Debug.Log("HOURS CHANGE "+ value);
 
-        if (value == 6)
+        if (value == 5)
         {
             StartCoroutine(TransitionSkybox(skyboxNight, skyboxSunrise, 10f));
             // StartCoroutine(LerpLight(graddientNightToSunrise, 10f));
@@ -123,7 +130,7 @@ public class TimeManager : MonoBehaviour
             StartCoroutine(TransitionSkybox(skyboxDay, skyboxSunset, 10f));
             // StartCoroutine(LerpLight(graddientDayToSunset, 10f));
         }
-        else if (value == 22)
+        else if (value == 20)
         {
             StartCoroutine(TransitionSkybox(skyboxSunset, skyboxNight, 10f));
             // StartCoroutine(LerpLight(graddientSunsetToNight, 10f));
@@ -186,12 +193,16 @@ public class TimeManager : MonoBehaviour
                
         bool isAM = true;
         int formattedHours = Hours;
-        if(formattedHours>12)
+        if(formattedHours>12 && formattedHours<24)
         {
             formattedHours-=12;
             isAM = false;
         }
         if(formattedHours==12){isAM=false;}
+        else if(formattedHours==24){
+            isAM=true;
+            formattedHours = 0;
+        }
 
         string hoursStr = formattedHours.ToString();
         if(formattedHours<10){hoursStr="0"+hoursStr;}
@@ -223,11 +234,15 @@ public class TimeManager : MonoBehaviour
 
     public static void sleep()
     {
+
+        Debug.Log("SLEEPING: ");
+
         myTimeManager.minutes = 0;
         myTimeManager.Hours = 5;
         myTimeManager.Days++;
 
         myTimeManager.displayDay();
         myTimeManager.displayTime();
+        myTimeManager.clockActive = true;
     }
 }
