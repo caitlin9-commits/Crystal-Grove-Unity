@@ -57,7 +57,7 @@ public class TreeSpawner : MonoBehaviour
                 randomPos.y = hit.point.y;
             }
 
-            float treeHeight = 3f; 
+            float treeHeight = 13f; 
             randomPos.y += treeHeight / 2f;
 
             Instantiate(myTreeSpawner.treePrefab, randomPos, Quaternion.identity);

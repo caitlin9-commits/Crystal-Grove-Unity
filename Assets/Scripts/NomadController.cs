@@ -59,7 +59,7 @@ public class NomadController : MonoBehaviour
                 if(hit.collider != null)
                 {
                     Vector3 movePos = transform.position;
-                    movePos.y = hit.point.y + groundDist;
+                   // movePos.y = hit.point.y + groundDist;
                     transform.position = movePos;
                 }
             }
@@ -93,8 +93,11 @@ public class NomadController : MonoBehaviour
         }
         else
         {
-            Vector3 moveDir = new Vector3(x,0,y);
-            rb.linearVelocity = moveDir*0;
+            //Vector3 moveDir = new Vector3(x,0,y);
+           // rb.linearVelocity = moveDir*0;
+           Vector3 velocity = rb.linearVelocity;
+            velocity.x = x * speed;
+            rb.linearVelocity = velocity;   
 
             myAnim.SetBool("BackTurned",false);
             myAnim.SetFloat("MoveSpeed",0);
