@@ -6,6 +6,7 @@ public class ConversationStarter : MonoBehaviour
     [SerializeField] private NPCConversation myConversation;
     
     bool hasSpoken = false;
+   
     bool canSpeak = false;
 
     void Update()
@@ -48,6 +49,7 @@ public class ConversationStarter : MonoBehaviour
         ConversationManager.Instance.StartConversation(myConversation);
         ConversationManager.OnConversationEnded = ConversationEnd;
         ConversationManager.Instance.SetBool("hasSpoken",hasSpoken);
+    
         ConversationManager.Instance.SetInt("woodCount",woodAmount);
     }
 
@@ -58,4 +60,5 @@ public class ConversationStarter : MonoBehaviour
         Debug.Log("CONVO OVER");
         NomadController.setWalk(true);
     }
+
 }
