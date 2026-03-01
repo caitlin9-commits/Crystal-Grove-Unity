@@ -40,48 +40,32 @@ public class NomadController : MonoBehaviour
         fainted = false;
 
     }
+    float x;
+    float z;
 
     // Update is called once per frame
-    void Update()
+   void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
+        // Read input ONLY
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
 
-        if(canWalk)
+        if (canWalk)
         {
+            // Animation speed based on current velocity
+            myAnim.SetFloat("MoveSpeed", rb.linearVelocity.magnitude);
 
-            RaycastHit hit;
-            Vector3 castPos = transform.position;
-            castPos.y += 1;
-
-            if(Physics.Raycast(castPos,-transform.up,out hit,Mathf.Infinity,terrainLayer))
-            {
-                if(hit.collider != null)
-                {
-                    Vector3 movePos = transform.position;
-                   // movePos.y = hit.point.y + groundDist;
-                    transform.position = movePos;
-                }
-            }
-
-            
-
-            myAnim.SetFloat("MoveSpeed",rb.linearVelocity.magnitude);
-
-            if (rb.linearVelocity.magnitude < 0.1)
+            if (rb.linearVelocity.magnitude < 0.1f)
             {
                 backTurned = false;
             }
 
-            if(!backTurned && y>0){backTurned = true;}
-            else if(backTurned && y<0){backTurned = false;}
+            if (!backTurned && z > 0) { backTurned = true; }
+            else if (backTurned && z < 0) { backTurned = false; }
 
-            myAnim.SetBool("BackTurned",backTurned);
+            myAnim.SetBool("BackTurned", backTurned);
 
-            Vector3 moveDir = new Vector3(x,0,y);
-            rb.linearVelocity = moveDir*speed;
-            
-
+            // Flip sprite
             Vector3 scale = transform.localScale;
 
             if (x < 0)
@@ -93,64 +77,48 @@ public class NomadController : MonoBehaviour
         }
         else
         {
-            //Vector3 moveDir = new Vector3(x,0,y);
-           // rb.linearVelocity = moveDir*0;
-           Vector3 velocity = rb.linearVelocity;
-            velocity.x = x * speed;
-            rb.linearVelocity = velocity;   
-
-            myAnim.SetBool("BackTurned",false);
-            myAnim.SetFloat("MoveSpeed",0);
-
+            // Stop animations when walking disabled
+            myAnim.SetBool("BackTurned", false);
+            myAnim.SetFloat("MoveSpeed", 0);
         }
 
-
-
-
-        if(canChop && Input.GetKey(KeyCode.Space))
+        // CHOPPING
+        if (canChop && Input.GetKey(KeyCode.Space))
         {
             chopSoundCounter++;
             if (chopSoundCounter > 300)
             {
                 SoundEffectManager.Play("Chopping");
-                chopSoundCounter = 0;    
+                chopSoundCounter = 0;
             }
-            
         }
 
-        if(canSleep && Input.GetKey(KeyCode.Z))
+        chopping = canChop && Input.GetKey(KeyCode.Space);
+        myAnim.SetBool("Chopping", chopping);
+
+        // SLEEP
+        if (canSleep && Input.GetKey(KeyCode.Z))
         {
             canSleep = false;
             GoToSleep();
         }
-
-        
-
-        //CHOPPING
-        chopping = canChop && Input.GetKey(KeyCode.Space);
-        myAnim.SetBool("Chopping",chopping);
-
-        
-
-
-
-        // if(x != 0 && x <0)
-        // {
-        //     sr.flipX = true;
-            
-        // }
-        // else if(x != 0 && x > 0)
-        // {
-        //     sr.flipX = false;
-        // }
-
-        
-
-
-        // Console.WriteLine("Test log");
-
     }
 
+
+
+    void FixedUpdate()
+    {
+        if (!canWalk)
+            return;
+
+        Vector3 velocity = rb.linearVelocity;
+
+        // Only modify X and Z — preserve Y for gravity
+        velocity.x = x * speed;
+        velocity.z = z * speed;
+
+        rb.linearVelocity = velocity;
+    }
 
     void OnTriggerEnter(Collider other)
     {

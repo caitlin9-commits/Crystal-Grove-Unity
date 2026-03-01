@@ -5,6 +5,7 @@ public class TreeSpawner : MonoBehaviour
     public GameObject treePrefab;
     public int treeCount = 5;
     public float spawnRadius = 10f;
+    public float treeHeight = 1f;
 
     private static TreeSpawner myTreeSpawner;
 
@@ -32,10 +33,10 @@ public class TreeSpawner : MonoBehaviour
     {
         int treesCut = GlobalValues.getTreesCut();
         double multiplier = 1;
-        if(treesCut > 5){multiplier*=0.8;}
-        else if(treesCut > 10){multiplier*=0.6;}
+        if(treesCut > 20){multiplier*=0.2;}
         else if(treesCut > 15){multiplier*=0.4;}
-        else if(treesCut > 20){multiplier*=0.2;}
+        else if(treesCut > 10){multiplier*=0.6;}
+        else if(treesCut > 5){multiplier*=0.8;}
 
         int amountOfTrees = (int)(myTreeSpawner.treeCount*multiplier);
 
@@ -57,8 +58,7 @@ public class TreeSpawner : MonoBehaviour
                 randomPos.y = hit.point.y;
             }
 
-            float treeHeight = 13f; 
-            randomPos.y += treeHeight / 2f;
+            randomPos.y += myTreeSpawner.treeHeight / 2f;
 
             Instantiate(myTreeSpawner.treePrefab, randomPos, Quaternion.identity);
 

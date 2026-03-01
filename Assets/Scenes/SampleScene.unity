@@ -1206,7 +1206,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154905886}
   serializedVersion: 5
-  m_Mass: 1.9
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1234,7 +1234,7 @@ Transform:
   m_GameObject: {fileID: 154905886}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3412.4, y: 29.5, z: -3242.9}
+  m_LocalPosition: {x: 3412.4, y: 29.55, z: -3242.9}
   m_LocalScale: {x: 3.02, y: 3.02, z: 1.0066667}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -5524,6 +5524,7 @@ MonoBehaviour:
   treePrefab: {fileID: 1055891661410554791}
   treeCount: 50
   spawnRadius: 50
+  treeHeight: 1
 --- !u!4 &474273960
 Transform:
   m_ObjectHideFlags: 0
@@ -13901,6 +13902,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223813328}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1231823855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231823857}
+  - component: {fileID: 1231823856}
+  m_Layer: 0
+  m_Name: TreeSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1231823856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231823855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a224b997ef80bd4bada2243532ba743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  treePrefab: {fileID: 168348168}
+  treeCount: 50
+  spawnRadius: 100
+  treeHeight: 13
+--- !u!4 &1231823857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231823855}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3381.655, y: 37.05, z: -3234.396}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1235670289
 GameObject:
   m_ObjectHideFlags: 0
@@ -14884,53 +14933,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &1355326497
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1355326499}
-  - component: {fileID: 1355326498}
-  m_Layer: 0
-  m_Name: TreeSpawner (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1355326498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355326497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a224b997ef80bd4bada2243532ba743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  treePrefab: {fileID: 168348168}
-  treeCount: 50
-  spawnRadius: 100
---- !u!4 &1355326499
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355326497}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3381.655, y: 37.05, z: -3234.396}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1380078203
 GameObject:
   m_ObjectHideFlags: 0
@@ -52373,7 +52375,7 @@ SceneRoots:
   - {fileID: 168348173}
   - {fileID: 1443315449}
   - {fileID: 474273960}
-  - {fileID: 1355326499}
+  - {fileID: 1231823857}
   - {fileID: 884703551}
   - {fileID: 1442839576}
   - {fileID: 154905892}
