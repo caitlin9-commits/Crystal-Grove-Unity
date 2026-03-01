@@ -216,6 +216,7 @@ public class NomadController : MonoBehaviour
         Debug.Log("FADING: ");
         fading = true;
         await ScreenFader.Instance.FadeOut();
+        TreeSpawner.SpawnTrees();
         await Task.Delay(1000); 
         TimeManager.sleep();
         await ScreenFader.Instance.FadeIn();

@@ -30,7 +30,16 @@ public class TreeSpawner : MonoBehaviour
 
     public static void SpawnTrees()
     {
-        for (int i = 0; i < myTreeSpawner.treeCount; i++)
+        int treesCut = GlobalValues.getTreesCut();
+        double multiplier = 1;
+        if(treesCut > 5){multiplier*=0.8;}
+        else if(treesCut > 10){multiplier*=0.6;}
+        else if(treesCut > 15){multiplier*=0.4;}
+        else if(treesCut > 20){multiplier*=0.2;}
+
+        int amountOfTrees = (int)(myTreeSpawner.treeCount*multiplier);
+
+        for (int i = 0; i < amountOfTrees; i++)
         {
             Vector3 randomPos = myTreeSpawner.transform.position +
             new Vector3(

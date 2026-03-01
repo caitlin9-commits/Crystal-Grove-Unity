@@ -43,6 +43,7 @@ public class TimeManager : MonoBehaviour
     private float tempSecond;
 
     private bool clockActive ;
+    private bool spokenToOldMan ;
 
     private void Awake()
     {
@@ -60,6 +61,7 @@ public class TimeManager : MonoBehaviour
     private void Start()
     {
         clockActive = true;
+        spokenToOldMan = false;
         Days = 1;
         RenderSettings.skybox = skyboxNight;
         DynamicGI.UpdateEnvironment();
@@ -71,13 +73,14 @@ public class TimeManager : MonoBehaviour
 
     public void Update()
     {
-        if(clockActive)
+
+        if(clockActive && spokenToOldMan)
         {
             tempSecond += Time.deltaTime;
     
             if (tempSecond >= 1)
             {
-                Minutes += 1.6; //1 second equals to 1.6 minutes in game
+                Minutes += 100.6; //1 second equals to 1.6 minutes in game
                 //this equates to the day being 15min long
                 tempSecond = 0;
             }
@@ -244,5 +247,11 @@ public class TimeManager : MonoBehaviour
         myTimeManager.displayDay();
         myTimeManager.displayTime();
         myTimeManager.clockActive = true;
+
+    }
+
+   public static void spokeToOldMan()
+    {
+        myTimeManager.spokenToOldMan = true;
     }
 }

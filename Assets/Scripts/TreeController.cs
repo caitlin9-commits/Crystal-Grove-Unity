@@ -100,7 +100,6 @@ public class Tree : MonoBehaviour
         GlobalValues.changeWoodAmount(5);
         Destroy(gameObject);
 
-        TreeSpawner.SpawnTrees();
         
         int treesCut = GlobalValues.getTreesCut();
         Debug.Log("Tree cut count: " + treesCut);

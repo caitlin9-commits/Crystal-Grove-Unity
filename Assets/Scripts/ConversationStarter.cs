@@ -45,11 +45,12 @@ public class ConversationStarter : MonoBehaviour
     {
         NomadController.setWalk(false);
         int woodAmount = GlobalValues.getWoodAmount();
+        bool agreedToHelp = OldManController.checkIfAgreedToHelp();
 
         ConversationManager.Instance.StartConversation(myConversation);
         ConversationManager.OnConversationEnded = ConversationEnd;
         ConversationManager.Instance.SetBool("hasSpoken",hasSpoken);
-    
+        ConversationManager.Instance.SetBool("agreedToHelp",agreedToHelp);
         ConversationManager.Instance.SetInt("woodCount",woodAmount);
     }
 
