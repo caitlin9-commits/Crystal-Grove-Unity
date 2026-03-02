@@ -80,7 +80,7 @@ public class TimeManager : MonoBehaviour
     
             if (tempSecond >= 1)
             {
-                Minutes += 100.6; //1 second equals to 1.6 minutes in game
+                Minutes += 1.6; //1 second equals to 1.6 minutes in game
                 //this equates to the day being 15min long
                 tempSecond = 0;
             }

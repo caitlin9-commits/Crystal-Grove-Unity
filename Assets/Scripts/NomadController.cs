@@ -173,9 +173,9 @@ public class NomadController : MonoBehaviour
     {
         myNomad.fainted = true;
         Debug.Log("Sending to tent: ");
-        float x = 5.8f;
-        float y = 0.53f;
-        float z = 23.8f;
+        float x = 3406.5f;
+        float y = 31.2f;
+        float z = -3203.7f;
         myNomad.transform.position =  new Vector3(x,y,z);
         myNomad.GoToSleep();
     }
