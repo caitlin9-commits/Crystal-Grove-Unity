@@ -8,22 +8,13 @@ public class GlobalValues : MonoBehaviour
 
     private static GlobalValues myGlobalValues;
 
-
     private int treesCut;
     private int woodAmount;
     private int coinsAmount;
 
-
-    private bool spokeToOldMan;
-
-
-
-    // public TMP_Text treeCutText;
+    public TMP_Text treeCutText;
     public TMP_Text woodAmountText;
-    public Image woodImage;
-
     public TMP_Text coinAmountText;
-    public TMP_Text instructionText;
 
     private void Awake()
     {
@@ -44,18 +35,16 @@ public class GlobalValues : MonoBehaviour
         woodAmount = 0;
         coinsAmount = 0;
 
-        // treeCutText.text = treesCut.ToString();
-        woodImage.enabled = false;
-        woodAmountText.text = "";//woodAmount.ToString();
+        treeCutText.text = treesCut.ToString();
+        woodAmountText.text = woodAmount.ToString();
         coinAmountText.text = coinsAmount.ToString();
-        instructionText.text = "";
     }
 
 
     public static void treesCutIncrememt()
     {
         myGlobalValues.treesCut++;
-        // myGlobalValues.treeCutText.text = myGlobalValues.treesCut.ToString();
+        myGlobalValues.treeCutText.text = myGlobalValues.treesCut.ToString();
     }
 
     public static int getTreesCut()
@@ -77,7 +66,6 @@ public class GlobalValues : MonoBehaviour
     {
         myGlobalValues.woodAmount+=change;
         myGlobalValues.woodAmountText.text = myGlobalValues.woodAmount.ToString();
-        myGlobalValues.woodImage.enabled = true;
 
     }
     public static void changeCoinsmount(int change)
@@ -86,31 +74,14 @@ public class GlobalValues : MonoBehaviour
         myGlobalValues.coinAmountText.text = myGlobalValues.coinsAmount.ToString();
 
     }
-    
 
     public static void sellWood()
     {
         myGlobalValues.coinsAmount+=myGlobalValues.woodAmount;
         myGlobalValues.woodAmount=0;
-        myGlobalValues.woodImage.enabled = false;
-        myGlobalValues.woodAmountText.text = "";
+        myGlobalValues.woodAmountText.text = myGlobalValues.woodAmount.ToString();
         myGlobalValues.coinAmountText.text = myGlobalValues.coinsAmount.ToString();
 
-        
     }
    
-    public static void setInstructionText(string keyAction,string key, string action)
-    {
-        myGlobalValues.instructionText.text = keyAction+" '"+key+"' to "+action;
-    }
-    public static void setInstructionTextString(string text)
-    {
-        myGlobalValues.instructionText.text = text;
-    }
-
-    public static void clearInstructionText()
-    {
-        myGlobalValues.instructionText.text = "";
-    }
-
 }

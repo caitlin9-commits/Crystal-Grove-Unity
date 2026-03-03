@@ -24,11 +24,6 @@ public class Tree : MonoBehaviour
         myAnim = gameObject.GetComponent<Animator>();
         currentHealth = maxHealth;
         UpdateHealthBar();
-
-
-        int cutCount = GlobalValues.getTreesCut();
-        Debug.Log("CUT COUNT " + cutCount);
-        myAnim.SetInteger("CutCount", cutCount);
     }
 
     void Update()
@@ -96,11 +91,8 @@ public class Tree : MonoBehaviour
 
         SoundEffectManager.Play("Success");
         GlobalValues.treesCutIncrememt();
-
         GlobalValues.changeWoodAmount(5);
         Destroy(gameObject);
-
-        TreeSpawner.SpawnTrees();
         
         int treesCut = GlobalValues.getTreesCut();
         Debug.Log("Tree cut count: " + treesCut);

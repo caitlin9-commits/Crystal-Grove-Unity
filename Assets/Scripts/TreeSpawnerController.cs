@@ -6,37 +6,20 @@ public class TreeSpawner : MonoBehaviour
     public int treeCount = 5;
     public float spawnRadius = 10f;
 
-    private static TreeSpawner myTreeSpawner;
-
-
-     private void Awake()
-    {
-        if(myTreeSpawner == null)
-        {
-            myTreeSpawner = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
-
     void Start()
     {
         SpawnTrees();
     }
 
-    public static void SpawnTrees()
+    void SpawnTrees()
     {
-        for (int i = 0; i < myTreeSpawner.treeCount; i++)
+        for (int i = 0; i < treeCount; i++)
         {
-            Vector3 randomPos = myTreeSpawner.transform.position +
+            Vector3 randomPos = transform.position +
             new Vector3(
-                Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius),
+                Random.Range(-spawnRadius, spawnRadius),
                 0,
-                Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius)
+                Random.Range(-spawnRadius, spawnRadius)
             );
 
             
@@ -51,7 +34,7 @@ public class TreeSpawner : MonoBehaviour
             float treeHeight = 3f; 
             randomPos.y += treeHeight / 2f;
 
-            Instantiate(myTreeSpawner.treePrefab, randomPos, Quaternion.identity);
+            Instantiate(treePrefab, randomPos, Quaternion.identity);
 
         }
     }

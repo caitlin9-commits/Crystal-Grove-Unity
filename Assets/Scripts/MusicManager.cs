@@ -33,7 +33,7 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("THERE IS NO MUSIC");
+            Debug.Log("NO MUSIC");
         }
     }
 
