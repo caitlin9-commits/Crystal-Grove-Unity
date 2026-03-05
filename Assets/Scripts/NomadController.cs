@@ -136,7 +136,7 @@ public class NomadController : MonoBehaviour
             }
             
         }
-        if (other.CompareTag("Tent") && !fainted)
+        if (other.CompareTag("Tent") && !fainted && TimeManager.hasSpokenToOldMan())
         {
             canSleep = true;
             GlobalValues.setInstructionText("Press","Z","sleep");

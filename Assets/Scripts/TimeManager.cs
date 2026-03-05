@@ -74,13 +74,15 @@ public class TimeManager : MonoBehaviour
     public void Update()
     {
 
+        // Debug.Log("Time Manager: ",clockActive,spokenToOldMan);
+
         if(clockActive && spokenToOldMan)
         {
             tempSecond += Time.deltaTime;
     
             if (tempSecond >= 1)
             {
-                Minutes += 1.6; //1 second equals to 1.6 minutes in game
+                Minutes += 10.6; //1 second equals to 1.6 minutes in game
                 //this equates to the day being 15min long
                 tempSecond = 0;
             }
@@ -253,5 +255,15 @@ public class TimeManager : MonoBehaviour
    public static void spokeToOldMan()
     {
         myTimeManager.spokenToOldMan = true;
+    }
+
+    public static bool hasSpokenToOldMan()
+    {
+        return myTimeManager.spokenToOldMan;
+    }
+
+    public static int getDay()
+    {
+        return myTimeManager.Days;
     }
 }
