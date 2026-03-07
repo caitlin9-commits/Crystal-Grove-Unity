@@ -1627,11 +1627,7 @@ Transform:
   - {fileID: 1572756780}
   m_Father: {fileID: 501830389}
   m_LocalEulerAnglesHint: {x: 0, y: 2.843, z: 0}
-<<<<<<< HEAD
 --- !u!1 &140820605
-=======
---- !u!1 &147890986
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1639,7 +1635,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
   - component: {fileID: 140820606}
   m_Layer: 0
   m_Name: OldMan (4)
@@ -1680,10 +1675,6 @@ GameObject:
   m_Component:
   - component: {fileID: 149634597}
   - component: {fileID: 149634596}
-=======
-  - component: {fileID: 147890988}
-  - component: {fileID: 147890987}
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   m_Layer: 0
   m_Name: OldManConvoDay3
   m_TagString: Untagged
@@ -1691,28 +1682,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!114 &149634596
-=======
---- !u!114 &147890987
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 149634595}
-=======
-  m_GameObject: {fileID: 147890986}
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 50
-<<<<<<< HEAD
   json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":658.75,"yPos":815},"ID":39,"ParamActions":[],"TMPFontGUID":null,"Text":"Cash
     in","parentUIDs":[38],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":935.75,"yPos":818},"ID":40,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
     wood","parentUIDs":[38],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"agreedToHelp","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":33},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":true,"xPos":310.25,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello
@@ -1733,35 +1715,12 @@ MonoBehaviour:
     the villagers'' concerns about the environment.","parentUIDs":[44],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":1041.25,"yPos":527},"ID":46,"ParamActions":[],"TMPFontGUID":null,"Text":"The
     crystal will help us fix those later.","parentUIDs":[45],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":48}],"EditorInfo":{"isRoot":false,"xPos":1037.25,"yPos":99},"ID":47,"ParamActions":[],"TMPFontGUID":null,"Text":"I
     NEED YOU TO GIVE ME MORE! NOW!","parentUIDs":[34],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":1140.25,"yPos":215},"ID":48,"ParamActions":[],"TMPFontGUID":null,"Text":"Don''t
-=======
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":921.641846,"yPos":931.5729},"ID":39,"ParamActions":[],"TMPFontGUID":null,"Text":"Cash
-    in","parentUIDs":[38],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":1198.64172,"yPos":934.5731},"ID":40,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
-    wood","parentUIDs":[38],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"agreedToHelp","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":33},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":true,"xPos":573.1426,"yPos":138.571426},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello
-    Nomad.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":252.142181,"yPos":1776.57434},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Enjoy
-    your night!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":false,"xPos":178.642853,"yPos":159.5713},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"This
-    arrangement is not working out.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":36}],"EditorInfo":{"isRoot":false,"xPos":366.642853,"yPos":370.5715},"ID":32,"ParamActions":[],"TMPFontGUID":null,"Text":"Look,
-    I need you to work harder.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":43}],"EditorInfo":{"isRoot":false,"xPos":798.6422,"yPos":217.571426},"ID":33,"ParamActions":[],"TMPFontGUID":null,"Text":"How
-    is my favourite guy doing?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":47}],"EditorInfo":{"isRoot":false,"xPos":1118.64172,"yPos":99.57143},"ID":34,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    am not getting enough resources","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-35.35666,"yPos":287.5715},"ID":35,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    think it''s time for you to move on.","parentUIDs":[31],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":37}],"EditorInfo":{"isRoot":false,"xPos":313.642853,"yPos":537.571533},"ID":36,"ParamActions":[],"TMPFontGUID":null,"Text":"You''re
-    not going to be able to afford a house here at that rate.","parentUIDs":[32],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":397.642853,"yPos":692.5729},"ID":37,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
-    you want to live in this village?","parentUIDs":[36],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":39},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":40}],"EditorInfo":{"isRoot":false,"xPos":1052.64172,"yPos":782.5729},"ID":38,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
-    you have stuff to give me?","parentUIDs":[0,37,46,48],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":889.1421,"yPos":1042.57214},"ID":41,"ParamActions":[],"TMPFontGUID":null,"Text":"Pleasure
-    doing business with you!","parentUIDs":[39],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1257.14124,"yPos":1056.57239},"ID":42,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    will get that wood off you eventually boy!","parentUIDs":[40],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":44}],"EditorInfo":{"isRoot":false,"xPos":921.141846,"yPos":323.571381},"ID":43,"ParamActions":[],"TMPFontGUID":null,"Text":"Have
-    you noticed how big the crystal is getting?","parentUIDs":[33],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":45}],"EditorInfo":{"isRoot":false,"xPos":992.1415,"yPos":423.5715},"ID":44,"ParamActions":[],"TMPFontGUID":null,"Text":"This
-    crystal is gonna change the world!","parentUIDs":[43],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":46}],"EditorInfo":{"isRoot":false,"xPos":1087.14148,"yPos":524.571167},"ID":45,"ParamActions":[],"TMPFontGUID":null,"Text":"Ignore
-    the villagers'' concerns about the environment.","parentUIDs":[44],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":1304.14124,"yPos":643.572754},"ID":46,"ParamActions":[],"TMPFontGUID":null,"Text":"The
-    crystal will help us fix those later.","parentUIDs":[45],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":48}],"EditorInfo":{"isRoot":false,"xPos":1300.14148,"yPos":215.571426},"ID":47,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    NEED YOU TO GIVE ME MORE! NOW!","parentUIDs":[34],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":1403.14172,"yPos":331.5715},"ID":48,"ParamActions":[],"TMPFontGUID":null,"Text":"Don''t
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
     be a fool, the cryst.... I mean, the town needs them.","parentUIDs":[47],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 0}
   DefaultFont: {fileID: 0}
   NodeSerializedDataList:
-<<<<<<< HEAD
   - {fileID: 415191594}
   - {fileID: 415191593}
   - {fileID: 415191592}
@@ -1783,62 +1742,26 @@ MonoBehaviour:
   - {fileID: 415191576}
   - {fileID: 415191575}
   - {fileID: 415191573}
-=======
-  - {fileID: 1818035558}
-  - {fileID: 1818035557}
-  - {fileID: 1818035556}
-  - {fileID: 1818035555}
-  - {fileID: 1818035554}
-  - {fileID: 1818035553}
-  - {fileID: 1818035552}
-  - {fileID: 1818035551}
-  - {fileID: 1818035550}
-  - {fileID: 1818035549}
-  - {fileID: 1818035548}
-  - {fileID: 1818035547}
-  - {fileID: 1818035546}
-  - {fileID: 1818035545}
-  - {fileID: 1818035544}
-  - {fileID: 1818035543}
-  - {fileID: 1818035542}
-  - {fileID: 1818035541}
-  - {fileID: 1818035540}
-  - {fileID: 1818035539}
-  - {fileID: 1818035537}
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
       m_Calls: []
-<<<<<<< HEAD
 --- !u!4 &149634597
-=======
---- !u!4 &147890988
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 149634595}
-=======
-  m_GameObject: {fileID: 147890986}
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.27706, y: -0.558, z: -0.34040022}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-<<<<<<< HEAD
   - {fileID: 415191574}
   m_Father: {fileID: 140820606}
-=======
-  - {fileID: 1818035538}
-  m_Father: {fileID: 1409112945}
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &154905886
 GameObject:
@@ -3262,7 +3185,6 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
-<<<<<<< HEAD
 --- !u!1 &224732835
 GameObject:
   m_ObjectHideFlags: 0
@@ -3944,8 +3866,6 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: -693617474, guid: 6eef812f1284ff0418472590e7292315, type: 3}
   Audio: {fileID: 8300000, guid: 2d00a80d3c53541059bb8d7078fbdc76, type: 3}
-=======
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
 --- !u!1 &225531648
 GameObject:
   m_ObjectHideFlags: 0
@@ -5085,7 +5005,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334536871}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
 --- !u!1 &334783164
 GameObject:
   m_ObjectHideFlags: 0
@@ -5559,8 +5478,6 @@ Transform:
   - {fileID: 1033389484}
   m_Father: {fileID: 1158542193}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
 --- !u!64 &342940951
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8398,12 +8315,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 593601515}
-<<<<<<< HEAD
   - {fileID: 1158542193}
   - {fileID: 140820606}
-=======
-  - {fileID: 1409112945}
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   - {fileID: 256633296}
   - {fileID: 1768796894}
   - {fileID: 243882149}
@@ -15885,7 +15798,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153141477}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
 --- !u!1 &1154519122
 GameObject:
   m_ObjectHideFlags: 0
@@ -16299,8 +16211,6 @@ Transform:
   - {fileID: 92199777}
   m_Father: {fileID: 501830389}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
 --- !u!1 &1167554990
 GameObject:
   m_ObjectHideFlags: 0
@@ -20158,18 +20068,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2135365050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &1554825252
 GameObject:
-=======
---- !u!136 &1526242705
-CapsuleCollider:
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1554825256}
@@ -20221,52 +20125,20 @@ Animator:
 --- !u!212 &1554825255
 SpriteRenderer:
   serializedVersion: 2
-=======
-  m_GameObject: {fileID: 1526242703}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1526242706
-MeshRenderer:
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1554825252}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-=======
-  m_GameObject: {fileID: 1526242703}
-  m_Enabled: 1
-  m_CastShadows: 3
-  m_ReceiveShadows: 1
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-<<<<<<< HEAD
   m_RayTracingMode: 0
-=======
-  m_RayTracingMode: 2
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -20276,11 +20148,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-<<<<<<< HEAD
   - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-=======
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20293,11 +20161,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-<<<<<<< HEAD
   m_SelectedEditorRenderState: 0
-=======
-  m_SelectedEditorRenderState: 3
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -20307,7 +20171,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-<<<<<<< HEAD
   m_Sprite: {fileID: 656824906, guid: c316d1197d997d24db955122406f3187, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -20320,16 +20183,10 @@ MeshRenderer:
   m_SpriteSortPoint: 0
 --- !u!4 &1554825256
 Transform:
-=======
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1526242707
-MeshFilter:
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1554825252}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -20339,10 +20196,6 @@ MeshFilter:
   m_Children: []
   m_Father: {fileID: 140820606}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
-  m_GameObject: {fileID: 1526242703}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
 --- !u!1 &1563052350
 GameObject:
   m_ObjectHideFlags: 0
@@ -24634,7 +24487,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872326704}
   m_Mesh: {fileID: -6539473898289611233, guid: 022fc8c77dd48ed4589b7b488ec28c58, type: 3}
-<<<<<<< HEAD
 --- !u!1 &1873427870
 GameObject:
   m_ObjectHideFlags: 0
@@ -25010,8 +24862,6 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: -693617474, guid: 6eef812f1284ff0418472590e7292315, type: 3}
   Audio: {fileID: 0}
-=======
->>>>>>> c81ff09b0a604876bd69c4fd8ebbb88b5db3edb6
 --- !u!1 &1891727616
 GameObject:
   m_ObjectHideFlags: 0
