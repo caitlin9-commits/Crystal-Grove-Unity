@@ -20,6 +20,7 @@ public class NomadController : MonoBehaviour
     public bool canWalk;
     public bool canSleep;
     public bool canPlant;
+    public bool canFish;
 
     public bool fading;
 
@@ -106,11 +107,14 @@ public class NomadController : MonoBehaviour
         // CHOPPING
         if (canPlant && Input.GetKey(KeyCode.P))
         {
-            
                 canPlant = false;
                 PlantPinecone();    
-            
-            
+        }
+
+        if (canFish && Input.GetKey(KeyCode.F))
+        {
+                canFish = false;
+                Fish();    
         }
 
 
@@ -163,6 +167,13 @@ public class NomadController : MonoBehaviour
             canPlant = false;
             GlobalValues.setInstructionText("Press","Z","sleep");
         }
+
+        if (other.CompareTag("water"))
+        {
+            canFish = true;
+            GlobalValues.setInstructionText("Press","F","fish");
+
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -177,6 +188,12 @@ public class NomadController : MonoBehaviour
         {
             canSleep = false;
             canPlant = true;
+            GlobalValues.clearInstructionText();
+        }
+
+        if (other.CompareTag("water"))
+        {
+            canFish = false;
             GlobalValues.clearInstructionText();
         }
     }
@@ -236,9 +253,9 @@ public class NomadController : MonoBehaviour
             TreeSpawner.PlantSprout(transform.position.x, transform.position.z);
             myAnim.SetBool("Planting", false);
             GlobalValues.setInstructionTextString("You planted a pinecone.");
+            canWalk = true;
             await Task.Delay(2000); 
             canPlant = true;
-            canWalk = true;
             GlobalValues.clearInstructionText();
         }
         else
@@ -248,6 +265,24 @@ public class NomadController : MonoBehaviour
             GlobalValues.clearInstructionText();
             canPlant = true;
         }
+    }
+
+
+    async void Fish()
+    {
+        canWalk = false;
+        myAnim.SetBool("Casting", true);
+        await Task.Delay(1000); 
+        myAnim.SetBool("Fishing", true);
+        await Task.Delay(7000); 
+        myAnim.SetBool("Casting", false);
+        myAnim.SetBool("Fishing", false);
+        GlobalValues.changeFishAmount(1);
+        GlobalValues.setInstructionTextString("You caught a fish.");
+        canFish = true;
+        canWalk = true;
+        await Task.Delay(2000); 
+        GlobalValues.clearInstructionText();
     }
 
 }

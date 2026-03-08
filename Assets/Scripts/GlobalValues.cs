@@ -11,6 +11,7 @@ public class GlobalValues : MonoBehaviour
 
     private int treesCut;
     private int woodAmount;
+    private int fishAmount;
     private int coinsAmount;
     private int pineconeAmount;
     private bool spokeToOldMan;
@@ -20,6 +21,8 @@ public class GlobalValues : MonoBehaviour
     // public TMP_Text treeCutText;
     public TMP_Text woodAmountText;
     public Image woodImage;
+    public TMP_Text fishAmountText;
+    public Image fishImage;
 
     public TMP_Text pineconeAmountText;
     public Image pineconeImage;
@@ -49,6 +52,8 @@ public class GlobalValues : MonoBehaviour
         // treeCutText.text = treesCut.ToString();
         pineconeImage.enabled = false;
         pineconeAmountText.text = "";
+        fishImage.enabled = false;
+        fishAmountText.text = "";
         woodImage.enabled = false;
         woodAmountText.text = "";//woodAmount.ToString();
         coinAmountText.text = coinsAmount.ToString();
@@ -81,12 +86,12 @@ public class GlobalValues : MonoBehaviour
     }
 
 
+
     public static void changeWoodAmount(int change)
     {
         myGlobalValues.woodAmount+=change;
         myGlobalValues.woodAmountText.text = myGlobalValues.woodAmount.ToString();
         myGlobalValues.woodImage.enabled = true;
-
     }
 
     public static void changePineconeAmount(int change)
@@ -95,7 +100,14 @@ public class GlobalValues : MonoBehaviour
 
         myGlobalValues.pineconeAmountText.text = myGlobalValues.pineconeAmount==0?"":myGlobalValues.pineconeAmount.ToString();
         myGlobalValues.pineconeImage.enabled = myGlobalValues.pineconeAmount==0?false:true;
+    }
 
+    public static void changeFishAmount(int change)
+    {
+        myGlobalValues.fishAmount+=change;
+
+        myGlobalValues.fishAmountText.text = myGlobalValues.fishAmount==0?"":myGlobalValues.fishAmount.ToString();
+        myGlobalValues.fishImage.enabled = myGlobalValues.fishAmount==0?false:true;
     }
 
     public static void changeCoinsmount(int change)
