@@ -45,6 +45,7 @@ public class PineConeController : MonoBehaviour
         if (other.CompareTag("Nomad"))
         {
             canPickUp = false;
+            GlobalValues.clearInstructionText();
         }
     }
 
