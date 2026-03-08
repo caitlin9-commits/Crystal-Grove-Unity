@@ -6,6 +6,8 @@ public class TreeSpawner : MonoBehaviour
     public GameObject brownTree;
     public GameObject deadTree;
     public GameObject cystalTree;
+    public GameObject pineconePrefab;
+    public GameObject sproutPrefab;
 
     public int treeCount = 5;
     public float spawnRadius = 10f;
@@ -16,6 +18,7 @@ public class TreeSpawner : MonoBehaviour
     private int treeHealthState = 4;
 
     private List<TreeObject> trees = new List<TreeObject>();
+    private List<TreeObject> sprouts = new List<TreeObject>();
     private List<GameObject> spawnedTrees = new List<GameObject>();
 
      private void Awake()
@@ -37,6 +40,7 @@ public class TreeSpawner : MonoBehaviour
     void Start()
     {
         SpawnTrees();
+        SpawnPineCones();
     }
 
     private void GenerateTreeLocations()
@@ -61,6 +65,15 @@ public class TreeSpawner : MonoBehaviour
             Destroy(tree);
         }
         myTreeSpawner.spawnedTrees.Clear();
+
+        
+        foreach (TreeObject sprout in myTreeSpawner.sprouts)
+        {
+            myTreeSpawner.trees.Add(sprout);
+            Debug.Log("BUDDED SRPOUT: "+sprout.x+" "+sprout.z);
+        }
+
+        myTreeSpawner.sprouts.Clear();
 
 
         for (int i = 0; i < myTreeSpawner.trees.Count; i++)
@@ -135,6 +148,85 @@ public class TreeSpawner : MonoBehaviour
 
         }
     }
+
+
+    public static void SpawnPineCones()
+    {   
+
+        for (int i = 0; i < 10; i++)
+        {
+        
+            GameObject pineconePrefab = myTreeSpawner.pineconePrefab;
+            
+
+            Vector3 randomPos = myTreeSpawner.transform.position +
+            new Vector3(
+                Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius),
+                0,
+                Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius)
+            );
+
+            RaycastHit hit;
+            int groundLayer = LayerMask.GetMask("Terrain");
+
+            if (Physics.Raycast(randomPos + Vector3.up * 50f, Vector3.down, out hit, 100f,groundLayer))
+            {
+                randomPos.y = hit.point.y;
+            }
+
+            randomPos.y += 2f / 2f;
+
+            GameObject newPineCone = Instantiate(pineconePrefab, randomPos, Quaternion.identity);
+
+        }
+    }
+
+
+    public static void PlantSprout(float x, float z)
+    {   
+        
+        Debug.Log("SRPOUT: "+x+" "+z);
+
+        GameObject sproutPrefab = myTreeSpawner.sproutPrefab;
+
+        Vector3 plantPos = 
+        new Vector3(
+            x,
+            0,
+            z
+        );
+
+        RaycastHit hit;
+        int groundLayer = LayerMask.GetMask("Terrain");
+
+        if (Physics.Raycast(plantPos + Vector3.up * 50f, Vector3.down, out hit, 100f,groundLayer))
+        {
+            plantPos.y = hit.point.y;
+        }
+
+        plantPos.y += 2f / 2f;
+
+        GameObject newSprout = Instantiate(sproutPrefab, plantPos, Quaternion.identity);
+        myTreeSpawner.spawnedTrees.Add(newSprout);
+
+
+        Vector3 local = new Vector3(x,0,z) - myTreeSpawner.transform.position;
+
+        myTreeSpawner.sprouts.Add(new TreeObject{
+            x = local.x,
+            z = local.z,
+            isChopped = false
+        });
+            
+        GlobalValues.changePineconeAmount(-1);
+
+
+        
+    }
+
+
+
+
 }
 
 
@@ -144,4 +236,5 @@ public class TreeObject
     public float x { get; set; }
     public float z { get; set; }
     public bool isChopped { get; set; }
+
 }

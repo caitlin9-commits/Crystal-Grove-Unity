@@ -12,8 +12,7 @@ public class GlobalValues : MonoBehaviour
     private int treesCut;
     private int woodAmount;
     private int coinsAmount;
-
-
+    private int pineconeAmount;
     private bool spokeToOldMan;
 
 
@@ -21,6 +20,9 @@ public class GlobalValues : MonoBehaviour
     // public TMP_Text treeCutText;
     public TMP_Text woodAmountText;
     public Image woodImage;
+
+    public TMP_Text pineconeAmountText;
+    public Image pineconeImage;
 
     public TMP_Text coinAmountText;
     public TMP_Text instructionText;
@@ -45,6 +47,8 @@ public class GlobalValues : MonoBehaviour
         coinsAmount = 0;
 
         // treeCutText.text = treesCut.ToString();
+        pineconeImage.enabled = false;
+        pineconeAmountText.text = "";
         woodImage.enabled = false;
         woodAmountText.text = "";//woodAmount.ToString();
         coinAmountText.text = coinsAmount.ToString();
@@ -67,6 +71,10 @@ public class GlobalValues : MonoBehaviour
     {
         return myGlobalValues.woodAmount;
     }
+    public static int getPineconeAmount()
+    {
+        return myGlobalValues.pineconeAmount;
+    }
     public static int getCoinAmount()
     {
         return myGlobalValues.coinsAmount;
@@ -80,6 +88,16 @@ public class GlobalValues : MonoBehaviour
         myGlobalValues.woodImage.enabled = true;
 
     }
+
+    public static void changePineconeAmount(int change)
+    {
+        myGlobalValues.pineconeAmount+=change;
+
+        myGlobalValues.pineconeAmountText.text = myGlobalValues.pineconeAmount==0?"":myGlobalValues.pineconeAmount.ToString();
+        myGlobalValues.pineconeImage.enabled = myGlobalValues.pineconeAmount==0?false:true;
+
+    }
+
     public static void changeCoinsmount(int change)
     {
         myGlobalValues.coinsAmount+=change;
@@ -95,8 +113,6 @@ public class GlobalValues : MonoBehaviour
         myGlobalValues.woodImage.enabled = false;
         myGlobalValues.woodAmountText.text = "";
         myGlobalValues.coinAmountText.text = myGlobalValues.coinsAmount.ToString();
-
-        
     }
    
     public static void setInstructionText(string keyAction,string key, string action)

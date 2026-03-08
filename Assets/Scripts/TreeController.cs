@@ -29,7 +29,6 @@ public class Tree : MonoBehaviour
 
 
         int cutCount = GlobalValues.getTreesCut();
-        Debug.Log("CUT COUNT " + cutCount);
         myAnim.SetInteger("CutCount", cutCount);
     }
 
