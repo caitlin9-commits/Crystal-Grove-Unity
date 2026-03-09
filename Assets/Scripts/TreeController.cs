@@ -4,6 +4,8 @@ using System.Collections;
 
 public class Tree : MonoBehaviour
 {
+    public TreeObject treeData;
+
     public float maxHealth = 100f;
     public float chopDamagePerSecond = 20f;
 
@@ -27,7 +29,6 @@ public class Tree : MonoBehaviour
 
 
         int cutCount = GlobalValues.getTreesCut();
-        Debug.Log("CUT COUNT " + cutCount);
         myAnim.SetInteger("CutCount", cutCount);
     }
 
@@ -93,10 +94,11 @@ public class Tree : MonoBehaviour
         myAnim.SetBool("IsFalling", isFalling);
 
         yield return new WaitForSeconds(1f);
-
+        
+        treeData.isChopped = true;
         SoundEffectManager.Play("Success");
         GlobalValues.treesCutIncrememt();
-
+        GlobalValues.clearInstructionText();
         GlobalValues.changeWoodAmount(5);
         Destroy(gameObject);
 

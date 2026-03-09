@@ -19,6 +19,9 @@ public class NomadController : MonoBehaviour
     private bool canChop;
     public bool canWalk;
     public bool canSleep;
+    public bool canPlant;
+    public bool canFish;
+
     public bool fading;
 
     private int chopSoundCounter;
@@ -34,6 +37,7 @@ public class NomadController : MonoBehaviour
 
         chopSoundCounter = 300;
         canWalk = true;
+        canPlant = true;
         canSleep = false;
         fading = false;
         myNomad = this;
@@ -93,8 +97,27 @@ public class NomadController : MonoBehaviour
             }
         }
 
+
+      
+
         chopping = canChop && Input.GetKey(KeyCode.Space);
         myAnim.SetBool("Chopping", chopping);
+
+
+        // CHOPPING
+        if (canPlant && Input.GetKey(KeyCode.P))
+        {
+                canPlant = false;
+                PlantPinecone();    
+        }
+
+        if (canFish && Input.GetKey(KeyCode.F))
+        {
+                canFish = false;
+                Fish();    
+        }
+
+
 
         // SLEEP
         if (canSleep && Input.GetKey(KeyCode.Z))
@@ -124,6 +147,8 @@ public class NomadController : MonoBehaviour
     {
         if (other.CompareTag("Tree"))
         {
+            canPlant = false;
+
             bool hasAxe = InventoryManager.checkForAxe();
             if (hasAxe)
             {
@@ -139,7 +164,15 @@ public class NomadController : MonoBehaviour
         if (other.CompareTag("Tent") && !fainted && TimeManager.hasSpokenToOldMan())
         {
             canSleep = true;
+            canPlant = false;
             GlobalValues.setInstructionText("Press","Z","sleep");
+        }
+
+        if (other.CompareTag("water"))
+        {
+            canFish = true;
+            GlobalValues.setInstructionText("Press","F","fish");
+
         }
     }
 
@@ -148,11 +181,19 @@ public class NomadController : MonoBehaviour
         if (other.CompareTag("Tree"))
         {
             canChop = false;
+            canPlant = true;
             GlobalValues.clearInstructionText();
         }
         if (other.CompareTag("Tent"))
         {
             canSleep = false;
+            canPlant = true;
+            GlobalValues.clearInstructionText();
+        }
+
+        if (other.CompareTag("water"))
+        {
+            canFish = false;
             GlobalValues.clearInstructionText();
         }
     }
@@ -198,6 +239,50 @@ public class NomadController : MonoBehaviour
             GlobalValues.setInstructionTextString("You fainted.");
             fainted = false;
         }
+    }
+
+    async void PlantPinecone()
+    {
+        int pineconeAmount = GlobalValues.getPineconeAmount();
+        if (pineconeAmount > 0)
+        {
+
+            canWalk = false;
+            myAnim.SetBool("Planting", true);
+            await Task.Delay(3000); 
+            TreeSpawner.PlantSprout(transform.position.x, transform.position.z);
+            myAnim.SetBool("Planting", false);
+            GlobalValues.setInstructionTextString("You planted a pinecone.");
+            canWalk = true;
+            await Task.Delay(2000); 
+            canPlant = true;
+            GlobalValues.clearInstructionText();
+        }
+        else
+        {
+            GlobalValues.setInstructionTextString("No pinecones to plant");
+            await Task.Delay(2000); 
+            GlobalValues.clearInstructionText();
+            canPlant = true;
+        }
+    }
+
+
+    async void Fish()
+    {
+        canWalk = false;
+        myAnim.SetBool("Casting", true);
+        await Task.Delay(1000); 
+        myAnim.SetBool("Fishing", true);
+        await Task.Delay(7000); 
+        myAnim.SetBool("Casting", false);
+        myAnim.SetBool("Fishing", false);
+        GlobalValues.changeFishAmount(1);
+        GlobalValues.setInstructionTextString("You caught a fish.");
+        canFish = true;
+        canWalk = true;
+        await Task.Delay(2000); 
+        GlobalValues.clearInstructionText();
     }
 
 }

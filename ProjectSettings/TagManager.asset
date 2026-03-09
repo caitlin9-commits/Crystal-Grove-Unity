@@ -8,6 +8,7 @@ TagManager:
   - Nomad
   - Tent
   - terrain
+  - water
   layers:
   - Default
   - TransparentFX
