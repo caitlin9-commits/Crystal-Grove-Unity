@@ -6,6 +6,7 @@ public class MusicManager : MonoBehaviour
     private static MusicManager myMusicManager;
     private AudioSource audioSource;
     public AudioClip backgroundMusic;
+    public AudioClip backgroundMusicForest;
     // [SerializeField] private Slider mucisSlider;
 
 

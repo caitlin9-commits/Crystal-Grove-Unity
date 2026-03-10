@@ -8,6 +8,7 @@ public class InventoryManager : MonoBehaviour
 
 
     private bool hasAxe;
+    private bool hasFishingRod;
 
 
     public Image axeImage;
@@ -48,10 +49,20 @@ public class InventoryManager : MonoBehaviour
     {
         return myInventoryManager.hasAxe;
     }
+    public static bool checkForRod()
+    {
+        return myInventoryManager.hasFishingRod;
+    }
     public static void getBasicAxe()
     {
         myInventoryManager.hasAxe = true;
         myInventoryManager.axeImage.enabled = true;
+    }
+
+    public static void getFishingRod()
+    {
+        myInventoryManager.hasFishingRod = true;
+        myInventoryManager.rodImage.enabled = true;
     }
 
 }

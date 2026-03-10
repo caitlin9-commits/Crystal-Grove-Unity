@@ -104,7 +104,7 @@ public class NomadController : MonoBehaviour
         myAnim.SetBool("Chopping", chopping);
 
 
-        // CHOPPING
+        // PLANTING
         if (canPlant && Input.GetKey(KeyCode.P))
         {
                 canPlant = false;
@@ -170,8 +170,20 @@ public class NomadController : MonoBehaviour
 
         if (other.CompareTag("water"))
         {
-            canFish = true;
-            GlobalValues.setInstructionText("Press","F","fish");
+
+            bool hasRod = InventoryManager.checkForRod();
+            if (hasRod)
+            {
+                canFish = true;
+                GlobalValues.setInstructionText("Press","F","fish");  
+            }
+            else
+            {
+                GlobalValues.setInstructionText("Go to","Old Man","get rod for fishing");    
+            }
+
+
+            
 
         }
     }
@@ -201,6 +213,7 @@ public class NomadController : MonoBehaviour
     public void TreeFell()
     {
         canChop = false;
+        canPlant = true;
         Debug.Log("TREE FELL");
     }
 

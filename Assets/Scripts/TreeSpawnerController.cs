@@ -138,7 +138,13 @@ public class TreeSpawner : MonoBehaviour
                 randomPos.y = hit.point.y;
             }
 
-            randomPos.y += myTreeSpawner.treeHeight / 2f;
+            if(myTreeSpawner.treeHealthState == 4){
+                randomPos.y += myTreeSpawner.treeHeight / 2f;
+            }
+            else
+            {
+                randomPos.y += myTreeSpawner.treeHeight / 3f;
+            }
 
             GameObject newTree = Instantiate(treePrefab, randomPos, Quaternion.identity);
             Tree treeComponent = newTree.GetComponent<Tree>();
