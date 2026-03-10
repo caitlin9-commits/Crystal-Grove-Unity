@@ -72,9 +72,9 @@ public class NomadController : MonoBehaviour
             // Flip sprite
             Vector3 scale = transform.localScale;
 
-            if (x < 0)
+            if (x > 0)
                 scale.x = -Mathf.Abs(scale.x);
-            else if (x > 0)
+            else if (x < 0)
                 scale.x = Mathf.Abs(scale.x);
 
             transform.localScale = scale;
@@ -227,9 +227,9 @@ public class NomadController : MonoBehaviour
     {
         myNomad.fainted = true;
         Debug.Log("Sending to tent: ");
-        float x = 3406.5f;
-        float y = 31.2f;
-        float z = -3203.7f;
+        float x = 682.8f;
+        float y = 37f;
+        float z = -2.5f;
         myNomad.transform.position =  new Vector3(x,y,z);
         myNomad.GoToSleep();
     }

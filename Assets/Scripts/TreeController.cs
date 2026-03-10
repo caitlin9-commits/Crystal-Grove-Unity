@@ -94,8 +94,12 @@ public class Tree : MonoBehaviour
         myAnim.SetBool("IsFalling", isFalling);
 
         yield return new WaitForSeconds(1f);
+
+        if (treeData != null)
+        {
+            treeData.isChopped = true;    
+        }
         
-        treeData.isChopped = true;
         SoundEffectManager.Play("Success");
         GlobalValues.treesCutIncrememt();
         GlobalValues.clearInstructionText();
