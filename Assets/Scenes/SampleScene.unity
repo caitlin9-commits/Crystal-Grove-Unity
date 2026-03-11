@@ -2003,9 +2003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1458ef2ceea3a2b4c965f680e5fa1b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  myConversation: {fileID: 355082006}
-  day2Conversation: {fileID: 0}
-  day3Conversation: {fileID: 0}
+  myConversation: {fileID: 876332509}
+  day2Conversation: {fileID: 254273762}
+  day3Conversation: {fileID: 1532808224}
   day4Conversation: {fileID: 1808750160}
   day5Conversation: {fileID: 2053974231}
 --- !u!65 &238714549
@@ -2174,20 +2174,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 42
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":326.75,"yPos":455},"ID":35,"ParamActions":[],"TMPFontGUID":null,"Text":"Cash
-    in","parentUIDs":[34],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":37}],"EditorInfo":{"isRoot":false,"xPos":602.75,"yPos":451},"ID":36,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
-    wood","parentUIDs":[34],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":311,"yPos":926},"ID":40,"ParamActions":[],"TMPFontGUID":null,"Text":"Sell
-    fish","parentUIDs":[39],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":608,"yPos":925},"ID":41,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
-    fish","parentUIDs":[39],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"agreedToHelp","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":30},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34}],"EditorInfo":{"isRoot":true,"xPos":142,"yPos":-148},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello
-    Nomad.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-179.000671,"yPos":1488.99927},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Enjoy
-    your night!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31}],"EditorInfo":{"isRoot":false,"xPos":-34.25,"yPos":11},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"That
-    silly girl protesting by the crystal again...","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34}],"EditorInfo":{"isRoot":false,"xPos":-42.25,"yPos":167},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"She
-    doesn''t know what she is talking about","parentUIDs":[30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":33}],"EditorInfo":{"isRoot":false,"xPos":369.75,"yPos":11},"ID":32,"ParamActions":[],"TMPFontGUID":null,"Text":"If
-    you want something done right, do it yourself.","parentUIDs":[0,0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34}],"EditorInfo":{"isRoot":false,"xPos":418.75,"yPos":153},"ID":33,"ParamActions":[],"TMPFontGUID":null,"Text":"Either
-    you help me, or you should consider moving to a new village.","parentUIDs":[32],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":35},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":36}],"EditorInfo":{"isRoot":false,"xPos":430.75,"yPos":295},"ID":34,"ParamActions":[],"TMPFontGUID":null,"Text":"Have
-    you got stuff to give me?","parentUIDs":[0,31,33],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":39}],"EditorInfo":{"isRoot":false,"xPos":660.75,"yPos":542},"ID":37,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    will get that wood off you eventually boy!","parentUIDs":[36],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":39}],"EditorInfo":{"isRoot":false,"xPos":355.75,"yPos":594},"ID":38,"ParamActions":[],"TMPFontGUID":null,"Text":"Pleasure
-    doing business with you!","parentUIDs":[35],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":40},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":487,"yPos":739},"ID":39,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":382,"yPos":625},"ID":35,"ParamActions":[],"TMPFontGUID":null,"Text":"Cash
+    in","parentUIDs":[34],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":37}],"EditorInfo":{"isRoot":false,"xPos":658,"yPos":621},"ID":36,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
+    wood","parentUIDs":[34],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":366.25,"yPos":1096},"ID":40,"ParamActions":[],"TMPFontGUID":null,"Text":"Sell
+    fish","parentUIDs":[39],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":663.25,"yPos":1095},"ID":41,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
+    fish","parentUIDs":[39],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"agreedToHelp","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":30},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34}],"EditorInfo":{"isRoot":true,"xPos":197.25,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello
+    Nomad.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-123.750671,"yPos":1658.99927},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Enjoy
+    your night!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31}],"EditorInfo":{"isRoot":false,"xPos":21,"yPos":181},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"That
+    silly girl protesting by the crystal again...","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34}],"EditorInfo":{"isRoot":false,"xPos":13,"yPos":337},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"She
+    doesn''t know what she is talking about","parentUIDs":[30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":33}],"EditorInfo":{"isRoot":false,"xPos":425,"yPos":181},"ID":32,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    you want something done right, do it yourself.","parentUIDs":[0,0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34}],"EditorInfo":{"isRoot":false,"xPos":474,"yPos":323},"ID":33,"ParamActions":[],"TMPFontGUID":null,"Text":"Either
+    you help me, or you should consider moving to a new village.","parentUIDs":[32],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":35},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":36}],"EditorInfo":{"isRoot":false,"xPos":486,"yPos":465},"ID":34,"ParamActions":[],"TMPFontGUID":null,"Text":"Have
+    you got stuff to give me?","parentUIDs":[0,31,33],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":39}],"EditorInfo":{"isRoot":false,"xPos":716,"yPos":712},"ID":37,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    will get that wood off you eventually boy!","parentUIDs":[36],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":39}],"EditorInfo":{"isRoot":false,"xPos":411,"yPos":764},"ID":38,"ParamActions":[],"TMPFontGUID":null,"Text":"Pleasure
+    doing business with you!","parentUIDs":[35],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":40},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":542.25,"yPos":909},"ID":39,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
     you want to sell any me any fish?","parentUIDs":[37,38],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1}]}'
   saveVersion: 110
   DefaultName: 
@@ -3305,129 +3305,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8335952774014930261, guid: 1c262ca227653a946bdad48c4abc182c, type: 3}
   m_PrefabInstance: {fileID: 577342582}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &355082005
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 355082007}
-  - component: {fileID: 355082006}
-  m_Layer: 0
-  m_Name: OldManConvo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &355082006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355082005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
-  CurrentIDCounter: 39
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":510.8593,"yPos":-698.3805},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes","parentUIDs":[18,19],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":1140.85681,"yPos":-526.809937},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"No","parentUIDs":[18,19],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":781.288147,"yPos":-13.8540344},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Cash
-    in","parentUIDs":[13],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":1059.14465,"yPos":-13.9966125},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
-    wood","parentUIDs":[13],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":783.464233,"yPos":420.429535},"ID":36,"ParamActions":[],"TMPFontGUID":null,"Text":"Sell
-    fish","parentUIDs":[35],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1090.464,"yPos":422.429535},"ID":37,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
-    fish","parentUIDs":[35],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"agreedToHelp","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"hasSpoken","CheckType":0,"RequiredValue":true},{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"woodCount","CheckType":0,"RequiredValue":0},{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"agreedToHelp","CheckType":0,"RequiredValue":true}],"NodeUID":12},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"hasSpoken","CheckType":0,"RequiredValue":true},{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"woodCount","CheckType":2,"RequiredValue":0}],"NodeUID":13},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"hasSpoken","CheckType":0,"RequiredValue":true},{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"agreedToHelp","CheckType":0,"RequiredValue":false}],"NodeUID":18},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":30}],"EditorInfo":{"isRoot":true,"xPos":765.714233,"yPos":-994.571045},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1136.90442,"yPos":-428.098938},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Come
-    on. Think about it!","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":476.859436,"yPos":-548.098755},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"You''ll
-    do it, GREAT!","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":1079.85681,"yPos":-765.2853},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
-    not as young as I used to be.","parentUIDs":[30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1103.42688,"yPos":-1012.14246},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    have no wood, get chopping boy!","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":14},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":948.2882,"yPos":-172.572479},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"It
-    appears you have some wood. I will buy it at 1 coin per piece of wood.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":false,"xPos":1082.57312,"yPos":118.576141},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    will get that wood off you eventually boy!","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":false,"xPos":774.288147,"yPos":109.433319},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Come
-    back again if you have more resources for me.","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":396.464233,"yPos":-889.071045},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Have
-    you changed your mind and want to help me?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":1142.714,"yPos":-651.571045},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"Could
-    you cut down the rest of these trees for me?","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":470.714233,"yPos":-421.572174},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
-    Fachtna by the way.","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":474.714233,"yPos":-270.572174},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    don''t have a place to stay?","parentUIDs":[20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":23}],"EditorInfo":{"isRoot":false,"xPos":428.714233,"yPos":-116.571747},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"Hmmmmmmm.....","parentUIDs":[21],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":24}],"EditorInfo":{"isRoot":false,"xPos":374.714233,"yPos":3.42745972},"ID":23,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    can stay in this old tent of mine.","parentUIDs":[22],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":359.714233,"yPos":127.427124},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"Come
-    to me, and I''ll pay you for the wood you cut down. ","parentUIDs":[23],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34}],"EditorInfo":{"isRoot":false,"xPos":357.714233,"yPos":261.427765},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    can find me at the house at the top of the hill.","parentUIDs":[24],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":413.714233,"yPos":494.428375},"ID":26,"ParamActions":[],"TMPFontGUID":null,"Text":"One
-    more thing!","parentUIDs":[34],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":453.714233,"yPos":625.4287},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"The
-    bell signifies that it''s time to rest for the village.","parentUIDs":[26],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":469.714233,"yPos":757.4287},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Enjoy
-    your night!","parentUIDs":[27],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":980.464355,"yPos":-884.571045},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"Young
-    man, give me a hand!","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":26}],"EditorInfo":{"isRoot":false,"xPos":380.464233,"yPos":378.429565},"ID":34,"ParamActions":[],"TMPFontGUID":null,"Text":"Take
-    this fishing rod, and you can catch fish from the lake too!","parentUIDs":[25],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":36},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":37}],"EditorInfo":{"isRoot":false,"xPos":946.464355,"yPos":265.429352},"ID":35,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
-    you want to sell any me any fish?","parentUIDs":[16,17],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":791.464233,"yPos":532.4302},"ID":38,"ParamActions":[],"TMPFontGUID":null,"Text":"Come
-    back again if you have more resources for me.","parentUIDs":[36],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1}]}'
-  saveVersion: 110
-  DefaultName: 
-  DefaultSprite: {fileID: 0}
-  DefaultFont: {fileID: 0}
-  NodeSerializedDataList:
-  - {fileID: 429032762}
-  - {fileID: 429032761}
-  - {fileID: 429032760}
-  - {fileID: 429032759}
-  - {fileID: 429032758}
-  - {fileID: 429032757}
-  - {fileID: 429032756}
-  - {fileID: 429032755}
-  - {fileID: 429032754}
-  - {fileID: 429032753}
-  - {fileID: 429032752}
-  - {fileID: 429032751}
-  - {fileID: 429032750}
-  - {fileID: 429032749}
-  - {fileID: 429032748}
-  - {fileID: 429032747}
-  - {fileID: 429032746}
-  - {fileID: 429032745}
-  - {fileID: 429032744}
-  - {fileID: 429032743}
-  - {fileID: 429032742}
-  - {fileID: 429032741}
-  - {fileID: 429032740}
-  - {fileID: 429032739}
-  - {fileID: 429032738}
-  - {fileID: 429032737}
-  - {fileID: 429032736}
-  - {fileID: 429032735}
-  - {fileID: 429032734}
-  - {fileID: 0}
-  ContinueFont: {fileID: 0}
-  EndConversationFont: {fileID: 0}
-  Event:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 949284724}
-        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
-        m_MethodName: getFishingRod
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!4 &355082007
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355082005}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.27706, y: -0.558, z: -0.34040022}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 401302267}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &357808514
 GameObject:
   m_ObjectHideFlags: 0
@@ -3830,12 +3707,12 @@ Transform:
   m_GameObject: {fileID: 401302266}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -142.5, y: 45.77, z: -52.3}
+  m_LocalPosition: {x: -137.8, y: 45.77, z: 37.8}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 483512997}
-  - {fileID: 355082007}
+  - {fileID: 876332510}
   - {fileID: 254273761}
   - {fileID: 1532808223}
   - {fileID: 1808750161}
@@ -4693,8 +4570,8 @@ MonoBehaviour:
         m_CallState: 2
   NodeID: 0
   TMPFont: {fileID: 0}
-  Icon: {fileID: -693617474, guid: 6eef812f1284ff0418472590e7292315, type: 3}
-  Audio: {fileID: 8300000, guid: 2d00a80d3c53541059bb8d7078fbdc76, type: 3}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
 --- !u!1001 &433407049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6575,6 +6452,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845012680}
   m_CullTransparentMesh: 1
+--- !u!114 &876332509 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5231927378557415691, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+  m_PrefabInstance: {fileID: 1867848213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
+--- !u!4 &876332510 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1520220351262199887, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+  m_PrefabInstance: {fileID: 1867848213}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &884703548
 GameObject:
   m_ObjectHideFlags: 0
@@ -11259,29 +11152,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 53
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":527.5,"yPos":785},"ID":39,"ParamActions":[],"TMPFontGUID":null,"Text":"Cash
-    in","parentUIDs":[38],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":804.5,"yPos":788},"ID":40,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
-    wood","parentUIDs":[38],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":453,"yPos":1240},"ID":51,"ParamActions":[],"TMPFontGUID":null,"Text":"Sell
-    fish","parentUIDs":[50],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":808,"yPos":1233},"ID":52,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
-    fsh","parentUIDs":[50],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"agreedToHelp","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":33},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":true,"xPos":179,"yPos":-8},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello
-    Nomad.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-142.000671,"yPos":1629.99927},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Enjoy
-    your night!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":false,"xPos":-215.5,"yPos":13},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"This
-    arrangement is not working out.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":36}],"EditorInfo":{"isRoot":false,"xPos":-27.5,"yPos":224},"ID":32,"ParamActions":[],"TMPFontGUID":null,"Text":"Look,
-    I need you to work harder.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":43}],"EditorInfo":{"isRoot":false,"xPos":404.5,"yPos":71},"ID":33,"ParamActions":[],"TMPFontGUID":null,"Text":"How
-    is my favourite guy doing?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":47}],"EditorInfo":{"isRoot":false,"xPos":724.5,"yPos":-47},"ID":34,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    am not getting enough resources","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-429.5,"yPos":141},"ID":35,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    think it''s time for you to move on.","parentUIDs":[31],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":37}],"EditorInfo":{"isRoot":false,"xPos":-80.5,"yPos":391},"ID":36,"ParamActions":[],"TMPFontGUID":null,"Text":"You''re
-    not going to be able to afford a house here at that rate.","parentUIDs":[32],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":3.5,"yPos":546},"ID":37,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
-    you want to live in this village?","parentUIDs":[36],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":39},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":40}],"EditorInfo":{"isRoot":false,"xPos":658.5,"yPos":636},"ID":38,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
-    you have stuff to give me?","parentUIDs":[0,37,46,48],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":50}],"EditorInfo":{"isRoot":false,"xPos":496,"yPos":896},"ID":41,"ParamActions":[],"TMPFontGUID":null,"Text":"Pleasure
-    doing business with you!","parentUIDs":[39],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":50}],"EditorInfo":{"isRoot":false,"xPos":863,"yPos":910},"ID":42,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    will get that wood off you eventually boy!","parentUIDs":[40],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":44}],"EditorInfo":{"isRoot":false,"xPos":527,"yPos":177},"ID":43,"ParamActions":[],"TMPFontGUID":null,"Text":"Have
-    you noticed how big the crystal is getting?","parentUIDs":[33],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":45}],"EditorInfo":{"isRoot":false,"xPos":598,"yPos":277},"ID":44,"ParamActions":[],"TMPFontGUID":null,"Text":"This
-    crystal is gonna change the world!","parentUIDs":[43],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":46}],"EditorInfo":{"isRoot":false,"xPos":691,"yPos":378},"ID":45,"ParamActions":[],"TMPFontGUID":null,"Text":"Ignore
-    the villagers'' concerns about the environment.","parentUIDs":[44],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":910,"yPos":497},"ID":46,"ParamActions":[],"TMPFontGUID":null,"Text":"The
-    crystal will help us fix those later.","parentUIDs":[45],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":48}],"EditorInfo":{"isRoot":false,"xPos":906,"yPos":68},"ID":47,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    NEED YOU TO GIVE ME MORE! NOW!","parentUIDs":[34],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":1009,"yPos":185},"ID":48,"ParamActions":[],"TMPFontGUID":null,"Text":"Don''t
-    be a fool, the cryst.... I mean, the town needs them.","parentUIDs":[47],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":51},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":52}],"EditorInfo":{"isRoot":false,"xPos":659,"yPos":1081},"ID":50,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":545.75,"yPos":815},"ID":39,"ParamActions":[],"TMPFontGUID":null,"Text":"Cash
+    in","parentUIDs":[38],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":822.75,"yPos":818},"ID":40,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
+    wood","parentUIDs":[38],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":471.25,"yPos":1270},"ID":51,"ParamActions":[],"TMPFontGUID":null,"Text":"Sell
+    fish","parentUIDs":[50],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":826.25,"yPos":1263},"ID":52,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
+    fsh","parentUIDs":[50],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"agreedToHelp","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":33},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":true,"xPos":197.25,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello
+    Nomad.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-123.750671,"yPos":1659.99927},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Enjoy
+    your night!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":false,"xPos":-197.25,"yPos":43},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"This
+    arrangement is not working out.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":36}],"EditorInfo":{"isRoot":false,"xPos":-9.25,"yPos":254},"ID":32,"ParamActions":[],"TMPFontGUID":null,"Text":"Look,
+    I need you to work harder.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":43}],"EditorInfo":{"isRoot":false,"xPos":422.75,"yPos":101},"ID":33,"ParamActions":[],"TMPFontGUID":null,"Text":"How
+    is my favourite guy doing?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":47}],"EditorInfo":{"isRoot":false,"xPos":742.75,"yPos":-17},"ID":34,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    am not getting enough resources","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-411.25,"yPos":171},"ID":35,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    think it''s time for you to move on.","parentUIDs":[31],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":37}],"EditorInfo":{"isRoot":false,"xPos":-62.25,"yPos":421},"ID":36,"ParamActions":[],"TMPFontGUID":null,"Text":"You''re
+    not going to be able to afford a house here at that rate.","parentUIDs":[32],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":21.75,"yPos":576},"ID":37,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
+    you want to live in this village?","parentUIDs":[36],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":39},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":40}],"EditorInfo":{"isRoot":false,"xPos":676.75,"yPos":666},"ID":38,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
+    you have stuff to give me?","parentUIDs":[0,37,46,48],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":50}],"EditorInfo":{"isRoot":false,"xPos":514.25,"yPos":926},"ID":41,"ParamActions":[],"TMPFontGUID":null,"Text":"Pleasure
+    doing business with you!","parentUIDs":[39],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":50}],"EditorInfo":{"isRoot":false,"xPos":881.25,"yPos":940},"ID":42,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    will get that wood off you eventually boy!","parentUIDs":[40],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":44}],"EditorInfo":{"isRoot":false,"xPos":545.25,"yPos":207},"ID":43,"ParamActions":[],"TMPFontGUID":null,"Text":"Have
+    you noticed how big the crystal is getting?","parentUIDs":[33],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":45}],"EditorInfo":{"isRoot":false,"xPos":616.25,"yPos":307},"ID":44,"ParamActions":[],"TMPFontGUID":null,"Text":"This
+    crystal is gonna change the world!","parentUIDs":[43],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":46}],"EditorInfo":{"isRoot":false,"xPos":709.25,"yPos":408},"ID":45,"ParamActions":[],"TMPFontGUID":null,"Text":"Ignore
+    the villagers'' concerns about the environment.","parentUIDs":[44],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":928.25,"yPos":527},"ID":46,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+    crystal will help us fix those later.","parentUIDs":[45],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":48}],"EditorInfo":{"isRoot":false,"xPos":924.25,"yPos":98},"ID":47,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    NEED YOU TO GIVE ME MORE! NOW!","parentUIDs":[34],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":1027.25,"yPos":215},"ID":48,"ParamActions":[],"TMPFontGUID":null,"Text":"Don''t
+    be a fool, the cryst.... I mean, the town needs them.","parentUIDs":[47],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":51},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":52}],"EditorInfo":{"isRoot":false,"xPos":677.25,"yPos":1111},"ID":50,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
     you want to sell any me any fish?","parentUIDs":[41,42],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1}]}'
   saveVersion: 110
   DefaultName: 
@@ -11354,6 +11247,97 @@ RectTransform:
   m_AnchoredPosition: {x: -362, y: 451.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1584692857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1584692859}
+  - component: {fileID: 1584692858}
+  m_Layer: 0
+  m_Name: Test Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1584692858
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584692857}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 1403587348, guid: 173ea521d40674cb0a3d14b43c03b81f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2, y: 2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &1584692859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584692857}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.9997369, z: -0, w: 0.022938954}
+  m_LocalPosition: {x: 3030.86, y: 44.73, z: -3385.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1615660252
 GameObject:
   m_ObjectHideFlags: 0
@@ -13155,24 +13139,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 46
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":82,"yPos":-212},"ID":36,"ParamActions":[],"TMPFontGUID":null,"Text":"Cash
-    in","parentUIDs":[35],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":39}],"EditorInfo":{"isRoot":false,"xPos":403,"yPos":-217},"ID":37,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
-    wood","parentUIDs":[35],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":32,"yPos":269},"ID":44,"ParamActions":[],"TMPFontGUID":null,"Text":"Sell
-    fish","parentUIDs":[43],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":387,"yPos":266},"ID":45,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
-    fish","parentUIDs":[43],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"agreedToHelp","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":30},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":true,"xPos":252,"yPos":-964},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello
-    Nomad.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-69.00067,"yPos":673.999268},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Enjoy
-    your night!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":33}],"EditorInfo":{"isRoot":false,"xPos":-23,"yPos":-865},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    need to work harder than that if you want to earn this house.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":40}],"EditorInfo":{"isRoot":false,"xPos":268,"yPos":-833},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    are doing a great job! Keep those resources coming.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":570,"yPos":-928},"ID":32,"ParamActions":[],"TMPFontGUID":null,"Text":"WHAT
-    ARE YOU DOING? I NEED THOSE RESOURCES NOW!","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34}],"EditorInfo":{"isRoot":false,"xPos":-180,"yPos":-737},"ID":33,"ParamActions":[],"TMPFontGUID":null,"Text":"This
-    is your last chance, or you''d better go on to the next town, kid.","parentUIDs":[30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":false,"xPos":-131,"yPos":-554},"ID":34,"ParamActions":[],"TMPFontGUID":null,"Text":"There
-    will be no work for you here.","parentUIDs":[33],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":36},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":37}],"EditorInfo":{"isRoot":false,"xPos":267,"yPos":-365},"ID":35,"ParamActions":[],"TMPFontGUID":null,"Text":"Looking
-    to trade?","parentUIDs":[0,34,41,42],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":43}],"EditorInfo":{"isRoot":false,"xPos":60,"yPos":-86},"ID":38,"ParamActions":[],"TMPFontGUID":null,"Text":"Pleasure
-    doing business with you!","parentUIDs":[36],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":43}],"EditorInfo":{"isRoot":false,"xPos":436,"yPos":-75},"ID":39,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    will get that wood off you eventually boy!","parentUIDs":[37],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":259,"yPos":-702},"ID":40,"ParamActions":[],"TMPFontGUID":null,"Text":"You''re
-    doing great things for this town and me.","parentUIDs":[31],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":false,"xPos":267,"yPos":-554},"ID":41,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    think you''re going to deserve that house soon.","parentUIDs":[40],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":false,"xPos":657,"yPos":-780},"ID":42,"ParamActions":[],"TMPFontGUID":null,"Text":"If
-    you won''t get them for me, I''ll get them myself.","parentUIDs":[32],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":44},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":45}],"EditorInfo":{"isRoot":false,"xPos":239,"yPos":95},"ID":43,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":27.25,"yPos":774},"ID":36,"ParamActions":[],"TMPFontGUID":null,"Text":"Cash
+    in","parentUIDs":[35],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":39}],"EditorInfo":{"isRoot":false,"xPos":348.25,"yPos":769},"ID":37,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
+    wood","parentUIDs":[35],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-22.75,"yPos":1255},"ID":44,"ParamActions":[],"TMPFontGUID":null,"Text":"Sell
+    fish","parentUIDs":[43],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":332.25,"yPos":1252},"ID":45,"ParamActions":[],"TMPFontGUID":null,"Text":"Keep
+    fish","parentUIDs":[43],"SpeechUID":-1}],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"agreedToHelp","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":30},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":31},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":true,"xPos":197.25,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello
+    Nomad.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-123.750671,"yPos":1659.99927},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Enjoy
+    your night!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":33}],"EditorInfo":{"isRoot":false,"xPos":-77.75,"yPos":121},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    need to work harder than that if you want to earn this house.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":40}],"EditorInfo":{"isRoot":false,"xPos":213.25,"yPos":153},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    are doing a great job! Keep those resources coming.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":515.25,"yPos":58},"ID":32,"ParamActions":[],"TMPFontGUID":null,"Text":"WHAT
+    ARE YOU DOING? I NEED THOSE RESOURCES NOW!","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34}],"EditorInfo":{"isRoot":false,"xPos":-234.75,"yPos":249},"ID":33,"ParamActions":[],"TMPFontGUID":null,"Text":"This
+    is your last chance, or you''d better go on to the next town, kid.","parentUIDs":[30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":false,"xPos":-185.75,"yPos":432},"ID":34,"ParamActions":[],"TMPFontGUID":null,"Text":"There
+    will be no work for you here.","parentUIDs":[33],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":36},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":37}],"EditorInfo":{"isRoot":false,"xPos":212.25,"yPos":621},"ID":35,"ParamActions":[],"TMPFontGUID":null,"Text":"Looking
+    to trade?","parentUIDs":[0,34,41,42],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":43}],"EditorInfo":{"isRoot":false,"xPos":5.25,"yPos":900},"ID":38,"ParamActions":[],"TMPFontGUID":null,"Text":"Pleasure
+    doing business with you!","parentUIDs":[36],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":43}],"EditorInfo":{"isRoot":false,"xPos":381.25,"yPos":911},"ID":39,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    will get that wood off you eventually boy!","parentUIDs":[37],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":204.25,"yPos":284},"ID":40,"ParamActions":[],"TMPFontGUID":null,"Text":"You''re
+    doing great things for this town and me.","parentUIDs":[31],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":false,"xPos":212.25,"yPos":432},"ID":41,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    think you''re going to deserve that house soon.","parentUIDs":[40],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":35}],"EditorInfo":{"isRoot":false,"xPos":602.25,"yPos":206},"ID":42,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    you won''t get them for me, I''ll get them myself.","parentUIDs":[32],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":44},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":45}],"EditorInfo":{"isRoot":false,"xPos":184.25,"yPos":1081},"ID":43,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
     you want to sell any me any fish?","parentUIDs":[38,39],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1}]}'
   saveVersion: 110
   DefaultName: 
@@ -13831,6 +13815,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848955678}
   m_CullTransparentMesh: 1
+--- !u!1001 &1867848213
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 401302267}
+    m_Modifications:
+    - target: {fileID: 1520220351262199887, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.8388214
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520220351262199887, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.201568
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520220351262199887, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -56.93788
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520220351262199887, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520220351262199887, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520220351262199887, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520220351262199887, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520220351262199887, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520220351262199887, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520220351262199887, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996881499222335189, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
+      propertyPath: m_Name
+      value: OldManConvo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 911c09458afb7844ba83b1d5013311cb, type: 3}
 --- !u!1 &1876355292
 GameObject:
   m_ObjectHideFlags: 0
@@ -14593,8 +14634,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 30
-  json: '{"Options":[],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"agreedToHelp","BoolValue":false}],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":310.25,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"No
-    dialogue given yet.......","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-10.7506714,"yPos":1659.99927},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Enjoy
+  json: '{"Options":[],"Parameters":[{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"hasSpoken","BoolValue":false},{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"woodCount","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"agreedToHelp","BoolValue":false}],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":197.25,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"No
+    dialogue given yet.......","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-123.750671,"yPos":1659.99927},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Enjoy
     your night!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Fachtna","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
@@ -16152,6 +16193,7 @@ SceneRoots:
   - {fileID: 681130257}
   - {fileID: 1717951783}
   - {fileID: 1628556026}
+  - {fileID: 1584692859}
   - {fileID: 268386091}
   - {fileID: 1443315449}
   - {fileID: 474273960}
