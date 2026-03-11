@@ -5007,9 +5007,9 @@ MonoBehaviour:
   backgroundMusic: {fileID: 8300000, guid: 420baccea0af3b348b05bd596a671b3c, type: 3}
   VillageBad: {fileID: 0}
   VillageBad2: {fileID: 0}
-  Forest: {fileID: 0}
-  ForestBad: {fileID: 8300000, guid: 20032dbf6f8fe4608af0a04e7d336b39, type: 3}
-  ForestBad2: {fileID: 0}
+  Forest: {fileID: 8300000, guid: 5305b1a238b1c4af5b21040eaecbc235, type: 3}
+  ForestBad: {fileID: 8300000, guid: b86ae9e4b5775494f894b6ff359a0b14, type: 3}
+  ForestBad2: {fileID: 8300000, guid: e12ad509b1b7a4fcd8fa0cd09eceb8fd, type: 3}
 --- !u!82 &884703550
 AudioSource:
   m_ObjectHideFlags: 0
