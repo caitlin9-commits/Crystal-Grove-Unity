@@ -6,11 +6,11 @@ public class MusicManager : MonoBehaviour
     private static MusicManager myMusicManager;
     private AudioSource audioSource;
     public AudioClip backgroundMusic;
-    public AudioClip VillageBad;
-    public AudioClip VillageBad2;
-    public AudioClip Forest;
-    public AudioClip ForestBad;
-    public AudioClip ForestBad2;
+    public AudioClip Village2;
+    public AudioClip Village3;
+    public AudioClip ForestMusic;
+    public AudioClip Forest2;
+    public AudioClip Forest3;
 
 
 
