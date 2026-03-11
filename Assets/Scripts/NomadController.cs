@@ -90,7 +90,7 @@ public class NomadController : MonoBehaviour
         if (canChop && Input.GetKey(KeyCode.Space))
         {
             chopSoundCounter++;
-            if (chopSoundCounter > 300)
+            if (chopSoundCounter > 104)
             {
                 SoundEffectManager.Play("Chopping");
                 chopSoundCounter = 0;
@@ -286,8 +286,10 @@ public class NomadController : MonoBehaviour
         canWalk = false;
         myAnim.SetBool("Casting", true);
         await Task.Delay(1000); 
+        SoundEffectManager.Play("Fishing");
         myAnim.SetBool("Fishing", true);
         await Task.Delay(7000); 
+        SoundEffectManager.Play("Success");
         myAnim.SetBool("Casting", false);
         myAnim.SetBool("Fishing", false);
         GlobalValues.changeFishAmount(1);

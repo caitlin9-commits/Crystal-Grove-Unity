@@ -34,6 +34,7 @@ public class ScreenFader : MonoBehaviour
     public async Task FadeOut()
     {
         await Fade(1);
+        SoundEffectManager.Play("NewDay");
     }
     public async Task FadeIn()
     {
