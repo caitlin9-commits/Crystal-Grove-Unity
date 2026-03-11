@@ -17,6 +17,8 @@ public class GlobalValues : MonoBehaviour
     private bool spokeToOldMan;
 
 
+    public GameObject menuCanvas;
+
 
     // public TMP_Text treeCutText;
     public TMP_Text woodAmountText;
@@ -58,8 +60,16 @@ public class GlobalValues : MonoBehaviour
         woodAmountText.text = "";//woodAmount.ToString();
         coinAmountText.text = coinsAmount.ToString();
         instructionText.text = "";
+        menuCanvas.SetActive(false);
     }
-
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            menuCanvas.SetActive(!menuCanvas.activeSelf);
+            Debug.Log("MENU CLICKED");
+        }
+    }
 
     public static void treesCutIncrememt()
     {
@@ -140,5 +150,6 @@ public class GlobalValues : MonoBehaviour
     {
         myGlobalValues.instructionText.text = "";
     }
+
 
 }
