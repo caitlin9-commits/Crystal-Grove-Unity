@@ -131,6 +131,11 @@ public class NomadController : MonoBehaviour
                 Fish();    
         }
 
+        if (Input.GetKey(KeyCode.B))
+        {
+            CharacterManager.setCharacterPositionsDay1();  
+        }
+
 
 
         // SLEEP
