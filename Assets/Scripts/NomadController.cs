@@ -25,6 +25,7 @@ public class NomadController : MonoBehaviour
     public bool fading;
 
     private int chopSoundCounter;
+    private int walkSoundCounter;
 
     public Animator myAnim;
     [SerializeField] bool backTurned;
@@ -36,6 +37,7 @@ public class NomadController : MonoBehaviour
         myAnim = gameObject.GetComponent<Animator>();
 
         chopSoundCounter = 300;
+        walkSoundCounter = 300;
         canWalk = true;
         canPlant = true;
         canSleep = false;
@@ -85,6 +87,18 @@ public class NomadController : MonoBehaviour
             myAnim.SetBool("BackTurned", false);
             myAnim.SetFloat("MoveSpeed", 0);
         }
+
+        // Walking
+        if (canWalk && Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            walkSoundCounter++;
+            if (walkSoundCounter > 90)
+            {
+                SoundEffectManager.Play("Footsteps");
+                walkSoundCounter = 0;
+            }
+        }
+
 
         // CHOPPING
         if (canChop && Input.GetKey(KeyCode.Space))
