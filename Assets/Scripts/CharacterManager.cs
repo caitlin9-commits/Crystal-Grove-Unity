@@ -40,8 +40,8 @@ public class CharacterManager : MonoBehaviour
         Vector3 FachtnaCoords = new Vector3(3036.1f, 44.73f, -3405.6f);
         myCharacterManager.Fachtna.transform.position = FachtnaCoords;
 
-        Vector3 BebhinnCoords = new Vector3(3558f, 30.1f, -3202.5f);
-        myCharacterManager.Bebhinn.transform.position = BebhinnCoords;
+        // Vector3 BebhinnCoords = new Vector3(3558f, 30.1f, -3202.5f);
+        // myCharacterManager.Bebhinn.transform.position = BebhinnCoords;
     }
 
     //Day 3 character positions
