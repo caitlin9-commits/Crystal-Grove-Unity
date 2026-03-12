@@ -246,6 +246,12 @@ public class TimeManager : MonoBehaviour
         myTimeManager.Hours = 5;
         myTimeManager.Days++;
 
+        if(myTimeManager.Days == 2){CharacterManager.setCharacterPositionsDay2(); }
+        else if(myTimeManager.Days == 3){CharacterManager.setCharacterPositionsDay3(); }
+        else if(myTimeManager.Days == 4){CharacterManager.setCharacterPositionsDay4(); }
+        else if(myTimeManager.Days == 5){CharacterManager.setCharacterPositionsDay5(); }
+
+
         myTimeManager.displayDay();
         myTimeManager.displayTime();
         myTimeManager.clockActive = true;
