@@ -34,6 +34,12 @@ public class Tree : MonoBehaviour
 
     void Update()
     {
+
+        int axeLevel = InventoryManager.getAxeLevel();
+        if(axeLevel == 2){chopDamagePerSecond=30f;}
+        else if(axeLevel == 3){chopDamagePerSecond=40f;}
+        else if(axeLevel == 4){chopDamagePerSecond=50f;}
+
         // If nomad is nearby AND chopping → take damage
         if (nomad != null && nomad.chopping)
         {

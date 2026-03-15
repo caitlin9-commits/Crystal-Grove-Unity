@@ -325,6 +325,28 @@ public class NomadController : MonoBehaviour
 
     async void Fish()
     {
+
+        int rodLevel = InventoryManager.getRodLevel();
+
+        int fishingWaitTime = 7000;
+        int trashLikelihood = 3;
+
+        if(rodLevel == 2)
+        {
+            fishingWaitTime = 5500;
+            trashLikelihood = 5;
+        }
+        else if(rodLevel == 3)
+        {
+            fishingWaitTime = 3000;
+            trashLikelihood = 7;
+        }
+        else if(rodLevel == 4)
+        {
+            fishingWaitTime = 1500;
+            trashLikelihood = 10;
+        }
+
         canWalk = false;
         myAnim.SetBool("Casting", true);
         await Task.Delay(1000); 
@@ -334,6 +356,7 @@ public class NomadController : MonoBehaviour
         SoundEffectManager.Play("Success");
         myAnim.SetBool("Casting", false);
         myAnim.SetBool("Fishing", false);
+
 
         int random = Random.Range(0,3);
 
