@@ -352,13 +352,13 @@ public class NomadController : MonoBehaviour
         await Task.Delay(1000); 
         SoundEffectManager.Play("Fishing");
         myAnim.SetBool("Fishing", true);
-        await Task.Delay(7000); 
+        await Task.Delay(fishingWaitTime); 
         SoundEffectManager.Play("Success");
         myAnim.SetBool("Casting", false);
         myAnim.SetBool("Fishing", false);
 
 
-        int random = Random.Range(0,3);
+        int random = Random.Range(0,trashLikelihood);
 
         if (random == 2)
         {
