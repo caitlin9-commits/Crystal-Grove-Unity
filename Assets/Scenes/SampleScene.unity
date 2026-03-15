@@ -7386,7 +7386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Fachtna: {fileID: 401302266}
-  Bebhinn: {fileID: 0}
+  Bebhinn: {fileID: 1446681551}
 --- !u!1 &1007597404 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7005306515523116677, guid: a9501bbbbe5eeac47860272fe2aa7612, type: 3}
@@ -10337,6 +10337,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445867701}
   m_CullTransparentMesh: 1
+--- !u!1 &1446681551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1378373282371748206, guid: 70fad744a54508140ba3f3c8aa059180, type: 3}
+  m_PrefabInstance: {fileID: 202440344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1462936667
 PrefabInstance:
   m_ObjectHideFlags: 0
