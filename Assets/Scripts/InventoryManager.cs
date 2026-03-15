@@ -126,6 +126,8 @@ public class InventoryManager : MonoBehaviour
 
     public static void upgradeAxe()
     {
+        Debug.Log ("Upgrading axe " );
+
         myInventoryManager.axeLevel++;
         if(myInventoryManager.axeLevel == 2){myInventoryManager.axeImage.sprite = myInventoryManager.copperAxe;}
         if(myInventoryManager.axeLevel == 3){myInventoryManager.axeImage.sprite = myInventoryManager.goldAxe;}

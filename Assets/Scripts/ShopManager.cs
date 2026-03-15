@@ -145,6 +145,7 @@ public class ShopManager : MonoBehaviour
         costText.text = itemCost.ToString();
 
         Button btn = option.GetComponent<Button>();
+        btn.onClick.RemoveAllListeners();
 		btn.onClick.AddListener(()=>TaskOnClick(number,itemName,itemCost));
 
 	}
