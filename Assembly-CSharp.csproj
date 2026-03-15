@@ -53,6 +53,7 @@
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableConversation.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\Connection.cs" />
     <Compile Include="Assets\Scripts\OldManController.cs" />
+    <Compile Include="Assets\Scripts\ShopManager.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\Parameter.cs" />
     <Compile Include="Assets\Scripts\GlobalValues.cs" />
     <Compile Include="Assets\DialogueEditor\Example\ExampleInputManager.cs" />

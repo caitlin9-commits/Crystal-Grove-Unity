@@ -252,9 +252,14 @@ public class TimeManager : MonoBehaviour
         else if(myTimeManager.Days == 5){CharacterManager.setCharacterPositionsDay5(); }
 
 
-        myTimeManager.displayDay();
-        myTimeManager.displayTime();
-        myTimeManager.clockActive = true;
+        if(myTimeManager.Days<6)
+        {
+            myTimeManager.displayDay();
+            myTimeManager.displayTime();
+            myTimeManager.clockActive = true;    
+        }
+
+        
 
     }
 
