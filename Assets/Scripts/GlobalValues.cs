@@ -7,29 +7,18 @@ public class GlobalValues : MonoBehaviour
 {
 
     private static GlobalValues myGlobalValues;
-
-
     private int treesCut;
-    private int woodAmount;
-    private int fishAmount;
-    private int coinsAmount;
-    private int pineconeAmount;
+
+    private bool hasWaterWheel;
+    private bool hasWindmill;
+   
     private bool spokeToOldMan;
 
 
     public GameObject menuCanvas;
+    public GameObject shopCanvas;
 
 
-    // public TMP_Text treeCutText;
-    public TMP_Text woodAmountText;
-    public Image woodImage;
-    public TMP_Text fishAmountText;
-    public Image fishImage;
-
-    public TMP_Text pineconeAmountText;
-    public Image pineconeImage;
-
-    public TMP_Text coinAmountText;
     public TMP_Text instructionText;
 
     private void Awake()
@@ -47,20 +36,15 @@ public class GlobalValues : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        treesCut = 0;
-        woodAmount = 0;
-        coinsAmount = 0;
-
         // treeCutText.text = treesCut.ToString();
-        pineconeImage.enabled = false;
-        pineconeAmountText.text = "";
-        fishImage.enabled = false;
-        fishAmountText.text = "";
-        woodImage.enabled = false;
-        woodAmountText.text = "";//woodAmount.ToString();
-        coinAmountText.text = coinsAmount.ToString();
+        treesCut = 0;
+        
+        hasWaterWheel = false;
+        hasWindmill = false;
+
         instructionText.text = "";
         menuCanvas.SetActive(false);
+        shopCanvas.SetActive(false);
     }
     void Update()
     {
@@ -69,6 +53,17 @@ public class GlobalValues : MonoBehaviour
             menuCanvas.SetActive(!menuCanvas.activeSelf);
             Debug.Log("MENU CLICKED");
         }
+
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            shopCanvas.SetActive(!shopCanvas.activeSelf);
+            Debug.Log("MENU CLICKED");
+        }
+    }
+
+    public static void toggleShop(bool showShop)
+    {
+        myGlobalValues.shopCanvas.SetActive(showShop);
     }
 
     public static void treesCutIncrememt()
@@ -82,61 +77,26 @@ public class GlobalValues : MonoBehaviour
         return myGlobalValues.treesCut;
     }
 
-    public static int getWoodAmount()
+    public static bool checkForWaterwheel()
     {
-        return myGlobalValues.woodAmount;
-    }
-    public static int getPineconeAmount()
-    {
-        return myGlobalValues.pineconeAmount;
-    }
-    public static int getCoinAmount()
-    {
-        return myGlobalValues.coinsAmount;
+        return myGlobalValues.hasWaterWheel;
     }
 
-
-
-    public static void changeWoodAmount(int change)
+    public static bool checkForWindmill()
     {
-        myGlobalValues.woodAmount+=change;
-        myGlobalValues.woodAmountText.text = myGlobalValues.woodAmount.ToString();
-        myGlobalValues.woodImage.enabled = true;
+        return myGlobalValues.hasWindmill;
     }
 
-    public static void changePineconeAmount(int change)
+    public static void buyWaterwheel()
     {
-        myGlobalValues.pineconeAmount+=change;
-
-        myGlobalValues.pineconeAmountText.text = myGlobalValues.pineconeAmount==0?"":myGlobalValues.pineconeAmount.ToString();
-        myGlobalValues.pineconeImage.enabled = myGlobalValues.pineconeAmount==0?false:true;
+        myGlobalValues.hasWaterWheel = true;
+    }
+    public static void buyWindmill()
+    {
+        myGlobalValues.hasWindmill = true;
     }
 
-    public static void changeFishAmount(int change)
-    {
-        myGlobalValues.fishAmount+=change;
-
-        myGlobalValues.fishAmountText.text = myGlobalValues.fishAmount==0?"":myGlobalValues.fishAmount.ToString();
-        myGlobalValues.fishImage.enabled = myGlobalValues.fishAmount==0?false:true;
-    }
-
-    public static void changeCoinsmount(int change)
-    {
-        myGlobalValues.coinsAmount+=change;
-        myGlobalValues.coinAmountText.text = myGlobalValues.coinsAmount.ToString();
-
-    }
     
-
-    public static void sellWood()
-    {
-        myGlobalValues.coinsAmount+=myGlobalValues.woodAmount;
-        myGlobalValues.woodAmount=0;
-        myGlobalValues.woodImage.enabled = false;
-        myGlobalValues.woodAmountText.text = "";
-        myGlobalValues.coinAmountText.text = myGlobalValues.coinsAmount.ToString();
-    }
-   
     public static void setInstructionText(string keyAction,string key, string action)
     {
         myGlobalValues.instructionText.text = keyAction+" '"+key+"' to "+action;

@@ -27,7 +27,7 @@ public class PineConeController : MonoBehaviour
     {
         Destroy(gameObject);
         GlobalValues.clearInstructionText();
-        GlobalValues.changePineconeAmount(1);
+        InventoryManager.changePineconeAmount(1);
     }
 
     

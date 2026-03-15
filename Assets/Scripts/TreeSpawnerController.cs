@@ -224,7 +224,7 @@ public class TreeSpawner : MonoBehaviour
             isChopped = false
         });
             
-        GlobalValues.changePineconeAmount(-1);
+        InventoryManager.changePineconeAmount(-1);
 
 
         

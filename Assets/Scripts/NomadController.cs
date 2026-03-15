@@ -21,6 +21,7 @@ public class NomadController : MonoBehaviour
     public bool canSleep;
     public bool canPlant;
     public bool canFish;
+    public bool canRecycle;
 
     public bool fading;
 
@@ -41,6 +42,7 @@ public class NomadController : MonoBehaviour
         canWalk = true;
         canPlant = true;
         canSleep = false;
+        canRecycle = false;
         fading = false;
         myNomad = this;
         fainted = false;
@@ -131,6 +133,12 @@ public class NomadController : MonoBehaviour
                 Fish();    
         }
 
+        if (canRecycle && Input.GetKey(KeyCode.R))
+        {
+                canRecycle = false;
+                Recycle();    
+        }
+
 
 
         // SLEEP
@@ -196,9 +204,12 @@ public class NomadController : MonoBehaviour
                 GlobalValues.setInstructionText("Go to","Old Man","get rod for fishing");    
             }
 
-
-            
-
+        }
+        
+        if (other.CompareTag("bin"))
+        {
+            canRecycle = true;
+            GlobalValues.setInstructionText("Press","R","recycle");     
         }
     }
 
@@ -220,6 +231,12 @@ public class NomadController : MonoBehaviour
         if (other.CompareTag("water"))
         {
             canFish = false;
+            GlobalValues.clearInstructionText();
+        }
+
+        if (other.CompareTag("bin"))
+        {
+            canRecycle = false;
             GlobalValues.clearInstructionText();
         }
     }
@@ -260,17 +277,28 @@ public class NomadController : MonoBehaviour
         TimeManager.sleep();
         await ScreenFader.Instance.FadeIn();
         fading = false;
-        canWalk = true;
-        if(fainted)
+
+        if(TimeManager.getDay() == 6)
         {
-            GlobalValues.setInstructionTextString("You fainted.");
-            fainted = false;
+            GlobalValues.setInstructionTextString("GAME OVER");
         }
+        else
+        {
+            
+            canWalk = true;
+            if(fainted)
+            {
+                GlobalValues.setInstructionTextString("You fainted.");
+                fainted = false;
+            }    
+        }
+
+        
     }
 
     async void PlantPinecone()
     {
-        int pineconeAmount = GlobalValues.getPineconeAmount();
+        int pineconeAmount = InventoryManager.getPineconeAmount();
         if (pineconeAmount > 0)
         {
 
@@ -306,12 +334,46 @@ public class NomadController : MonoBehaviour
         SoundEffectManager.Play("Success");
         myAnim.SetBool("Casting", false);
         myAnim.SetBool("Fishing", false);
-        GlobalValues.changeFishAmount(1);
-        GlobalValues.setInstructionTextString("You caught a fish.");
+
+        int random = Random.Range(0,3);
+
+        if (random == 2)
+        {
+            InventoryManager.changeTrashAmount(1);
+            GlobalValues.setInstructionTextString("You found some trash.");
+        }
+        else
+        {
+            InventoryManager.changeFishAmount(1);
+            GlobalValues.setInstructionTextString("You caught a fish.");    
+        }
+
+        
         canFish = true;
         canWalk = true;
         await Task.Delay(2000); 
         GlobalValues.clearInstructionText();
+    }
+
+    async void Recycle()
+    {
+        int trashAmount = InventoryManager.getTrashAmount();
+
+        if (trashAmount == 0)
+        {
+            GlobalValues.setInstructionTextString("You do not have any trash to recycle.");    
+        }
+        else
+        {
+            InventoryManager.changeTrashAmount(-trashAmount);
+            InventoryManager.changeRecycledAmount(trashAmount);
+            GlobalValues.setInstructionTextString("You recycled your trash.");
+            canRecycle = false;
+            await Task.Delay(2000); 
+            GlobalValues.clearInstructionText();
+        }
+
+        
     }
 
 }

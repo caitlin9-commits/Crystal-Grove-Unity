@@ -246,9 +246,14 @@ public class TimeManager : MonoBehaviour
         myTimeManager.Hours = 5;
         myTimeManager.Days++;
 
-        myTimeManager.displayDay();
-        myTimeManager.displayTime();
-        myTimeManager.clockActive = true;
+        if(myTimeManager.Days<6)
+        {
+            myTimeManager.displayDay();
+            myTimeManager.displayTime();
+            myTimeManager.clockActive = true;    
+        }
+
+        
 
     }
 

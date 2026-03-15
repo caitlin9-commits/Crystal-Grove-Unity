@@ -9,6 +9,7 @@ TagManager:
   - Tent
   - terrain
   - water
+  - bin
   layers:
   - Default
   - TransparentFX

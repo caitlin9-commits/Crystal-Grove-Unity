@@ -48,7 +48,7 @@ public class ConversationStarter : MonoBehaviour
     private void ConversationStart()
     {
         NomadController.setWalk(false);
-        int woodAmount = GlobalValues.getWoodAmount();
+        int woodAmount = InventoryManager.getWoodAmount();
         bool agreedToHelp = OldManController.checkIfAgreedToHelp();
 
         NPCConversation todayConversation;
