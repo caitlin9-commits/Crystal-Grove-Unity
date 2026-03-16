@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ce5e147ff694d054e84c5b015ba0b232
+guid: e4c790b5582b24357a6acb09d71a79e5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,27 +93,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shop2 UI_0
+      name: Shop2 UI 1_0
       rect:
         serializedVersion: 2
-        x: 182
+        x: 181
         y: 154
-        width: 2077
+        width: 2078
         height: 1106
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f60bf6443f942a640be23983281f8bf7
-      internalID: -705709278
+      spriteID: a59b48ab015ee432d85c281545b0def1
+      internalID: 1145519615
       vertices: []
       indices: 
       edges: []
@@ -122,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cb1f4c70a5480e04bb2bcbe0357b02b4
+    spriteID: 88914dbbc70274542832223140aa18af
     internalID: 0
     vertices: []
     indices: 
@@ -132,9 +145,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Shop2 UI_0: -705709278
+      Shop2 UI 1_0: 1145519615
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
