@@ -68,6 +68,7 @@ public class TimeManager : MonoBehaviour
         displayDay();
         displayTime(); 
 
+        if(Days == 1){CharacterManager.setCharacterPositionsDay1(); }
     }
 
 
