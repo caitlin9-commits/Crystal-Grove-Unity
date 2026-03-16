@@ -54,8 +54,8 @@ public class CharacterManager : MonoBehaviour
 
     //Day 1 character positions
     public static void setCharacterPositionsDay1()
-    {
-        Vector3 FachtnaCoords = new Vector3(3168.08f, 45.77f, -3392.9f); //beside house in forest
+    { 
+        Vector3 FachtnaCoords = new Vector3(2951.7f, 45.58f, -3401.8f);//beside bridge in forest
         myCharacterManager.Fachtna.transform.position = FachtnaCoords;
 
 
@@ -123,7 +123,7 @@ public class CharacterManager : MonoBehaviour
         Vector3 FachtnaCoords = new Vector3(2794.88f, 45.77f, -3438.43f); //beside house in forest
         myCharacterManager.Fachtna.transform.position = FachtnaCoords;
 
-        Vector3 BebhinnCoords = new Vector3(3560.92f, 33.14f, -3357.12f);
+        Vector3 BebhinnCoords = new Vector3(2951.7f, 45.58f, -3401.8f);//beside bridge in forest
         myCharacterManager.Bebhinn.transform.position = BebhinnCoords;
     }
 
@@ -135,7 +135,8 @@ public class CharacterManager : MonoBehaviour
         Vector3 FachtnaCoords = new Vector3(2794.88f, 45.77f, -3438.43f); //beside house in forest
         myCharacterManager.Fachtna.transform.position = FachtnaCoords;
 
-        Vector3 BebhinnCoords = new Vector3(3560.92f, 33.14f, -3357.12f);
+
+        Vector3 BebhinnCoords = new Vector3(2951.7f, 45.58f, -3401.8f);//beside bridge in forest
         myCharacterManager.Bebhinn.transform.position = BebhinnCoords;
     }
 
@@ -146,6 +147,10 @@ public class CharacterManager : MonoBehaviour
     {
         Vector3 FachtnaCoords = new Vector3(2794.88f, 45.77f, -3438.43f); //beside house in forest
         myCharacterManager.Fachtna.transform.position = FachtnaCoords;
+
+
+        Vector3 BebhinnCoords = new Vector3(2951.7f, 45.58f, -3401.8f);//beside bridge in forest
+        myCharacterManager.Bebhinn.transform.position = BebhinnCoords;
     }
 
 
@@ -155,5 +160,9 @@ public class CharacterManager : MonoBehaviour
     {
         Vector3 FachtnaCoords = new Vector3(2794.88f, 45.77f, -3438.43f);
         myCharacterManager.Fachtna.transform.position = FachtnaCoords;
+
+
+        Vector3 BebhinnCoords = new Vector3(2951.7f, 45.58f, -3401.8f);//beside bridge in forest
+        myCharacterManager.Bebhinn.transform.position = BebhinnCoords;
     }
 }

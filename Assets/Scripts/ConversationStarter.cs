@@ -68,7 +68,7 @@ public class ConversationStarter : MonoBehaviour
         ConversationManager.Instance.SetBool("agreedToHelp",agreedToHelp);
         ConversationManager.Instance.SetInt("woodCount",woodAmount);
 
-        ConversationManager.Instance.SetInt("happinessIndex",1);
+        ConversationManager.Instance.SetInt("environmentHealth",1);
 
     }
 
