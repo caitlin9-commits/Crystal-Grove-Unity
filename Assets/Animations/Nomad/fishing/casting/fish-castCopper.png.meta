@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7c547b6e3b64a064fa65948eac29a690
+guid: 59dd62fd12b1346deb14d50843cb914a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,23 +110,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Axe-copper_0
+      name: fish-castCopper_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 9
-      pivot: {x: 0.44067994, y: 0.50000006}
+        x: 8
+        y: 32
+        width: 32
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95053d294761b904a92a14859becefea
-      internalID: 289216834
+      spriteID: a88baf1ecd5cc43c2bde40b69b5f3334
+      internalID: 1833462237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish-castCopper_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 32
+        width: 32
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8d335d5fdd7440b9f4231edb54137c
+      internalID: 520850343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish-castCopper_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 32
+        width: 32
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14f2e321d11e4372bd96a3af082d5d8
+      internalID: -946415045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish-castCopper_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 32
+        width: 32
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3eb40f482c344c5f85bd1f474185ffc
+      internalID: -1855058370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish-castCopper_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 32
+        width: 32
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a46bd7793d7049bf9723910c539bc33
+      internalID: 237138214
       vertices: []
       indices: 
       edges: []
@@ -135,7 +223,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2dad704bc910fab4bb36d64da5681966
+    spriteID: 3a31cffdbae8b4c01ac989fdf9c0f5f0
     internalID: 0
     vertices: []
     indices: 
@@ -145,9 +233,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Axe-copper_0: 289216834
+      fish-castCopper_0: 1833462237
+      fish-castCopper_1: 520850343
+      fish-castCopper_2: -946415045
+      fish-castCopper_3: -1855058370
+      fish-castCopper_4: 237138214
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

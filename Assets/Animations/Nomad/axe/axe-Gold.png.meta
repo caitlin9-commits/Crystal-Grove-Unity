@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7c547b6e3b64a064fa65948eac29a690
+guid: c0ac3d82f77e143a48d31928074a4e95
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,23 +110,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Axe-copper_0
+      name: axe-Gold_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 9
-      pivot: {x: 0.44067994, y: 0.50000006}
+        x: 16
+        y: 32
+        width: 22
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95053d294761b904a92a14859becefea
-      internalID: 289216834
+      spriteID: aa7a1612ee1c546f4aa2adfb2f511380
+      internalID: 701967850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axe-Gold_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 20
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497176b60aa754ecba1d5bb52c9421cf
+      internalID: 1057793329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axe-Gold_2
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 32
+        width: 19
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9f50f0bd3d349eeba1e2cab8a7dd16
+      internalID: 300839500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axe-Gold_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 32
+        width: 20
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07f144f8400f4e0986a7511e35b2c67
+      internalID: 1455556439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axe-Gold_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 32
+        width: 22
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec83c0d94327e4153a79589d3374c930
+      internalID: -1149332202
       vertices: []
       indices: 
       edges: []
@@ -135,7 +223,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2dad704bc910fab4bb36d64da5681966
+    spriteID: 197774e47017243dcb56020d8d0f8f7c
     internalID: 0
     vertices: []
     indices: 
@@ -145,9 +233,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1.0,"y":1.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Axe-copper_0: 289216834
+      axe-Gold_0: 701967850
+      axe-Gold_1: 1057793329
+      axe-Gold_2: 300839500
+      axe-Gold_3: 1455556439
+      axe-Gold_4: -1149332202
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
