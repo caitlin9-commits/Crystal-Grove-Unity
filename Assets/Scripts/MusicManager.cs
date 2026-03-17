@@ -34,10 +34,10 @@ public class MusicManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(backgroundMusic != null)
+        if(ForestMusic != null)
         {
             Debug.Log("THERE IS MUSIC");
-            PlayBackgroundMusic(false,backgroundMusic);
+            PlayBackgroundMusic(false,ForestMusic);
         }
         else
         {
@@ -50,6 +50,20 @@ public class MusicManager : MonoBehaviour
     // {
         
     // }
+
+    public static void PlayNewSong(string songName)
+    {
+        AudioClip audioClip = null;
+        if(songName == "ForestGood"){audioClip=myMusicManager.ForestMusic;}
+        else if(songName == "ForestNeutral"){audioClip=myMusicManager.Forest2;}
+        else if(songName == "ForestBad"){audioClip=myMusicManager.Forest3;}
+        else if(songName == "VillageGood"){audioClip=myMusicManager.backgroundMusic;}
+        else if(songName == "VillageNeutral"){audioClip=myMusicManager.Village2;}
+        else if(songName == "VillageBad"){audioClip=myMusicManager.Village3;}
+
+
+        PlayBackgroundMusic(true,audioClip);
+    }
 
     public static void PlayBackgroundMusic(bool resetSong, AudioClip audioClip = null)
     {

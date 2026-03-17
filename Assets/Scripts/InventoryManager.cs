@@ -132,6 +132,8 @@ public class InventoryManager : MonoBehaviour
         if(myInventoryManager.axeLevel == 2){myInventoryManager.axeImage.sprite = myInventoryManager.copperAxe;}
         if(myInventoryManager.axeLevel == 3){myInventoryManager.axeImage.sprite = myInventoryManager.goldAxe;}
         if(myInventoryManager.axeLevel == 4){myInventoryManager.axeImage.sprite = myInventoryManager.crystalAxe;}
+
+        NomadController.setAxe(myInventoryManager.axeLevel);
     }
 
     public static void upgradeRod()
@@ -140,6 +142,8 @@ public class InventoryManager : MonoBehaviour
         if(myInventoryManager.rodLevel == 2){myInventoryManager.rodImage.sprite = myInventoryManager.copperRod;}
         if(myInventoryManager.rodLevel == 3){myInventoryManager.rodImage.sprite = myInventoryManager.goldRod;}
         if(myInventoryManager.rodLevel == 4){myInventoryManager.rodImage.sprite = myInventoryManager.crystalRod;}
+
+        NomadController.setRod(myInventoryManager.rodLevel);
     }
 
     public static int getWoodAmount()
@@ -213,5 +217,23 @@ public class InventoryManager : MonoBehaviour
         myInventoryManager.coinAmountText.text = myInventoryManager.coinsAmount.ToString();
     }
    
+
+    public static void donateFish()
+    {
+        GlobalValues.fishDonatedIncrement(myInventoryManager.fishAmount);
+        myInventoryManager.fishAmount=0;
+        myInventoryManager.fishImage.enabled = false;
+        myInventoryManager.fishAmountText.text = "";
+    }
+
+     public static void donateWood()
+    {
+        GlobalValues.woodDonatedIncrement(myInventoryManager.woodAmount);
+        myInventoryManager.woodAmount=0;
+        myInventoryManager.woodImage.enabled = false;
+        myInventoryManager.woodAmountText.text = "";
+    }
+   
+
 
 }

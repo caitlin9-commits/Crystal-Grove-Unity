@@ -5,6 +5,9 @@ using TMPro;
 using System;
 using System.Threading.Tasks;
 
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
+
 public class ShopManager : MonoBehaviour
 {
 
@@ -13,6 +16,10 @@ public class ShopManager : MonoBehaviour
     public Canvas option3;
     public Canvas option4;
     public TMP_Text coinAmountText;
+
+    public TMP_Text closeText;
+    public TMP_Text mainText;
+
 
     public Sprite copperRod;
     public Sprite goldRod;
@@ -60,6 +67,11 @@ public class ShopManager : MonoBehaviour
 
         coinsAmount = InventoryManager.getCoinAmount();
         coinAmountText.text = coinsAmount.ToString();
+
+
+        Button btn = closeText.GetComponent<Button>();
+        btn.onClick.RemoveAllListeners();
+		btn.onClick.AddListener(()=>GlobalValues.toggleShop(false));
     }
 
     void SetupOption(int number,Canvas option){
@@ -148,6 +160,16 @@ public class ShopManager : MonoBehaviour
         btn.onClick.RemoveAllListeners();
 		btn.onClick.AddListener(()=>TaskOnClick(number,itemName,itemCost));
 
+        // HoverEvent hover = option.GetComponent<HoverEvent>();
+
+        // hover.onHover.AddListener(() => {
+        //     Debug.Log("Mouse entered");
+        // });
+
+        // hover.onHoverExit.AddListener(() => {
+        //     Debug.Log("Mouse left");
+        // });
+
 	}
 
     async void TaskOnClick(int optionNumber,string item,int cost){
@@ -156,20 +178,20 @@ public class ShopManager : MonoBehaviour
         
         if(optionNumber == 1 && InventoryManager.getAxeLevel()==4)
         {
-            GlobalValues.setInstructionTextString("You have fully upgraded your axe.");
+            mainText.text = "\"You have fully upgraded your axe.\"";
     
         }
         else if(optionNumber == 2 && InventoryManager.getRodLevel()==4)
         {
-            GlobalValues.setInstructionTextString("You have fully upgraded your rod.");
+             mainText.text = "\"You have fully upgraded your rod.\"";
         }
         else if(optionNumber == 4 && GlobalValues.checkForWindmill())
         {
-            GlobalValues.setInstructionTextString("You have already purchased the windmill.");
+             mainText.text = "\"You have already purchased the windmill.\"";
         }
         else if (cost > coinsAmount)
         {
-            GlobalValues.setInstructionTextString("You do not have enough money for this item.");
+             mainText.text = "\"You do not have enough money for this item.\"";
         }
         else
         {
@@ -195,5 +217,23 @@ public class ShopManager : MonoBehaviour
 
         GlobalValues.setInstructionTextString("You have just purchased: "+ item);
         GlobalValues.toggleShop(false);
+    }
+}
+
+
+
+public class HoverEvent : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+{
+    public UnityEvent onHover;
+    public UnityEvent onHoverExit;
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        onHover?.Invoke();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        onHoverExit?.Invoke();
     }
 }
