@@ -254,13 +254,15 @@ public class NomadController : MonoBehaviour
         myNomad.canWalk = walkingEnabled;
     }
 
+
+
     public static void sendToTent()
     {
         myNomad.fainted = true;
         Debug.Log("Sending to tent: ");
-        float x = 682.8f;
-        float y = 37f;
-        float z = -2.5f;
+        float x = 3254.98f;
+        float y = 34.21f;
+        float z = -3259.55f;
         myNomad.transform.position =  new Vector3(x,y,z);
         myNomad.GoToSleep();
     }
