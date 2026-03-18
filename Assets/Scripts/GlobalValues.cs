@@ -8,11 +8,16 @@ public class GlobalValues : MonoBehaviour
 
     private static GlobalValues myGlobalValues;
     private int treesCut;
+    private int woodDonated;
+    private int fishDonated;
+    private int seedsPlanted;
 
     private bool hasWaterWheel;
     private bool hasWindmill;
    
     private bool spokeToOldMan;
+    
+    
 
 
     public GameObject menuCanvas;
@@ -70,6 +75,19 @@ public class GlobalValues : MonoBehaviour
     {
         myGlobalValues.treesCut++;
         // myGlobalValues.treeCutText.text = myGlobalValues.treesCut.ToString();
+    }
+
+    public static void seedsPlantedIncrement()
+    {
+        myGlobalValues.seedsPlanted++;
+    }
+    public static void woodDonatedIncrement(int amount)
+    {
+        myGlobalValues.woodDonated+=amount;
+    }
+    public static void fishDonatedIncrement(int amount)
+    {
+        myGlobalValues.fishDonated+=amount;
     }
 
     public static int getTreesCut()

@@ -24,12 +24,21 @@ public class SoundEffectManager : MonoBehaviour
         }
     }
 
-    public static void Play(string soundName)
+    public static void Play(string soundName, float volume = 1f)
     {
         AudioClip audioClip = soundEffectLibrary.GetRandomClip(soundName);
         if(audioClip != null)
         {
+        
             audioSource.PlayOneShot(audioClip);
+
+            if(soundName=="Footsteps")
+            {
+                audioSource.volume = volume;    
+            }
+            
+
+            
         }
     }
 

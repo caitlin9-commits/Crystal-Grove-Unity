@@ -10,6 +10,8 @@ TagManager:
   - terrain
   - water
   - bin
+  - orb
+  - village
   layers:
   - Default
   - TransparentFX

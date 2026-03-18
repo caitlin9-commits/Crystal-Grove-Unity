@@ -23,9 +23,13 @@ public class NomadController : MonoBehaviour
     public bool canFish;
     public bool canRecycle;
 
+    public bool inOrbZone;
+
     public bool fading;
 
     private int chopSoundCounter;
+
+    private int orbSoundCounter;
     private int walkSoundCounter;
 
     public Animator myAnim;
@@ -39,6 +43,7 @@ public class NomadController : MonoBehaviour
 
         chopSoundCounter = 300;
         walkSoundCounter = 300;
+        orbSoundCounter = 0;
         canWalk = true;
         canPlant = true;
         canSleep = false;
@@ -46,6 +51,7 @@ public class NomadController : MonoBehaviour
         fading = false;
         myNomad = this;
         fainted = false;
+        inOrbZone = false;
 
     }
     float x;
@@ -96,7 +102,7 @@ public class NomadController : MonoBehaviour
             walkSoundCounter++;
             if (walkSoundCounter > 90)
             {
-                SoundEffectManager.Play("Footsteps");
+                SoundEffectManager.Play("Footsteps",0.2f);
                 walkSoundCounter = 0;
             }
         }
@@ -113,9 +119,7 @@ public class NomadController : MonoBehaviour
             }
         }
 
-
       
-
         chopping = canChop && Input.GetKey(KeyCode.Space);
         myAnim.SetBool("Chopping", chopping);
 
@@ -146,6 +150,35 @@ public class NomadController : MonoBehaviour
         {
             canSleep = false;
             GoToSleep();
+        }
+
+        if(inOrbZone)
+        {
+            orbSoundCounter++;
+            if (orbSoundCounter > 500)
+            {
+
+                float NomadX = myNomad.transform.position.x;
+                float NomadZ = myNomad.transform.position.z;
+
+                float orbX=3542f;
+                float orbY=24f;
+                float orbZ=-3119f;
+
+                
+
+                float dist = Vector3.Distance(myNomad.transform.position,  new Vector3(orbX,orbY,orbZ));
+
+                float volume = 10/dist;
+                if(volume>1f){volume=1f;}
+
+
+                Debug.Log("DISTNACE FROM ORB "+ dist);
+
+
+                SoundEffectManager.Play("Chopping",volume);
+                orbSoundCounter = 0;
+            }
         }
     }
 
@@ -211,6 +244,24 @@ public class NomadController : MonoBehaviour
             canRecycle = true;
             GlobalValues.setInstructionText("Press","R","recycle");     
         }
+
+
+        if (other.CompareTag("orb"))
+        {
+
+                Debug.Log("ENTERIONG ORB ZONE");
+
+
+            inOrbZone = true;
+           SoundEffectManager.Play("Glowing");
+        }
+
+        if (other.CompareTag("village"))
+        {
+            Debug.Log("ENTERING VILLAGE");
+            MusicManager.PlayNewSong("VillageGood");
+        }
+
     }
 
     void OnTriggerExit(Collider other)
@@ -238,6 +289,17 @@ public class NomadController : MonoBehaviour
         {
             canRecycle = false;
             GlobalValues.clearInstructionText();
+        }
+
+        if (other.CompareTag("orb"))
+        {
+            inOrbZone = false;
+        }
+
+        if (other.CompareTag("village"))
+        {
+            Debug.Log("EXITING VILLAGE");
+            MusicManager.PlayNewSong("ForestGood");
         }
     }
 
@@ -267,6 +329,16 @@ public class NomadController : MonoBehaviour
         myNomad.GoToSleep();
     }
 
+    public static void setAxe(int level)
+    {
+        myNomad.myAnim.SetInteger("AxeLevel", level);
+    }
+
+    public static void setRod(int level)
+    {
+        myNomad.myAnim.SetInteger("RodLevel", level);
+    }
+
     async void GoToSleep()
     {
         GlobalValues.clearInstructionText();
@@ -274,10 +346,13 @@ public class NomadController : MonoBehaviour
         Debug.Log("FADING: ");
         fading = true;
         await ScreenFader.Instance.FadeOut();
+        MusicManager.PlayNewSong("ForestBad");
         TreeSpawner.SpawnTrees();
         await Task.Delay(1000); 
         TimeManager.sleep();
         await ScreenFader.Instance.FadeIn();
+        
+        
         fading = false;
 
         if(TimeManager.getDay() == 6)
@@ -314,6 +389,8 @@ public class NomadController : MonoBehaviour
             await Task.Delay(2000); 
             canPlant = true;
             GlobalValues.clearInstructionText();
+
+            GlobalValues.seedsPlantedIncrement();
         }
         else
         {

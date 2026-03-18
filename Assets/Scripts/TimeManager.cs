@@ -141,6 +141,10 @@ public class TimeManager : MonoBehaviour
             StartCoroutine(TransitionSkybox(skyboxSunset, skyboxNight, 10f));
             // StartCoroutine(LerpLight(graddientSunsetToNight, 10f));
         }
+        else if (value == 22)
+        {
+            SoundEffectManager.Play("Bell");
+        }
 
 
         
@@ -251,6 +255,7 @@ public class TimeManager : MonoBehaviour
         else if(myTimeManager.Days == 3){CharacterManager.setCharacterPositionsDay3(); }
         else if(myTimeManager.Days == 4){CharacterManager.setCharacterPositionsDay4(); }
         else if(myTimeManager.Days == 5){CharacterManager.setCharacterPositionsDay5(); }
+
 
 
         if(myTimeManager.Days<6)
