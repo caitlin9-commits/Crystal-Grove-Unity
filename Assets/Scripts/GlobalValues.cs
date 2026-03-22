@@ -8,9 +8,11 @@ public class GlobalValues : MonoBehaviour
 
     private static GlobalValues myGlobalValues;
     private int treesCut;
+    private int fishCaught;
     private int woodDonated;
     private int fishDonated;
     private int seedsPlanted;
+    private int recycledAmount;
 
     private bool hasWaterWheel;
     private bool hasWindmill;
@@ -52,6 +54,8 @@ public class GlobalValues : MonoBehaviour
     {
         // treeCutText.text = treesCut.ToString();
         treesCut = 0;
+        fishCaught = 0;
+        recycledAmount=0;
         
         hasWaterWheel = false;
         hasWindmill = false;
@@ -86,7 +90,11 @@ public class GlobalValues : MonoBehaviour
     public static void treesCutIncrememt()
     {
         myGlobalValues.treesCut++;
-        // myGlobalValues.treeCutText.text = myGlobalValues.treesCut.ToString();
+    }
+
+    public static void fishCaughtIncrememt()
+    {
+        myGlobalValues.fishCaught++;
     }
 
     public static void seedsPlantedIncrement()
@@ -100,6 +108,11 @@ public class GlobalValues : MonoBehaviour
     public static void fishDonatedIncrement(int amount)
     {
         myGlobalValues.fishDonated+=amount;
+    }
+
+    public static void changeRecycledAmount(int change)
+    {
+        myGlobalValues.recycledAmount+=change;
     }
 
     public static int getTreesCut()
@@ -194,6 +207,25 @@ public class GlobalValues : MonoBehaviour
 
     public static int calculateEnvironmentScore()
     {
+        double treeCutScore = myGlobalValues.treesCut *-3;
+        double fishCaughtScore = myGlobalValues.fishCaught *-2;
+        double recycledScore = myGlobalValues.recycledAmount *2;
+        double seedsScore = myGlobalValues.seedsPlanted *3;
+        double woodDonatedScore = myGlobalValues.woodDonated *0.3;
+        double fishdDonatedScore = myGlobalValues.fishDonated;
+
+        double waterwheelScore = myGlobalValues.hasWaterWheel?50:0;
+        double windmillScore = myGlobalValues.hasWindmill?50:0;
+
+        double netScore = treeCutScore+fishCaughtScore+recycledScore
+        +seedsScore+woodDonatedScore+fishdDonatedScore
+        +windmillScore+waterwheelScore;
+
+
+        if(netScore>=0){return 1;}
+        else if(netScore>=-20 && netScore<0){return 2;}
+        else if(netScore>=-40 && netScore<-20){return 3;}
+        else if(netScore<-40){return 4;}
         return 0;
     }
 
