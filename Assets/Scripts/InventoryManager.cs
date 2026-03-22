@@ -11,7 +11,7 @@ public class InventoryManager : MonoBehaviour
     private int coinsAmount;
     private int pineconeAmount;
     private int trashAmount;
-    private int recycledAmount;
+    
 
 
     private int axeLevel;
@@ -62,7 +62,7 @@ public class InventoryManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        recycledAmount=0;
+        
         woodAmount = 0;
         coinsAmount = 1000;
         trashAmount = 0;
@@ -172,6 +172,7 @@ public class InventoryManager : MonoBehaviour
         myInventoryManager.woodImage.enabled = true;
     }
 
+
     public static void changePineconeAmount(int change)
     {
         myInventoryManager.pineconeAmount+=change;
@@ -195,10 +196,7 @@ public class InventoryManager : MonoBehaviour
         myInventoryManager.trashAmountText.text = myInventoryManager.trashAmount==0?"":myInventoryManager.trashAmount.ToString();
         myInventoryManager.trashImage.enabled = myInventoryManager.trashAmount==0?false:true;
     }
-    public static void changeRecycledAmount(int change)
-    {
-        myInventoryManager.recycledAmount+=change;
-    }
+    
 
     public static void changeCoinsAmount(int change)
     {
