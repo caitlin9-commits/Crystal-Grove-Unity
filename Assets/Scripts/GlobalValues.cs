@@ -194,7 +194,7 @@ public class GlobalValues : MonoBehaviour
 
     public static int calculateEnvironmentScore()
     {
-        return 0;
+        return 1;
     }
 
 }

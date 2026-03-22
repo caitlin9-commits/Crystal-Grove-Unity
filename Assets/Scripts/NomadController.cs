@@ -278,10 +278,23 @@ public class NomadController : MonoBehaviour
            SoundEffectManager.Play("Glowing");
         }
 
+
         if (other.CompareTag("village"))
         {
             Debug.Log("ENTERING VILLAGE");
-            MusicManager.PlayNewSong("VillageGood");
+            
+            if (GlobalValues.calculateEnvironmentScore()==1)
+            {
+                MusicManager.PlayNewSong("VillageGood");
+            }
+            else if (GlobalValues.calculateEnvironmentScore()==2)
+            {
+                MusicManager.PlayNewSong("VillageNeutral");
+            }
+            else if (GlobalValues.calculateEnvironmentScore()==3 || GlobalValues.calculateEnvironmentScore()==4)
+            {
+                MusicManager.PlayNewSong("VillageBad");
+            }
         }
 
     }
@@ -321,7 +334,7 @@ public class NomadController : MonoBehaviour
         if (other.CompareTag("village"))
         {
             Debug.Log("EXITING VILLAGE");
-            MusicManager.PlayNewSong("ForestGood");
+            playForestMusic();
         }
     }
 
@@ -369,7 +382,8 @@ public class NomadController : MonoBehaviour
         Debug.Log("FADING: ");
         fading = true;
         await ScreenFader.Instance.FadeOut();
-        MusicManager.PlayNewSong("ForestBad");
+        playForestMusic();
+
         TreeSpawner.SpawnTrees();
         await Task.Delay(1000); 
         TimeManager.sleep();
@@ -503,5 +517,23 @@ public class NomadController : MonoBehaviour
 
         
     }
+
+    private void playForestMusic()
+    {
+        if(GlobalValues.calculateEnvironmentScore()==1)
+        {
+            MusicManager.PlayNewSong("ForestGood");
+        }
+        else if(GlobalValues.calculateEnvironmentScore()==2)
+        {
+            MusicManager.PlayNewSong("ForestNeutral");
+        }
+        else if(GlobalValues.calculateEnvironmentScore()==3 || GlobalValues.calculateEnvironmentScore()==4)
+        {
+            MusicManager.PlayNewSong("ForestBad");
+        }
+    }
+
+
 
 }
