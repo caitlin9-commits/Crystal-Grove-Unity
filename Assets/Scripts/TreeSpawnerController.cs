@@ -32,13 +32,15 @@ public class TreeSpawner : MonoBehaviour
         {
             Destroy(gameObject);
         }
+         GenerateTreeLocations();
 
-        GenerateTreeLocations();
+
     }
 
 
     void Start()
     {
+       
         SpawnTrees();
         SpawnPineCones();
     }
@@ -49,10 +51,23 @@ public class TreeSpawner : MonoBehaviour
 
         for (int i = 0; i < amountOfTrees; i++)
         {
-            float randomX = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
-            float randomZ = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
-        
-            trees.Add(new TreeObject{x=randomX,z=randomZ,isChopped = false});
+
+            bool foundAppropriateCoordinates = false;
+
+            while(!foundAppropriateCoordinates)
+            {
+                float randomX = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
+                float randomZ = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
+
+                foundAppropriateCoordinates = IsAppropriateSpawnLocation(randomX,randomZ);
+            
+                if(foundAppropriateCoordinates)
+                {
+                    trees.Add(new TreeObject{x=randomX,z=randomZ,isChopped = false});
+                }
+            }
+
+            
         }
     }
 
@@ -156,33 +171,86 @@ public class TreeSpawner : MonoBehaviour
     }
 
 
+    public static bool IsAppropriateSpawnLocation(float x, float z)
+    {
+        if(x>3244.79 && x<3279.25 && z>-3287.52 && z<-3301.46) //tent and sign
+        {
+            return false;
+        }
+        else if(x>3128.6 && x<3206.14 && z>-3256  && z<-3295.57) //forest pond
+        {
+            return false;
+        }
+        else if(x>3055.5 && x<3089.7 && z>-3325.4  && z<-3364.14) //forest bridge
+        {
+            return false;
+        }
+        else if(x>3017.14 && x<3049.4 && z>-3313.7  && z<-3340.11) //forest river (middle)
+        {
+            return false;
+        }
+        else if(x>2981.5 && x<3011.8 && z>-3293  && z<-3323.41) //forest river (end)
+        {
+            return false;
+        }
+        else if(x>2965.4 && x<2998.6 && z>-3280.7  && z<-3299) //forest river (corner)
+        {
+            return false;
+        }
+        else if(x>2988.5 && x<3019.8 && z>-3329.5  && z<-3354.3) //old man house
+        {
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
     public static void SpawnPineCones()
     {   
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 15; i++)
         {
         
             GameObject pineconePrefab = myTreeSpawner.pineconePrefab;
             
-
-            Vector3 randomPos = myTreeSpawner.transform.position +
-            new Vector3(
-                Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius),
-                0,
-                Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius)
-            );
-
-            RaycastHit hit;
-            int groundLayer = LayerMask.GetMask("Terrain");
-
-            if (Physics.Raycast(randomPos + Vector3.up * 50f, Vector3.down, out hit, 100f,groundLayer))
+            bool foundAppropriateCoordinates = false;
+            
+            while(!foundAppropriateCoordinates)
             {
-                randomPos.y = hit.point.y;
+                float pineconeX = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
+                float pineconeZ = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
+
+                foundAppropriateCoordinates = IsAppropriateSpawnLocation(pineconeX,pineconeZ);
+
+
+                if(foundAppropriateCoordinates)
+                {
+                    Vector3 randomPos = myTreeSpawner.transform.position +
+                        new Vector3(
+                            pineconeX,
+                            0,
+                            pineconeZ
+                        );
+
+                    RaycastHit hit;
+                    int groundLayer = LayerMask.GetMask("Terrain");
+
+                    if (Physics.Raycast(randomPos + Vector3.up * 50f, Vector3.down, out hit, 100f,groundLayer))
+                    {
+                        randomPos.y = hit.point.y;
+                    }
+
+                    randomPos.y += 2f / 2f;
+
+                    GameObject newPineCone = Instantiate(pineconePrefab, randomPos, Quaternion.identity);
+                }
+
             }
 
-            randomPos.y += 2f / 2f;
 
-            GameObject newPineCone = Instantiate(pineconePrefab, randomPos, Quaternion.identity);
+            
+            
 
         }
     }
