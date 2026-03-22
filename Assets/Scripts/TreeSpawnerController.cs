@@ -11,6 +11,8 @@ public class TreeSpawner : MonoBehaviour
 
     public int treeCount = 5;
     public float spawnRadius = 10f;
+    public float spawnRadiusZ = 10f;
+
     public float treeHeight = 1f;
 
     private static TreeSpawner myTreeSpawner;
@@ -45,7 +47,7 @@ public class TreeSpawner : MonoBehaviour
     {
        
         SpawnTrees();
-        SpawnPineCones();
+        // SpawnPineCones();
     }
 
     private void GenerateTreeLocations()
@@ -60,7 +62,7 @@ public class TreeSpawner : MonoBehaviour
             while(!foundAppropriateCoordinates)
             {
                 float randomX = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
-                float randomZ = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
+                float randomZ = Random.Range(-myTreeSpawner.spawnRadiusZ, myTreeSpawner.spawnRadiusZ);
 
                 Vector3 newPos = myTreeSpawner.transform.position +
                 new Vector3(
@@ -183,35 +185,51 @@ public class TreeSpawner : MonoBehaviour
 
     public static bool IsAppropriateSpawnLocation(float x, float z)
     {
-        if(x>3244.79 && x<3279.25 && z>-3287.52 && z<-3301.46) //tent and sign
+
+
+
+        if(x>3244.79 && x<3279.25 && z<-3287.52 && z>-3301.46) //tent and sign
         {
             return false;
         }
-        else if(x>3100.1 && x<3233.61 && z>-3238.6  && z<-3323.2) //forest pond + raised area
+        else if(x>3100.1 && x<3232 && z<-3238.6  && z>-3316.1) //forest pond + raised area
         {
             return false;
         }
-        else if(x>3055.5 && x<3089.7 && z>-3325.4  && z<-3364.14) //forest bridge
+        else if(x>3055.5 && x<3089.7 && z<-3325.4  && z>-3364.14) //forest bridge
         {
             return false;
         }
-        else if(x>3017.14 && x<3049.4 && z>-3313.7  && z<-3340.11) //forest river (middle)
+        else if(x>3017.14 && x>3068.2 && z<-3300.4  && z>-3336.6) //forest river (middle)
         {
             return false;
         }
-        else if(x>2981.5 && x<3011.8 && z>-3293  && z<-3323.41) //forest river (end)
+        else if(x>2970.1 && x<3011.8 && z<-3293  && z>-3323.41) //forest river (end)
         {
             return false;
         }
-        else if(x>2965.4 && x<2998.6 && z>-3280.7  && z<-3299) //forest river (corner)
+        else if(x>2965.4 && x<2998.6 && z<-3280.7  && z>-3299) //forest river (corner)
         {
             return false;
         }
-        else if(x>2988.5 && x<3019.8 && z>-3329.5  && z<-3354.3) //old man house
+        else if(x>2988.5 && x<3029.1 && z<-3329.5  && z>-3354.3) //old man house
+        {
+            return false;
+        }
+        else if(x>3084.4 && x<3104.6 && z<-3328.9  && z>-3359.8) //Nomad spawner
+        {
+            return false;
+        }
+        else if(x>3007.8 && x<3027 && z<-3332.9  && z>-3369.2) //Old man location
+        {
+            return false;
+        }
+        else if(x>3045.1 && x<3077.8 && z<-3307.1  && z>-3332) //river corner square
         {
             return false;
         }
         else{
+            
             return true;
         }
     }
