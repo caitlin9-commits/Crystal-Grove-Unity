@@ -100,10 +100,10 @@ TextureImporter:
       name: Btreefall-ani_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 0
         y: 15
-        width: 24
-        height: 39
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,10 +122,10 @@ TextureImporter:
       name: Btreefall-ani_1
       rect:
         serializedVersion: 2
-        x: 75
+        x: 64
         y: 15
-        width: 24
-        height: 38
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,10 +144,10 @@ TextureImporter:
       name: Btreefall-ani_2
       rect:
         serializedVersion: 2
-        x: 142
-        y: 14
-        width: 24
-        height: 37
+        x: 128
+        y: 15
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: Btreefall-ani_3
       rect:
         serializedVersion: 2
-        x: 208
-        y: 13
-        width: 26
-        height: 35
+        x: 192
+        y: 15
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,10 +188,10 @@ TextureImporter:
       name: Btreefall-ani_4
       rect:
         serializedVersion: 2
-        x: 273
-        y: 13
-        width: 33
-        height: 30
+        x: 256
+        y: 15
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: Btreefall-ani_5
       rect:
         serializedVersion: 2
-        x: 338
-        y: 13
-        width: 37
-        height: 24
+        x: 320
+        y: 15
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +232,10 @@ TextureImporter:
       name: Btreefall-ani_6
       rect:
         serializedVersion: 2
-        x: 402
-        y: 5
-        width: 42
-        height: 27
+        x: 384
+        y: 15
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,50 +246,6 @@ TextureImporter:
       bones: []
       spriteID: ed7a9392e52ac2b499322f5f90d670b4
       internalID: 1860643748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Btreefall-ani_7
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 0
-        width: 438
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd36eac84f6bb914bb8d062f89a0177d
-      internalID: 1542054194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Btreefall-ani_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 443
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61bdbe2cd50c22c468b39a5010dafd44
-      internalID: 515257452
       vertices: []
       indices: 
       edges: []
@@ -308,7 +264,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":49.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Btreefall-ani_0: -381112483
       Btreefall-ani_1: -1971100166
@@ -317,8 +273,6 @@ TextureImporter:
       Btreefall-ani_4: -274675743
       Btreefall-ani_5: -967216837
       Btreefall-ani_6: 1860643748
-      Btreefall-ani_7: 1542054194
-      Btreefall-ani_8: 515257452
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

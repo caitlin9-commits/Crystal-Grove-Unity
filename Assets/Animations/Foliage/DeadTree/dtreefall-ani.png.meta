@@ -100,10 +100,10 @@ TextureImporter:
       name: dtreefall-ani_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 15
-        width: 22
-        height: 39
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,10 +122,10 @@ TextureImporter:
       name: dtreefall-ani_1
       rect:
         serializedVersion: 2
-        x: 78
-        y: 14
-        width: 21
-        height: 38
+        x: 64
+        y: 15
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,10 +144,10 @@ TextureImporter:
       name: dtreefall-ani_2
       rect:
         serializedVersion: 2
-        x: 142
-        y: 13
-        width: 23
-        height: 38
+        x: 128
+        y: 15
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: dtreefall-ani_3
       rect:
         serializedVersion: 2
-        x: 207
-        y: 12
-        width: 29
-        height: 32
+        x: 192
+        y: 15
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,10 +188,10 @@ TextureImporter:
       name: dtreefall-ani_4
       rect:
         serializedVersion: 2
-        x: 272
-        y: 12
-        width: 34
-        height: 27
+        x: 256
+        y: 15
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: dtreefall-ani_5
       rect:
         serializedVersion: 2
-        x: 337
-        y: 12
-        width: 37
-        height: 23
+        x: 320
+        y: 15
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +232,10 @@ TextureImporter:
       name: dtreefall-ani_6
       rect:
         serializedVersion: 2
-        x: 401
-        y: 6
-        width: 37
-        height: 25
+        x: 384
+        y: 15
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,7 +264,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":49.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       dtreefall-ani_0: 1368479992
       dtreefall-ani_1: -1704591311

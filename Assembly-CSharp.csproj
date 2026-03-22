@@ -55,6 +55,7 @@
     <Compile Include="Assets\Scripts\OldManController.cs" />
     <Compile Include="Assets\Scripts\ShopManager.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\Parameter.cs" />
+    <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\TitleScreensController.cs" />
     <Compile Include="Assets\Scripts\GlobalValues.cs" />
     <Compile Include="Assets\DialogueEditor\Example\ExampleInputManager.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableCondition.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableSetParamAction.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\UI\UIConversationButton.cs" />
+    <Compile Include="Assets\Scripts\QuestMarkerController.cs" />
     <Compile Include="Assets\Scripts\NomadController.cs" />
     <Compile Include="Assets\Scripts\InventoryManager.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableConnection.cs" />
