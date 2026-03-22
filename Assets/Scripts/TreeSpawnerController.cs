@@ -177,7 +177,7 @@ public class TreeSpawner : MonoBehaviour
         {
             return false;
         }
-        else if(x>3100.1 && x<3232.1 && z>-3238.6  && z<-3317.6) //forest pond + raised area
+        else if(x>3100.1 && x<3233.61 && z>-3238.6  && z<-3323.2) //forest pond + raised area
         {
             return false;
         }

@@ -66,18 +66,12 @@ public class TitleScreensController : MonoBehaviour
         
     }
 
-    public static void GoodEnding()
+    public static void ShowEnding()
     {
-        myTitleScreens.goodEndCanvas.enabled = true;
+        int envScore = GlobalValues.calculateEnvironmentScore();
+        if(envScore == 1){myTitleScreens.goodEndCanvas.enabled = true;}
+        else if(envScore == 2){myTitleScreens.neutralEndCanvas.enabled = true;}
+        else {myTitleScreens.badEndCanvas.enabled = true;}
     }
 
-    public static void NeutralEnding()
-    {
-        myTitleScreens.neutralEndCanvas.enabled = true;
-    }
-
-    public static void BadEnding()
-    {
-        myTitleScreens.badEndCanvas.enabled = true;
-    }
 }

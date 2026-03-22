@@ -484,6 +484,7 @@ public class NomadController : MonoBehaviour
         }
         else
         {
+            GlobalValues.fishCaughtIncrememt();
             InventoryManager.changeFishAmount(1);
             GlobalValues.setInstructionTextString("You caught a fish.");    
         }
@@ -507,7 +508,7 @@ public class NomadController : MonoBehaviour
         else
         {
             InventoryManager.changeTrashAmount(-trashAmount);
-            InventoryManager.changeRecycledAmount(trashAmount);
+            GlobalValues.changeRecycledAmount(trashAmount);
             InventoryManager.changeCoinsAmount(trashAmount*5);
             GlobalValues.setInstructionTextString("You recycled your trash.");
             canRecycle = false;
