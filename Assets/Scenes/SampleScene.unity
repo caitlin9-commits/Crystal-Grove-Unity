@@ -119,6 +119,59 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &3779961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3779962}
+  - component: {fileID: 3779963}
+  m_Layer: 0
+  m_Name: TreeSpawner (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3779962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3779961}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3422.8, y: 30.5, z: -3193.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 268386091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3779963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3779961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a224b997ef80bd4bada2243532ba743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  healthyTree: {fileID: 2789923289402014024, guid: 1c262ca227653a946bdad48c4abc182c, type: 3}
+  brownTree: {fileID: 594818123972130642, guid: f0c28423ec4acd94c94b8774ab5e04cf, type: 3}
+  deadTree: {fileID: 6344700574193389544, guid: bc5aac11434b95945ae9e412198c83a9, type: 3}
+  cystalTree: {fileID: 4701863397727058940, guid: df942a9f686fb0a4ab7b5c8e4837af3b, type: 3}
+  pineconePrefab: {fileID: 8259652026176213963, guid: dd85952b8808836489dd89b752b2ebb4, type: 3}
+  sproutPrefab: {fileID: 4710596780836976545, guid: f5b573a2d541c7c4ebe7ad05dee3cd5e, type: 3}
+  treeCount: 25
+  spawnRadius: 60
+  treeHeight: 15
 --- !u!1 &33584820
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +682,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42206527}
   m_CullTransparentMesh: 1
+--- !u!1 &46058782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 46058783}
+  - component: {fileID: 46058784}
+  m_Layer: 0
+  m_Name: TreeSpawner (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &46058783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46058782}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3635.6, y: 30.5, z: -3232.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 268386091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &46058784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46058782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a224b997ef80bd4bada2243532ba743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  healthyTree: {fileID: 2789923289402014024, guid: 1c262ca227653a946bdad48c4abc182c, type: 3}
+  brownTree: {fileID: 594818123972130642, guid: f0c28423ec4acd94c94b8774ab5e04cf, type: 3}
+  deadTree: {fileID: 6344700574193389544, guid: bc5aac11434b95945ae9e412198c83a9, type: 3}
+  cystalTree: {fileID: 4701863397727058940, guid: df942a9f686fb0a4ab7b5c8e4837af3b, type: 3}
+  pineconePrefab: {fileID: 8259652026176213963, guid: dd85952b8808836489dd89b752b2ebb4, type: 3}
+  sproutPrefab: {fileID: 4710596780836976545, guid: f5b573a2d541c7c4ebe7ad05dee3cd5e, type: 3}
+  treeCount: 25
+  spawnRadius: 50
+  treeHeight: 15
 --- !u!1 &47737510
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +821,59 @@ Transform:
   - {fileID: 944140257}
   m_Father: {fileID: 201374570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &52741556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 52741557}
+  - component: {fileID: 52741558}
+  m_Layer: 0
+  m_Name: TreeSpawner (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &52741557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52741556}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3337.2, y: 30.5, z: -3264.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 268386091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &52741558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52741556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a224b997ef80bd4bada2243532ba743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  healthyTree: {fileID: 2789923289402014024, guid: 1c262ca227653a946bdad48c4abc182c, type: 3}
+  brownTree: {fileID: 594818123972130642, guid: f0c28423ec4acd94c94b8774ab5e04cf, type: 3}
+  deadTree: {fileID: 6344700574193389544, guid: bc5aac11434b95945ae9e412198c83a9, type: 3}
+  cystalTree: {fileID: 4701863397727058940, guid: df942a9f686fb0a4ab7b5c8e4837af3b, type: 3}
+  pineconePrefab: {fileID: 8259652026176213963, guid: dd85952b8808836489dd89b752b2ebb4, type: 3}
+  sproutPrefab: {fileID: 4710596780836976545, guid: f5b573a2d541c7c4ebe7ad05dee3cd5e, type: 3}
+  treeCount: 20
+  spawnRadius: 50
+  treeHeight: 15
 --- !u!1 &55248434
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,6 +3297,10 @@ Transform:
   - {fileID: 3464685187667385395}
   - {fileID: 168348173}
   - {fileID: 1592454242}
+  - {fileID: 46058783}
+  - {fileID: 52741557}
+  - {fileID: 3779962}
+  - {fileID: 1642283731}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 177.371, z: 0}
 --- !u!1 &269187585
@@ -16403,7 +16566,7 @@ Transform:
   m_GameObject: {fileID: 1592454241}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3438.93, y: 30.5, z: -3190.76}
+  m_LocalPosition: {x: 3499.8, y: 30.5, z: -3244.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16427,8 +16590,8 @@ MonoBehaviour:
   cystalTree: {fileID: 4701863397727058940, guid: df942a9f686fb0a4ab7b5c8e4837af3b, type: 3}
   pineconePrefab: {fileID: 8259652026176213963, guid: dd85952b8808836489dd89b752b2ebb4, type: 3}
   sproutPrefab: {fileID: 4710596780836976545, guid: f5b573a2d541c7c4ebe7ad05dee3cd5e, type: 3}
-  treeCount: 50
-  spawnRadius: 200
+  treeCount: 25
+  spawnRadius: 50
   treeHeight: 15
 --- !u!1 &1610390858
 GameObject:
@@ -17867,6 +18030,59 @@ Transform:
   - {fileID: 1683298428}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1642283730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1642283731}
+  - component: {fileID: 1642283732}
+  m_Layer: 0
+  m_Name: TreeSpawner (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1642283731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642283730}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3329.9, y: 30.5, z: -3202.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 268386091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1642283732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642283730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a224b997ef80bd4bada2243532ba743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  healthyTree: {fileID: 2789923289402014024, guid: 1c262ca227653a946bdad48c4abc182c, type: 3}
+  brownTree: {fileID: 594818123972130642, guid: f0c28423ec4acd94c94b8774ab5e04cf, type: 3}
+  deadTree: {fileID: 6344700574193389544, guid: bc5aac11434b95945ae9e412198c83a9, type: 3}
+  cystalTree: {fileID: 4701863397727058940, guid: df942a9f686fb0a4ab7b5c8e4837af3b, type: 3}
+  pineconePrefab: {fileID: 8259652026176213963, guid: dd85952b8808836489dd89b752b2ebb4, type: 3}
+  sproutPrefab: {fileID: 4710596780836976545, guid: f5b573a2d541c7c4ebe7ad05dee3cd5e, type: 3}
+  treeCount: 30
+  spawnRadius: 60
+  treeHeight: 15
 --- !u!1 &1683298427
 GameObject:
   m_ObjectHideFlags: 0
