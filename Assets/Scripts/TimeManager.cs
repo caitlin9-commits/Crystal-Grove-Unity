@@ -266,7 +266,7 @@ public class TimeManager : MonoBehaviour
         }
         else
         {
-            TitleScreensController.GoodEnding();
+            TitleScreensController.ShowEnding();
         }
 
         
