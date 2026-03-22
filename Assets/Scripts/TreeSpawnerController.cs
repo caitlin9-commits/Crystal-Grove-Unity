@@ -20,11 +20,14 @@ public class TreeSpawner : MonoBehaviour
     private List<TreeObject> trees = new List<TreeObject>();
     private List<TreeObject> sprouts = new List<TreeObject>();
     private List<GameObject> spawnedTrees = new List<GameObject>();
+    
 
      private void Awake()
     {
         if(myTreeSpawner == null)
         {
+
+
             myTreeSpawner = this;
             DontDestroyOnLoad(gameObject);
         }
@@ -59,7 +62,14 @@ public class TreeSpawner : MonoBehaviour
                 float randomX = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
                 float randomZ = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
 
-                foundAppropriateCoordinates = IsAppropriateSpawnLocation(randomX,randomZ);
+                Vector3 newPos = myTreeSpawner.transform.position +
+                new Vector3(
+                    randomX,
+                    0,
+                    randomZ
+                );
+
+                foundAppropriateCoordinates = IsAppropriateSpawnLocation(newPos.x,newPos.z);
             
                 if(foundAppropriateCoordinates)
                 {
@@ -75,11 +85,11 @@ public class TreeSpawner : MonoBehaviour
     public static void SpawnTrees()
     {   
         // Wipe trees from before
-        foreach (GameObject tree in myTreeSpawner.spawnedTrees)
-        {
-            Destroy(tree);
-        }
-        myTreeSpawner.spawnedTrees.Clear();
+        // foreach (GameObject tree in myTreeSpawner.spawnedTrees)
+        // {
+        //     Destroy(tree);
+        // }
+        // myTreeSpawner.spawnedTrees.Clear();
 
         
         foreach (TreeObject sprout in myTreeSpawner.sprouts)
@@ -208,6 +218,8 @@ public class TreeSpawner : MonoBehaviour
 
     public static void SpawnPineCones()
     {   
+
+        Debug.Log("TREE SPAWNER LOC" + myTreeSpawner.transform.position.x + "   " +  myTreeSpawner.transform.position.z);
 
         for (int i = 0; i < 15; i++)
         {
