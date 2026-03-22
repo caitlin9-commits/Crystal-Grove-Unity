@@ -264,9 +264,18 @@ public class TimeManager : MonoBehaviour
             myTimeManager.displayTime();
             myTimeManager.clockActive = true;    
         }
+        else
+        {
+            TitleScreensController.GoodEnding();
+        }
 
         
 
+    }
+
+    public static void setClockActive(bool active)
+    {
+        myTimeManager.clockActive = active;
     }
 
    public static void spokeToOldMan()

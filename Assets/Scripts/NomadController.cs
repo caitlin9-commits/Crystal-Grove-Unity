@@ -123,6 +123,10 @@ public class NomadController : MonoBehaviour
         chopping = canChop && Input.GetKey(KeyCode.Space);
         myAnim.SetBool("Chopping", chopping);
 
+        if (chopping)
+        {
+            GlobalValues.setSeenChopText();
+        }
 
         // PLANTING
         if (canPlant && Input.GetKey(KeyCode.P))
@@ -208,7 +212,12 @@ public class NomadController : MonoBehaviour
             if (hasAxe)
             {
                 canChop = true;
-                GlobalValues.setInstructionText("Hold","Spacebar","chop tree");    
+                if(!GlobalValues.checkSeenChopText())
+                {
+                    GlobalValues.setInstructionText("Hold","Spacebar","chop tree");
+                    
+                }
+                
             }
             else
             {
@@ -220,7 +229,12 @@ public class NomadController : MonoBehaviour
         {
             canSleep = true;
             canPlant = false;
-            GlobalValues.setInstructionText("Press","Z","sleep");
+            if(!GlobalValues.checkSeenSleepText())
+            {
+                GlobalValues.setInstructionText("Press","Z","sleep");  
+                
+            }
+            
         }
 
         if (other.CompareTag("water"))
@@ -230,7 +244,11 @@ public class NomadController : MonoBehaviour
             if (hasRod)
             {
                 canFish = true;
-                GlobalValues.setInstructionText("Press","F","fish");  
+                if(!GlobalValues.checkSeenFishText())
+                {
+                    GlobalValues.setInstructionText("Press","F","fish");   
+                }
+                
             }
             else
             {
@@ -242,7 +260,11 @@ public class NomadController : MonoBehaviour
         if (other.CompareTag("bin"))
         {
             canRecycle = true;
-            GlobalValues.setInstructionText("Press","R","recycle");     
+            if(!GlobalValues.checkSeenRecycleText())
+            {
+                GlobalValues.setInstructionText("Press","R","recycle");    
+            }
+            
         }
 
 
@@ -341,6 +363,7 @@ public class NomadController : MonoBehaviour
 
     async void GoToSleep()
     {
+        GlobalValues.setSeenSleepText();          
         GlobalValues.clearInstructionText();
         canWalk = false;
         Debug.Log("FADING: ");
@@ -404,6 +427,7 @@ public class NomadController : MonoBehaviour
 
     async void Fish()
     {
+        GlobalValues.setSeenFishText();             
 
         int rodLevel = InventoryManager.getRodLevel();
 
@@ -459,6 +483,7 @@ public class NomadController : MonoBehaviour
 
     async void Recycle()
     {
+        GlobalValues.setSeenRecycleText();                  
         int trashAmount = InventoryManager.getTrashAmount();
 
         if (trashAmount == 0)
@@ -469,6 +494,7 @@ public class NomadController : MonoBehaviour
         {
             InventoryManager.changeTrashAmount(-trashAmount);
             InventoryManager.changeRecycledAmount(trashAmount);
+            InventoryManager.changeCoinsAmount(trashAmount*5);
             GlobalValues.setInstructionTextString("You recycled your trash.");
             canRecycle = false;
             await Task.Delay(2000); 

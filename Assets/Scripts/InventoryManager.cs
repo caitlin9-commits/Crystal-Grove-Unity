@@ -64,10 +64,10 @@ public class InventoryManager : MonoBehaviour
     {
         recycledAmount=0;
         woodAmount = 0;
-        coinsAmount = 0;
+        coinsAmount = 1000;
+        trashAmount = 0;
 
-
-        hasAxe = false;
+        hasAxe = true;
 
         axeImage.enabled = false;
         rodImage.enabled = false;

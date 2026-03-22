@@ -28,8 +28,12 @@ public class ConversationStarter : MonoBehaviour
         
         if(other.CompareTag("Nomad"))
         {
-                canSpeak = true;
-                GlobalValues.setInstructionText("Press","X","talk");
+            canSpeak = true;
+            if(!GlobalValues.checkSeenTalkText())
+            {
+                GlobalValues.setInstructionText("Press","X","talk");  
+            }
+            
         }
     }
 
@@ -47,6 +51,8 @@ public class ConversationStarter : MonoBehaviour
 
     private void ConversationStart()
     {
+        GlobalValues.setSeenTalkText();             
+        GlobalValues.clearInstructionText();  
         NomadController.setWalk(false);
         int woodAmount = InventoryManager.getWoodAmount();
         bool agreedToHelp = OldManController.checkIfAgreedToHelp();

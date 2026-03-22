@@ -14,8 +14,15 @@ public class GlobalValues : MonoBehaviour
 
     private bool hasWaterWheel;
     private bool hasWindmill;
-   
+
+    
     private bool spokeToOldMan;
+
+    private bool seenTalkText;
+    private bool seenChopText;
+    private bool seenFishText;
+    private bool seenRecycleText;
+    private bool seenSleepText;
     
     
 
@@ -23,7 +30,9 @@ public class GlobalValues : MonoBehaviour
     public GameObject menuCanvas;
     public GameObject shopCanvas;
 
-
+    public GameObject windmill;
+    public GameObject waterwheel;
+   
     public TMP_Text instructionText;
 
     private void Awake()
@@ -50,6 +59,9 @@ public class GlobalValues : MonoBehaviour
         instructionText.text = "";
         menuCanvas.SetActive(false);
         shopCanvas.SetActive(false);
+
+        windmill.GetComponent<Renderer>().enabled = false;
+        waterwheel.SetActive(false);
     }
     void Update()
     {
@@ -59,11 +71,11 @@ public class GlobalValues : MonoBehaviour
             Debug.Log("MENU CLICKED");
         }
 
-        if(Input.GetKeyDown(KeyCode.M))
-        {
-            shopCanvas.SetActive(!shopCanvas.activeSelf);
-            Debug.Log("MENU CLICKED");
-        }
+        // if(Input.GetKeyDown(KeyCode.M))
+        // {
+        //     shopCanvas.SetActive(!shopCanvas.activeSelf);
+        //     Debug.Log("MENU CLICKED");
+        // }
     }
 
     public static void toggleShop(bool showShop)
@@ -107,10 +119,12 @@ public class GlobalValues : MonoBehaviour
 
     public static void buyWaterwheel()
     {
+        myGlobalValues.waterwheel.SetActive(true);
         myGlobalValues.hasWaterWheel = true;
     }
     public static void buyWindmill()
     {
+        myGlobalValues.windmill.GetComponent<Renderer>().enabled = true;
         myGlobalValues.hasWindmill = true;
     }
 
@@ -129,5 +143,58 @@ public class GlobalValues : MonoBehaviour
         myGlobalValues.instructionText.text = "";
     }
 
+
+
+    public static void setSeenChopText()
+    {
+        myGlobalValues.seenChopText = true;
+    }
+    public static bool checkSeenChopText()
+    {
+        return myGlobalValues.seenChopText;
+    }
+
+    public static void setSeenTalkText()
+    {
+        myGlobalValues.seenTalkText = true;
+    }
+    public static bool checkSeenTalkText()
+    {
+        return myGlobalValues.seenTalkText;
+    }
+
+    public static void setSeenFishText()
+    {
+        myGlobalValues.seenFishText = true;
+    }
+    public static bool checkSeenFishText()
+    {
+        return myGlobalValues.seenFishText;
+    }
+
+    public static void setSeenRecycleText()
+    {
+        myGlobalValues.seenRecycleText = true;
+    }
+    public static bool checkSeenRecycleText()
+    {
+        return myGlobalValues.seenRecycleText;
+    }
+
+    public static void setSeenSleepText()
+    {
+        myGlobalValues.seenSleepText = true;
+    }
+    public static bool checkSeenSleepText()
+    {
+        return myGlobalValues.seenSleepText;
+    }
+
+
+
+    public static int calculateEnvironmentScore()
+    {
+        return 0;
+    }
 
 }
