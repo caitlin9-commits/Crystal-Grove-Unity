@@ -109,7 +109,7 @@ public class NomadController : MonoBehaviour
 
 
         // CHOPPING
-        if (canChop && Input.GetKey(KeyCode.Space))
+        if (canChop && Input.GetKey(KeyCode.E))
         {
             chopSoundCounter++;
             if (chopSoundCounter > 104)
@@ -120,7 +120,7 @@ public class NomadController : MonoBehaviour
         }
 
       
-        chopping = canChop && Input.GetKey(KeyCode.Space);
+        chopping = canChop && Input.GetKey(KeyCode.E);
         myAnim.SetBool("Chopping", chopping);
 
         if (chopping)
@@ -129,19 +129,21 @@ public class NomadController : MonoBehaviour
         }
 
         // PLANTING
-        if (canPlant && Input.GetKey(KeyCode.P))
+        if (canPlant && Input.GetKey(KeyCode.E))
         {
                 canPlant = false;
                 PlantPinecone();    
         }
 
-        if (canFish && Input.GetKey(KeyCode.F))
+        //FISHING
+        if (canFish && Input.GetKey(KeyCode.E))
         {
                 canFish = false;
                 Fish();    
         }
 
-        if (canRecycle && Input.GetKey(KeyCode.R))
+        //RECYCLING
+        if (canRecycle && Input.GetKey(KeyCode.E))
         {
                 canRecycle = false;
                 Recycle();    
@@ -150,7 +152,7 @@ public class NomadController : MonoBehaviour
 
 
         // SLEEP
-        if (canSleep && Input.GetKey(KeyCode.Z))
+        if (canSleep && Input.GetKey(KeyCode.E))
         {
             canSleep = false;
             GoToSleep();

@@ -87,11 +87,11 @@ public class TreeSpawner : MonoBehaviour
     public static void SpawnTrees()
     {   
         // Wipe trees from before
-        // foreach (GameObject tree in myTreeSpawner.spawnedTrees)
-        // {
-        //     Destroy(tree);
-        // }
-        // myTreeSpawner.spawnedTrees.Clear();
+        foreach (GameObject tree in myTreeSpawner.spawnedTrees)
+        {
+            Destroy(tree);
+        }
+        myTreeSpawner.spawnedTrees.Clear();
 
         
         foreach (TreeObject sprout in myTreeSpawner.sprouts)
@@ -289,7 +289,6 @@ public class TreeSpawner : MonoBehaviour
     public static void PlantSprout(float x, float z)
     {   
         
-        Debug.Log("SRPOUT: "+x+" "+z);
 
         GameObject sproutPrefab = myTreeSpawner.sproutPrefab;
 
@@ -308,7 +307,10 @@ public class TreeSpawner : MonoBehaviour
             plantPos.y = hit.point.y;
         }
 
-        plantPos.y += 2f / 2f;
+        plantPos.y=33.5f; //+= 2f / 2f;
+
+        Debug.Log("SRPOUT PLANTED: "+plantPos.x+" "+plantPos.y+" "+plantPos.z);
+
 
         GameObject newSprout = Instantiate(sproutPrefab, plantPos, Quaternion.identity);
         myTreeSpawner.spawnedTrees.Add(newSprout);
