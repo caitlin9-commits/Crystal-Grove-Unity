@@ -129,7 +129,7 @@ public class NomadController : MonoBehaviour
         }
 
         // PLANTING
-        if (canPlant && Input.GetKey(KeyCode.E))
+        if (canPlant && Input.GetKey(KeyCode.P))
         {
                 canPlant = false;
                 PlantPinecone();    
