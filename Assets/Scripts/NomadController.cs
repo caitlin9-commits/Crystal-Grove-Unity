@@ -133,7 +133,7 @@ public class NomadController : MonoBehaviour
         }
 
         // PLANTING
-        if (canPlant && Input.GetKey(KeyCode.E))
+        if (canPlant && Input.GetKey(KeyCode.Q))
         {
                 canPlant = false;
                 PlantPinecone();    
@@ -296,6 +296,7 @@ public class NomadController : MonoBehaviour
         if (other.CompareTag("village"))
         {
             Debug.Log("ENTERING VILLAGE");
+            canPlant = false;
             
             if (GlobalValues.getDayStartEnvScore()==1)
             {
@@ -347,6 +348,7 @@ public class NomadController : MonoBehaviour
 
         if (other.CompareTag("village"))
         {
+            canPlant = true;
             Debug.Log("EXITING VILLAGE");
             playForestMusic();
         }
