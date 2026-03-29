@@ -55,6 +55,7 @@ public class ConversationStarter : MonoBehaviour
         GlobalValues.clearInstructionText();  
         NomadController.setWalk(false);
         int woodAmount = InventoryManager.getWoodAmount();
+        int fishAmount = InventoryManager.getFishAmount();
         bool agreedToHelp = OldManController.checkIfAgreedToHelp();
 
         NPCConversation todayConversation;
@@ -68,12 +69,21 @@ public class ConversationStarter : MonoBehaviour
         else if(day == 5){todayConversation=day5Conversation;}
         else{todayConversation=myConversation;}
 
+        bool hasSpokenToFairy = GlobalValues.getHasSpokenToFairy();
+        bool hasSpokenToBebhinnAboutFairy = GlobalValues.getHasSpokenToBebhinnAboutFairy();
+        bool hasWaterwheel = GlobalValues.checkForWaterwheel();
+
+
         ConversationManager.Instance.StartConversation(todayConversation);
         ConversationManager.OnConversationEnded = ConversationEnd;
         ConversationManager.Instance.SetBool("hasSpoken",hasSpoken);
         ConversationManager.Instance.SetBool("agreedToHelp",agreedToHelp);
         ConversationManager.Instance.SetInt("woodCount",woodAmount);
-
+        ConversationManager.Instance.SetInt("fishCount",fishAmount);
+        ConversationManager.Instance.SetBool("hasWaterwheel",hasWaterwheel);
+        ConversationManager.Instance.SetBool("hasSpokenFairy",hasSpokenToFairy);
+        ConversationManager.Instance.SetBool("toldBebhinnAboutFairy",hasSpokenToBebhinnAboutFairy);
+        
         ConversationManager.Instance.SetInt("environmentHealth",GlobalValues.calculateEnvironmentScore());
 
     }

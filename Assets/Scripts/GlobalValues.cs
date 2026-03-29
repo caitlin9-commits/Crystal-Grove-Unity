@@ -17,6 +17,9 @@ public class GlobalValues : MonoBehaviour
     private bool hasWaterWheel;
     private bool hasWindmill;
 
+    private bool hasSpokenToFairy;
+    private bool hasSpokenToBebhinnAboutFairy;
+
     private int dayStartEnvScore;
 
     
@@ -62,6 +65,7 @@ public class GlobalValues : MonoBehaviour
         
         hasWaterWheel = false;
         hasWindmill = false;
+        hasSpokenToFairy=false;
 
         instructionText.text = "";
         menuCanvas.SetActive(false);
@@ -142,6 +146,26 @@ public class GlobalValues : MonoBehaviour
     {
         myGlobalValues.windmill.GetComponent<Renderer>().enabled = true;
         myGlobalValues.hasWindmill = true;
+    }
+
+    public static bool getHasSpokenToFairy()
+    {
+        return myGlobalValues.hasSpokenToFairy;
+    }
+
+    public static void setHasSpokenToFairy()
+    {
+         myGlobalValues.hasSpokenToFairy = true;
+    }
+
+    public static bool getHasSpokenToBebhinnAboutFairy()
+    {
+        return myGlobalValues.hasSpokenToBebhinnAboutFairy;
+    }
+
+    public static void setHasSpokenToBebhinnAboutFairy()
+    {
+         myGlobalValues.hasSpokenToBebhinnAboutFairy = true;
     }
 
     

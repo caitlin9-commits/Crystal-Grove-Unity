@@ -32,6 +32,10 @@ public class NomadController : MonoBehaviour
     private int orbSoundCounter;
     private int walkSoundCounter;
 
+
+    private float speedMultiplier = 1;
+
+
     public Animator myAnim;
     [SerializeField] bool backTurned;
 
@@ -150,6 +154,11 @@ public class NomadController : MonoBehaviour
         }
 
 
+        if (Input.GetKey(KeyCode.N))
+        {
+            speedMultiplier+=0.1f;
+        }
+
 
         // SLEEP
         if (canSleep && Input.GetKey(KeyCode.E))
@@ -198,8 +207,8 @@ public class NomadController : MonoBehaviour
         Vector3 velocity = rb.linearVelocity;
 
         // Only modify X and Z — preserve Y for gravity
-        velocity.x = x * speed;
-        velocity.z = z * speed;
+        velocity.x = x * speed * speedMultiplier;
+        velocity.z = z * speed * speedMultiplier;
 
         rb.linearVelocity = velocity;
     }

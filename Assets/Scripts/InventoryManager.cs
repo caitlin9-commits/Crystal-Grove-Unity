@@ -151,6 +151,11 @@ public class InventoryManager : MonoBehaviour
     {
         return myInventoryManager.woodAmount;
     }
+    public static int getFishAmount()
+    {
+        return myInventoryManager.fishAmount;
+    }
+
     public static int getPineconeAmount()
     {
         return myInventoryManager.pineconeAmount;
@@ -215,6 +220,16 @@ public class InventoryManager : MonoBehaviour
         myInventoryManager.woodAmountText.text = "";
         myInventoryManager.coinAmountText.text = myInventoryManager.coinsAmount.ToString();
     }
+
+
+    public static void sellFish()
+    {
+        myInventoryManager.coinsAmount+=myInventoryManager.fishAmount;
+        myInventoryManager.fishAmount=0;
+        myInventoryManager.fishImage.enabled = false;
+        myInventoryManager.fishAmountText.text = "";
+        myInventoryManager.coinAmountText.text = myInventoryManager.coinsAmount.ToString();
+    }
    
 
     public static void donateFish()
@@ -228,6 +243,7 @@ public class InventoryManager : MonoBehaviour
      public static void donateWood()
     {
         GlobalValues.woodDonatedIncrement(myInventoryManager.woodAmount);
+        changePineconeAmount(myInventoryManager.woodAmount/5);
         myInventoryManager.woodAmount=0;
         myInventoryManager.woodImage.enabled = false;
         myInventoryManager.woodAmountText.text = "";
