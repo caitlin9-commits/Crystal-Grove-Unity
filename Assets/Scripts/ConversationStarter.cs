@@ -86,6 +86,16 @@ public class ConversationStarter : MonoBehaviour
         
         ConversationManager.Instance.SetInt("environmentHealth",GlobalValues.calculateEnvironmentScore());
 
+        Debug.Log("NEW CONVERSTION STARTED");
+        Debug.Log("Convo Details - hasSpoken "+hasSpoken);
+        Debug.Log("Convo Details - agreedToHelp "+agreedToHelp);
+        Debug.Log("Convo Details - woodCount "+woodAmount);
+        Debug.Log("Convo Details - fishCount "+fishAmount);
+        Debug.Log("Convo Details - hasWaterwheel "+hasWaterwheel);
+        Debug.Log("Convo Details - hasSpokenFairy "+hasSpokenToFairy);
+        Debug.Log("Convo Details - toldBebhinnAboutFairy "+hasSpokenToBebhinnAboutFairy);
+        Debug.Log("Convo Details - environmentHealth "+GlobalValues.calculateEnvironmentScore());
+
     }
 
     private void ConversationEnd()
