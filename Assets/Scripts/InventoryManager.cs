@@ -66,7 +66,7 @@ public class InventoryManager : MonoBehaviour
         woodAmount = 0;
         coinsAmount = 0;
         trashAmount = 0;
-        pineconeAmount = 3;
+        pineconeAmount = 0;
 
         hasAxe = false;
 

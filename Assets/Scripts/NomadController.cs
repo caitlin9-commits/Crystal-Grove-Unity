@@ -74,8 +74,8 @@ public class NomadController : MonoBehaviour
                 backTurned = false;
             }
 
-            if (!backTurned && z > 0) { backTurned = true; }
-            else if (backTurned && z < 0) { backTurned = false; }
+            if ( z > 0) { backTurned = true; }
+            else { backTurned = false; }
 
             myAnim.SetBool("BackTurned", backTurned);
 
@@ -129,7 +129,7 @@ public class NomadController : MonoBehaviour
         }
 
         // PLANTING
-        if (canPlant && Input.GetKey(KeyCode.P))
+        if (canPlant && Input.GetKey(KeyCode.E))
         {
                 canPlant = false;
                 PlantPinecone();    
@@ -216,7 +216,7 @@ public class NomadController : MonoBehaviour
                 canChop = true;
                 if(!GlobalValues.checkSeenChopText())
                 {
-                    GlobalValues.setInstructionText("Hold","Spacebar","chop tree");
+                    GlobalValues.setInstructionText("Hold","E","chop tree");
                     
                 }
                 
@@ -233,7 +233,7 @@ public class NomadController : MonoBehaviour
             canPlant = false;
             if(!GlobalValues.checkSeenSleepText())
             {
-                GlobalValues.setInstructionText("Press","Z","sleep");  
+                GlobalValues.setInstructionText("Press","E","sleep");  
                 
             }
             
@@ -242,13 +242,15 @@ public class NomadController : MonoBehaviour
         if (other.CompareTag("water"))
         {
 
+            canPlant = false;
+
             bool hasRod = InventoryManager.checkForRod();
             if (hasRod)
             {
                 canFish = true;
                 if(!GlobalValues.checkSeenFishText())
                 {
-                    GlobalValues.setInstructionText("Press","F","fish");   
+                    GlobalValues.setInstructionText("Press","E","fish");   
                 }
                 
             }
@@ -262,9 +264,10 @@ public class NomadController : MonoBehaviour
         if (other.CompareTag("bin"))
         {
             canRecycle = true;
+            canPlant = false;
             if(!GlobalValues.checkSeenRecycleText())
             {
-                GlobalValues.setInstructionText("Press","R","recycle");    
+                GlobalValues.setInstructionText("Press","E","recycle");    
             }
             
         }
@@ -285,15 +288,15 @@ public class NomadController : MonoBehaviour
         {
             Debug.Log("ENTERING VILLAGE");
             
-            if (GlobalValues.calculateEnvironmentScore()==1)
+            if (GlobalValues.getDayStartEnvScore()==1)
             {
                 MusicManager.PlayNewSong("VillageGood");
             }
-            else if (GlobalValues.calculateEnvironmentScore()==2)
+            else if (GlobalValues.getDayStartEnvScore()==2)
             {
                 MusicManager.PlayNewSong("VillageNeutral");
             }
-            else if (GlobalValues.calculateEnvironmentScore()==3 || GlobalValues.calculateEnvironmentScore()==4)
+            else if (GlobalValues.getDayStartEnvScore()==3 || GlobalValues.getDayStartEnvScore()==4)
             {
                 MusicManager.PlayNewSong("VillageBad");
             }
@@ -361,7 +364,7 @@ public class NomadController : MonoBehaviour
         Debug.Log("Sending to tent: ");
         float x = 3254.98f;
         float y = 34.21f;
-        float z = -3295.42f;
+        float z = -3259.55f;
         myNomad.transform.position =  new Vector3(x,y,z);
         myNomad.GoToSleep();
     }
@@ -386,7 +389,9 @@ public class NomadController : MonoBehaviour
         await ScreenFader.Instance.FadeOut();
         playForestMusic();
 
+        GlobalValues.setDayStartEnvScore();
         TreeSpawner.SpawnTrees();
+        
         await Task.Delay(1000); 
         TimeManager.sleep();
         await ScreenFader.Instance.FadeIn();
@@ -523,15 +528,15 @@ public class NomadController : MonoBehaviour
 
     private void playForestMusic()
     {
-        if(GlobalValues.calculateEnvironmentScore()==1)
+        if(GlobalValues.getDayStartEnvScore()==1)
         {
             MusicManager.PlayNewSong("ForestGood");
         }
-        else if(GlobalValues.calculateEnvironmentScore()==2)
+        else if(GlobalValues.getDayStartEnvScore()==2)
         {
             MusicManager.PlayNewSong("ForestNeutral");
         }
-        else if(GlobalValues.calculateEnvironmentScore()==3 || GlobalValues.calculateEnvironmentScore()==4)
+        else if(GlobalValues.getDayStartEnvScore()==3 || GlobalValues.getDayStartEnvScore()==4)
         {
             MusicManager.PlayNewSong("ForestBad");
         }

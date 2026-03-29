@@ -15,7 +15,7 @@ public class PineConeController : MonoBehaviour
     void Update()
     {
         
-        if (canPickUp && Input.GetKey(KeyCode.G))
+        if (canPickUp && Input.GetKey(KeyCode.E))
         {
             canPickUp = false;
             PickUp();
@@ -36,7 +36,7 @@ public class PineConeController : MonoBehaviour
         if (other.CompareTag("Nomad"))
         {
             canPickUp = true;
-            GlobalValues.setInstructionText("Press","G","pickup");
+            GlobalValues.setInstructionText("Press","E","pickup");
         }
     }
 

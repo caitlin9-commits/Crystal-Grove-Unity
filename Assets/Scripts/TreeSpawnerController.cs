@@ -116,31 +116,34 @@ public class TreeSpawner : MonoBehaviour
             int day = TimeManager.getDay();
 
 
-            if(myTreeSpawner.treeHealthState == 4)
-            {
-                if(netTrees<=-2){myTreeSpawner.treeHealthState--;}
-            }
-            else if(myTreeSpawner.treeHealthState == 3)
-            {
-                if(netTrees<=-10){myTreeSpawner.treeHealthState--;}
-                else if(netTrees>-2){myTreeSpawner.treeHealthState++;}
-            }
-            else if(myTreeSpawner.treeHealthState == 2)
-            {
-                if(netTrees<=-15){myTreeSpawner.treeHealthState--;}
-                else if(netTrees>-10){myTreeSpawner.treeHealthState++;}
-            }
-            else if(myTreeSpawner.treeHealthState == 1)
-            {
-                if(netTrees<=-20){myTreeSpawner.treeHealthState--;}
-                else if(netTrees>-15){myTreeSpawner.treeHealthState++;}
-            }
+            // if(myTreeSpawner.treeHealthState == 4)
+            // {
+            //     if(netTrees<=-2){myTreeSpawner.treeHealthState--;}
+            // }
+            // else if(myTreeSpawner.treeHealthState == 3)
+            // {
+            //     if(netTrees<=-10){myTreeSpawner.treeHealthState--;}
+            //     else if(netTrees>-2){myTreeSpawner.treeHealthState++;}
+            // }
+            // else if(myTreeSpawner.treeHealthState == 2)
+            // {
+            //     if(netTrees<=-15){myTreeSpawner.treeHealthState--;}
+            //     else if(netTrees>-10){myTreeSpawner.treeHealthState++;}
+            // }
+            // else if(myTreeSpawner.treeHealthState == 1)
+            // {
+            //     if(netTrees<=-20){myTreeSpawner.treeHealthState--;}
+            //     else if(netTrees>-15){myTreeSpawner.treeHealthState++;}
+            // }
+
+            
+            int envScore = GlobalValues.calculateEnvironmentScore();
 
 
-            if(myTreeSpawner.treeHealthState == 4){treePrefab = myTreeSpawner.healthyTree;}
-            else if(myTreeSpawner.treeHealthState == 3){treePrefab = myTreeSpawner.brownTree;}
-            else if(myTreeSpawner.treeHealthState == 2){treePrefab = myTreeSpawner.deadTree;}
-            else if(myTreeSpawner.treeHealthState == 1){treePrefab = myTreeSpawner.cystalTree;}
+            if(envScore == 1){treePrefab = myTreeSpawner.healthyTree;}
+            else if(envScore == 2){treePrefab = myTreeSpawner.brownTree;}
+            else if(envScore == 3){treePrefab = myTreeSpawner.deadTree;}
+            else if(envScore == 4){treePrefab = myTreeSpawner.cystalTree;}
             
 
             TreeObject tree = myTreeSpawner.trees[i];
@@ -165,7 +168,7 @@ public class TreeSpawner : MonoBehaviour
                 randomPos.y = hit.point.y;
             }
 
-            if(myTreeSpawner.treeHealthState == 4){
+            if(envScore == 1){
                 randomPos.y += myTreeSpawner.treeHeight / 2f;
             }
             else
@@ -239,7 +242,7 @@ public class TreeSpawner : MonoBehaviour
 
         Debug.Log("TREE SPAWNER LOC" + myTreeSpawner.transform.position.x + "   " +  myTreeSpawner.transform.position.z);
 
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 50; i++)
         {
         
             GameObject pineconePrefab = myTreeSpawner.pineconePrefab;
@@ -249,7 +252,7 @@ public class TreeSpawner : MonoBehaviour
             while(!foundAppropriateCoordinates)
             {
                 float pineconeX = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
-                float pineconeZ = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
+                float pineconeZ = Random.Range(-myTreeSpawner.spawnRadiusZ, myTreeSpawner.spawnRadiusZ);
 
                 foundAppropriateCoordinates = IsAppropriateSpawnLocation(pineconeX,pineconeZ);
 

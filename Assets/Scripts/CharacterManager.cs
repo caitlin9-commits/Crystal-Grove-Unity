@@ -110,6 +110,9 @@ public class CharacterManager : MonoBehaviour
         Vector3 BrigidCoords = new Vector3(3407.78f, 27.7f, -3263.1f); //at house
         myCharacterManager.Brigid.transform.position = BrigidCoords;
 
+        Vector3 RuairíCoords = new Vector3(3572.6f, 20.5f, -3226.6f); //at house
+        myCharacterManager.Ruairí.transform.position = RuairíCoords;
+
         
     }
 
@@ -182,6 +185,9 @@ public class CharacterManager : MonoBehaviour
         Vector3 BrigidCoords = new Vector3(3201.4f, 38.52f, -3278.4f); //in forest, beside pond
         myCharacterManager.Brigid.transform.position = BrigidCoords;
 
+        Vector3 RuairíCoords = new Vector3(3572.6f, 20.5f, -3226.6f); //at house
+        myCharacterManager.Ruairí.transform.position = RuairíCoords;
+
     }
 
 
@@ -253,6 +259,9 @@ public class CharacterManager : MonoBehaviour
         Vector3 BrigidCoords = new Vector3(3201.4f, 38.52f, -3278.4f); //in forest, beside pond
         myCharacterManager.Brigid.transform.position = BrigidCoords;
 
+        Vector3 RuairíCoords = new Vector3(3572.6f, 20.5f, -3226.6f); //at house
+        myCharacterManager.Ruairí.transform.position = RuairíCoords;
+
     }
 
 
@@ -322,6 +331,9 @@ public class CharacterManager : MonoBehaviour
 
         Vector3 BrigidCoords = new Vector3(3201.4f, 38.52f, -3278.4f); //in forest, beside pond
         myCharacterManager.Brigid.transform.position = BrigidCoords;
+
+        Vector3 RuairíCoords = new Vector3(3572.6f, 20.5f, -3226.6f); //at house
+        myCharacterManager.Ruairí.transform.position = RuairíCoords;
 
     }
 
@@ -394,6 +406,9 @@ public class CharacterManager : MonoBehaviour
 
         Vector3 BrigidCoords = new Vector3(3201.4f, 38.52f, -3278.4f); //in forest, beside pond
         myCharacterManager.Brigid.transform.position = BrigidCoords;
+
+        Vector3 RuairíCoords = new Vector3(3568.31f, 20.5f, -3156.3f); //at house
+        myCharacterManager.Ruairí.transform.position = RuairíCoords;
     }
 }
 

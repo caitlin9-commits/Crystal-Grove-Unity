@@ -94,7 +94,7 @@ public class ShopManager : MonoBehaviour
             if(axeLevel==1)
             {
                 itemName = "Next Axe: Copper";
-                itemCost = 0;
+                itemCost = 10;
                 itemImage.sprite = copperAxe;
             }
 
@@ -124,7 +124,7 @@ public class ShopManager : MonoBehaviour
             if(rodLevel==1)
             {
                 itemName = "Next Rod: Copper";
-                itemCost = 0;
+                itemCost = 10;
                 itemImage.sprite = copperRod;
             }
 

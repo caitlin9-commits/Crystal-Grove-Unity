@@ -17,6 +17,8 @@ public class GlobalValues : MonoBehaviour
     private bool hasWaterWheel;
     private bool hasWindmill;
 
+    private int dayStartEnvScore;
+
     
     private bool spokeToOldMan;
 
@@ -56,6 +58,7 @@ public class GlobalValues : MonoBehaviour
         treesCut = 0;
         fishCaught = 0;
         recycledAmount=0;
+        dayStartEnvScore=1;
         
         hasWaterWheel = false;
         hasWindmill = false;
@@ -201,6 +204,15 @@ public class GlobalValues : MonoBehaviour
     public static bool checkSeenSleepText()
     {
         return myGlobalValues.seenSleepText;
+    }
+
+    public static void setDayStartEnvScore()
+    {
+        myGlobalValues.dayStartEnvScore = calculateEnvironmentScore();
+    }
+    public static int getDayStartEnvScore()
+    {
+        return myGlobalValues.dayStartEnvScore;
     }
 
 
