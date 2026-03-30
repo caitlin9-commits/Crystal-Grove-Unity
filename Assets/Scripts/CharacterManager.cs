@@ -134,7 +134,7 @@ public class CharacterManager : MonoBehaviour
         myCharacterManager.Bebhinn.transform.position = BebhinnCoords;
 
 
-        Vector3 BláithínCoords = new Vector3(3246.64f, 34.65f, -3278.1f); //in the forest
+        Vector3 BláithínCoords = new Vector3(3254.2f, 34.39f, -3281.92f); //in the forest
         myCharacterManager.Bláithín.transform.position = BláithínCoords;
 
 
@@ -208,7 +208,7 @@ public class CharacterManager : MonoBehaviour
         myCharacterManager.Bebhinn.transform.position = BebhinnCoords;
 
 
-        Vector3 BláithínCoords = new Vector3(3246.64f, 34.65f, -3278.1f); //in the forest
+        Vector3 BláithínCoords = new Vector3(3254.2f, 34.39f, -3281.92f); //in the forest
         myCharacterManager.Bláithín.transform.position = BláithínCoords;
 
 
@@ -281,7 +281,7 @@ public class CharacterManager : MonoBehaviour
         myCharacterManager.Bebhinn.transform.position = BebhinnCoords;
 
 
-        Vector3 BláithínCoords = new Vector3(3246.64f, 34.65f, -3278.1f); //in the forest
+        Vector3 BláithínCoords = new Vector3(3254.2f, 34.39f, -3281.92f); //in the forest
         myCharacterManager.Bláithín.transform.position = BláithínCoords;
 
 
@@ -356,7 +356,7 @@ public class CharacterManager : MonoBehaviour
         myCharacterManager.Bebhinn.transform.position = BebhinnCoords;
 
 
-        Vector3 BláithínCoords = new Vector3(3246.64f, 34.65f, -3278.1f); //in the forest
+        Vector3 BláithínCoords = new Vector3(3254.2f, 34.39f, -3281.92f); //in the forest
         myCharacterManager.Bláithín.transform.position = BláithínCoords;
 
 

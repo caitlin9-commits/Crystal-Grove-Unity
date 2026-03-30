@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 3779961}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3460.6, y: 30.5, z: -3231}
+  m_LocalPosition: {x: 3460.1, y: 30.5, z: -3240.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -169,9 +169,9 @@ MonoBehaviour:
   cystalTree: {fileID: 4701863397727058940, guid: df942a9f686fb0a4ab7b5c8e4837af3b, type: 3}
   pineconePrefab: {fileID: 8259652026176213963, guid: dd85952b8808836489dd89b752b2ebb4, type: 3}
   sproutPrefab: {fileID: 4710596780836976545, guid: f5b573a2d541c7c4ebe7ad05dee3cd5e, type: 3}
-  treeCount: 60
+  treeCount: 80
   spawnRadius: 180
-  spawnRadiusZ: 42
+  spawnRadiusZ: 45
   treeHeight: 15
 --- !u!1 &33584820
 GameObject:
@@ -17438,7 +17438,7 @@ Transform:
   m_GameObject: {fileID: 1610390858}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2956.08, y: 46.2, z: -3373.1}
+  m_LocalPosition: {x: 2991, y: 34.39, z: -3324.8}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

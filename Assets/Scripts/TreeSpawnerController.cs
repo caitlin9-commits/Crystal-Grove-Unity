@@ -191,7 +191,7 @@ public class TreeSpawner : MonoBehaviour
 
 
 
-        if(x>3244.79 && x<3279.25 && z<-3287.52 && z>-3301.46) //tent and sign
+        if(x>3246.45 && x<3282.43 && z<-3273.85 && z>-3303.66) //tent and sign + forest fairy
         {
             return false;
         }
@@ -199,31 +199,39 @@ public class TreeSpawner : MonoBehaviour
         {
             return false;
         }
-        else if(x>3055.5 && x<3089.7 && z<-3325.4  && z>-3364.14) //forest bridge
+        else if(x>3049.73 && x<3089.7 && z<-3327.22  && z>-3364.14) //forest bridge
         {
             return false;
         }
-        else if(x>3017.14 && x>3068.2 && z<-3300.4  && z>-3336.6) //forest river (middle)
+        else if(x>3026.4 && x>3068.2 && z<-3307  && z>-3329.9) //forest river (middle start)
         {
             return false;
         }
-        else if(x>2970.1 && x<3011.8 && z<-3293  && z>-3323.41) //forest river (end)
+        else if(x>3007.4 && x>3026.4 && z<-3300.4  && z>-3325.3) //forest river (middle middle)
         {
             return false;
         }
-        else if(x>2965.4 && x<2998.6 && z<-3280.7  && z>-3299) //forest river (corner)
+        else if(x>2988.4 && x>3032.6 && z<-3294.3  && z>-3324.8) //forest river (another middle square)
         {
             return false;
         }
-        else if(x>2988.5 && x<3029.1 && z<-3329.5  && z>-3354.3) //old man house
+        else if(x>2970.1 && x<3018.1 && z<-3280.3  && z>-3318.7) //forest river mid-end square
         {
             return false;
         }
-        else if(x>3084.4 && x<3104.6 && z<-3328.9  && z>-3359.8) //Nomad spawner
+        else if(x>2953.6 && x<2996.6 && z<-3261.9  && z>-3286.1) //forest river (end corner)
         {
             return false;
         }
-        else if(x>3007.8 && x<3027 && z<-3332.9  && z>-3369.2) //Old man location
+        else if(x>2978.5 && x<3026.7 && z<-3329.5  && z>-3369.1) //old man house
+        {
+            return false;
+        }
+        else if(x>3084.4 && x<3104.6 && z<-3328.9  && z>-3375.82) //Nomad spawner
+        {
+            return false;
+        }
+        else if(x>3007.8 && x<3027 && z<-3330.4  && z>-3369.2) //Old man house location
         {
             return false;
         }
