@@ -465,6 +465,7 @@ public class NomadController : MonoBehaviour
 
         int fishingWaitTime = 7000;
         int trashLikelihood = 3;
+        int nothingLikelihood = 30;
 
         if(rodLevel == 2)
         {
@@ -482,6 +483,15 @@ public class NomadController : MonoBehaviour
             trashLikelihood = 10;
         }
 
+        
+        int envScore = GlobalValues.calculateEnvironmentScore();
+
+
+        if(envScore == 2){nothingLikelihood = 20;}
+        else if(envScore == 3){nothingLikelihood = 10;}
+        else if(envScore == 4){nothingLikelihood = 1;}
+
+
         canWalk = false;
         myAnim.SetBool("Casting", true);
         await Task.Delay(1000); 
@@ -493,9 +503,14 @@ public class NomadController : MonoBehaviour
         myAnim.SetBool("Fishing", false);
 
 
-        int random = Random.Range(0,trashLikelihood);
+        int trashRandom = Random.Range(0,trashLikelihood);
+        int nothingRandom = Random.Range(0,nothingLikelihood);
 
-        if (random == 2)
+        if(nothingRandom == 0)
+        {
+            GlobalValues.setInstructionTextString("You didn't catch anything.");
+        }
+        if (trashRandom == 2)
         {
             InventoryManager.changeTrashAmount(1);
             GlobalValues.setInstructionTextString("You found some trash.");

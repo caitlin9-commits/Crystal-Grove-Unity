@@ -112,6 +112,10 @@ public class GlobalValues : MonoBehaviour
     {
         myGlobalValues.woodDonated+=amount;
     }
+    public static int getWoodDonated()
+    {
+        return myGlobalValues.woodDonated;
+    }
     public static void fishDonatedIncrement(int amount)
     {
         myGlobalValues.fishDonated+=amount;

@@ -80,6 +80,7 @@ public class ShopManager : MonoBehaviour
         Image itemImage = option.transform.Find("ItemImage").GetComponent<Image>();
         TMP_Text costText = option.transform.Find("CostText").GetComponent<TMP_Text>();
 
+        int woodDonated = GlobalValues.getWoodDonated();
         
         string itemName ="";
         int itemCost=0;
@@ -145,12 +146,12 @@ public class ShopManager : MonoBehaviour
         else if(number == 3)
         {
             itemName = "Water Wheel";
-            itemCost = 50;
+            itemCost = 100-woodDonated;
         }
         else if(number == 4)
         {
             itemName = "Windmill";
-            itemCost = 100;
+            itemCost = 100-woodDonated;
         }
 
         itemText.text = itemName;
