@@ -223,7 +223,7 @@ public class TreeSpawner : MonoBehaviour
         {
             return false;
         }
-        else if(x>2978.5 && x<3026.7 && z<-3329.5  && z>-3369.1) //old man house
+        else if(x>2978.5 && x<3026.7 && z<-3300.3  && z>-3369.1) //old man house
         {
             return false;
         }
