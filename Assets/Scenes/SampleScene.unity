@@ -62327,6 +62327,7 @@ GameObject:
   - component: {fileID: 7781492817774914252}
   - component: {fileID: 4998311761490042346}
   - component: {fileID: 6366816524021566347}
+  - component: {fileID: 7781492817774914253}
   m_Layer: 0
   m_Name: border with fixed texturefbx (1)
   m_TagString: Untagged
@@ -76446,6 +76447,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6740476360618846723}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 88.917}
+--- !u!64 &7781492817774914253
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5526628899918381616}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3874432442672741690, guid: ef91699c41be53045a76cbed45ceaa88, type: 3}
 --- !u!114 &7782315369442652790
 MonoBehaviour:
   m_ObjectHideFlags: 0
