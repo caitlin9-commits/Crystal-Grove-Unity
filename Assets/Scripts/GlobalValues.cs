@@ -61,6 +61,7 @@ public class GlobalValues : MonoBehaviour
         treesCut = 0;
         fishCaught = 0;
         recycledAmount=0;
+        woodDonated=0;
         dayStartEnvScore=1;
         
         hasWaterWheel = false;
@@ -73,12 +74,15 @@ public class GlobalValues : MonoBehaviour
 
         windmill.GetComponent<Renderer>().enabled = false;
         waterwheel.SetActive(false);
+
+        setInstructionText("Press","Tab","View Controls");
     }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Tab))
         {
             menuCanvas.SetActive(!menuCanvas.activeSelf);
+            GlobalValues.clearInstructionText();
             Debug.Log("MENU CLICKED");
         }
 

@@ -67,6 +67,8 @@ public class InventoryManager : MonoBehaviour
         coinsAmount = 0;
         trashAmount = 0;
         pineconeAmount = 0;
+        axeLevel = 1;
+        rodLevel = 1;
 
         hasAxe = false;
 

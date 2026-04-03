@@ -113,10 +113,10 @@ TextureImporter:
       name: axe-Gold_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 8
         y: 32
-        width: 22
-        height: 18
+        width: 32
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,10 +135,10 @@ TextureImporter:
       name: axe-Gold_1
       rect:
         serializedVersion: 2
-        x: 80
+        x: 72
         y: 32
-        width: 20
-        height: 18
+        width: 32
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,10 +157,10 @@ TextureImporter:
       name: axe-Gold_2
       rect:
         serializedVersion: 2
-        x: 139
+        x: 136
         y: 32
-        width: 19
-        height: 23
+        width: 32
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: axe-Gold_3
       rect:
         serializedVersion: 2
-        x: 208
+        x: 200
         y: 32
-        width: 20
-        height: 16
+        width: 32
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: axe-Gold_4
       rect:
         serializedVersion: 2
-        x: 272
+        x: 264
         y: 32
-        width: 22
-        height: 18
+        width: 32
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
