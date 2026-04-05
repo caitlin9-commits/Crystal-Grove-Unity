@@ -100,10 +100,10 @@ TextureImporter:
       name: browntreeI-ani_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 0
         y: 15
-        width: 24
-        height: 39
+        width: 64
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

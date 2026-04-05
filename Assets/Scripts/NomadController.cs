@@ -154,9 +154,13 @@ public class NomadController : MonoBehaviour
         }
 
 
-        if (Input.GetKey(KeyCode.N))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            speedMultiplier+=0.1f;
+            speedMultiplier=2f;
+        }
+        else
+        {
+            speedMultiplier=1f;
         }
 
 
@@ -410,11 +414,11 @@ public class NomadController : MonoBehaviour
         
         fading = false;
 
-        if(TimeManager.getDay() == 6)
-        {
-            GlobalValues.setInstructionTextString("GAME OVER");
-        }
-        else
+        // if(TimeManager.getDay() == 6)
+        // {
+        //     GlobalValues.setInstructionTextString("GAME OVER");
+        // }
+        if(TimeManager.getDay()<6)
         {
             
             canWalk = true;

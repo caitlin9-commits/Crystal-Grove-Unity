@@ -64,6 +64,7 @@
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\NodeEventHolder.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableNode.cs" />
     <Compile Include="Assets\Scripts\ConversationStarter.cs" />
+    <Compile Include="Assets\Scripts\FlowerController.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\UI\ConversationManager.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableCondition.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableSetParamAction.cs" />

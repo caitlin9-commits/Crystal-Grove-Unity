@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6ff0212a76c85ae48b372b33b51f8f83
+guid: e208475436e9a1348815b6aa947a4319
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: deadtreeI-ani_0
+      name: crystaltree-nonchop_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 15
-        width: 64
-        height: 49
+        x: 19
+        y: 2
+        width: 26
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26d9b712b7a9965499231dc56f9cb852
-      internalID: -43142030
+      spriteID: dca35b74e6779eb4382096b42a928daf
+      internalID: -586894246
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2764679126aca8148817135859250dda
+    spriteID: abaf5e70f57ab4a43842bb4a2a84b255
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      deadtreeI-ani_0: -43142030
+      crystaltree-nonchop_0: -586894246
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -19,6 +19,12 @@ public class ScreenFader : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        canvasGroup.alpha = 1;
+    }
+
+
     async Task Fade(float targetTransparency)
     {
         float start = canvasGroup.alpha, t = 0;
