@@ -32,7 +32,7 @@ public class SoundEffectManager : MonoBehaviour
         
             audioSource.PlayOneShot(audioClip);
 
-            if(soundName=="Footsteps")
+            if(soundName=="Footsteps" || soundName=="Glowing")
             {
                 audioSource.volume = volume;    
             }

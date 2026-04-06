@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c67ac3388b791be48a7927f130605f2e
+guid: dde5553865614854381153630eb0d343
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: start-screen UI_0
+      name: potato-plant_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1666
-        height: 960
+        x: 12
+        y: 11
+        width: 7
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b9bd4ad289cb8942bede90029d3080e
-      internalID: -2050264097
+      spriteID: 1d90d586b472fc048934865a78a782ad
+      internalID: 1086497161
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4447cd50ee13ccd4eab3dae0b893948a
+    spriteID: 4793ab59b67ab144ab15a48fd808c974
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      start-screen UI_0: -2050264097
+      potato-plant_0: 1086497161
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

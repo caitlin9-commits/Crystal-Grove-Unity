@@ -29,7 +29,7 @@ public class NomadController : MonoBehaviour
 
     private int chopSoundCounter;
 
-    private int orbSoundCounter;
+    private float orbSoundCounter;
     private int walkSoundCounter;
 
 
@@ -173,8 +173,8 @@ public class NomadController : MonoBehaviour
 
         if(inOrbZone)
         {
-            orbSoundCounter++;
-            if (orbSoundCounter > 500)
+            orbSoundCounter += Time.deltaTime;
+            if (orbSoundCounter > 4)
             {
 
                 float NomadX = myNomad.transform.position.x;
@@ -193,9 +193,10 @@ public class NomadController : MonoBehaviour
 
 
                 Debug.Log("DISTNACE FROM ORB "+ dist);
+                Debug.Log("VOLUME "+ volume);
 
 
-                SoundEffectManager.Play("Chopping",volume);
+                SoundEffectManager.Play("Glowing",volume);
                 orbSoundCounter = 0;
             }
         }
@@ -293,7 +294,7 @@ public class NomadController : MonoBehaviour
 
 
             inOrbZone = true;
-           SoundEffectManager.Play("Glowing");
+        //    SoundEffectManager.Play("Glowing");
         }
 
 

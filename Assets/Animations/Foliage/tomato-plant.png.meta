@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c845ac07761ddeb46aed2837d036c53f
+guid: 71ea5fe07442dd7498171470c5f0d12b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ending1-Good 1_0
+      name: tomato-plant_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 7680
-        height: 4320
+        x: 8
+        y: 5
+        width: 17
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80049881d20e0274bbf66410618dfdb2
-      internalID: -1420947356
+      spriteID: abec8ac66f4c1c24b9b0aba7e7ad7816
+      internalID: -495354979
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3023cd610cefb524391f4e8dc59fc8eb
+    spriteID: f406ae11a635290458d49c952d148453
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Ending1-Good 1_0: -1420947356
+      tomato-plant_0: -495354979
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

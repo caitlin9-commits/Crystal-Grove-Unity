@@ -10,6 +10,10 @@ public class TitleScreensController : MonoBehaviour
     public Canvas startCanvas;
     public Image startCanvasImg;
 
+    public Canvas aboutCanvas;
+    public Image aboutCanvasImg;
+    public Button startGameButtonAbout;
+
     public Image goodEndCanvas;
     public Image neutralEndCanvas;
     public Image badEndCanvas;
@@ -18,6 +22,7 @@ public class TitleScreensController : MonoBehaviour
     public Button aboutGameButton;
 
     public Sprite nightStart;
+    public Sprite nightAbout;
 
     public Sprite goodEnd;
     public Sprite neutralEnd;
@@ -45,6 +50,7 @@ public class TitleScreensController : MonoBehaviour
 
         myTitleScreens = this;
         // startCanvas.enabled = false;
+        aboutCanvas.enabled = false;
         goodEndCanvas.enabled = false;
         neutralEndCanvas.enabled = false;
         badEndCanvas.enabled = false;
@@ -52,13 +58,16 @@ public class TitleScreensController : MonoBehaviour
         
 
 		startGameButton.onClick.AddListener(()=>StartGame());
-        aboutGameButton.onClick.AddListener(()=>Debug.Log("TEST BUTTON"));
+        aboutGameButton.onClick.AddListener(()=>AboutGame());
+        startGameButtonAbout.onClick.AddListener(()=>StartGame());
+
 
         int hourNow = DateTime.Now.Hour;
         
-        if(hourNow<6 && hourNow>19)
+        if(hourNow<6 || hourNow>19)
         {
             startCanvasImg.sprite = nightStart;    
+            aboutCanvasImg.sprite = nightAbout;    
         }
 
         
@@ -90,11 +99,13 @@ public class TitleScreensController : MonoBehaviour
     {
         Debug.Log("START GAME");
         startCanvas.enabled = false;
+        aboutCanvas.enabled = false;
     }
     
     void AboutGame()
     {
-        
+        startCanvas.enabled = false;
+        aboutCanvas.enabled = true;
     }
 
     public static void ShowEnding()
