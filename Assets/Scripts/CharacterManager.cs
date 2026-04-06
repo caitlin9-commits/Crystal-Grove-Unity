@@ -20,7 +20,7 @@ public class CharacterManager : MonoBehaviour
     public GameObject Aoibheann;
     public GameObject Fergus;
     public GameObject Aoife;
-    public GameObject Caitilín;
+    public GameObject Caoimhe;
     public GameObject Cóem;
     public GameObject Brigid;
 
@@ -89,8 +89,8 @@ public class CharacterManager : MonoBehaviour
         myCharacterManager.Aoife.transform.position = AoifeCoords;
 
 
-        Vector3 CaitilínCoords = new Vector3(3422.8f, 21.2f, -3140.3f); //beside Senan
-        myCharacterManager.Caitilín.transform.position = CaitilínCoords;
+        Vector3 CaoimheCoords = new Vector3(3422.8f, 21.2f, -3140.3f); //beside Senan
+        myCharacterManager.Caoimhe.transform.position = CaoimheCoords;
 
 
         Vector3 CóemCoords = new Vector3(3401.92f, 27.7f, -3285f); // at house
@@ -164,8 +164,8 @@ public class CharacterManager : MonoBehaviour
         myCharacterManager.Aoife.transform.position = AoifeCoords;
 
 
-        Vector3 CaitilínCoords = new Vector3(3422.8f, 21.2f, -3140.3f); //beside Senan
-        myCharacterManager.Caitilín.transform.position = CaitilínCoords;
+        Vector3 CaoimheCoords = new Vector3(3422.8f, 21.2f, -3140.3f); //beside Senan
+        myCharacterManager.Caoimhe.transform.position = CaoimheCoords;
 
 
         Vector3 CóemCoords = new Vector3(3208.57f, 38.52f, -3272.76f); // in forest, beside pond
@@ -218,7 +218,7 @@ public class CharacterManager : MonoBehaviour
         myCharacterManager.Sadbh.transform.position = SadbhCoords;
 
 
-        Vector3 SenánCoords = new Vector3(3554.74f, 21.3f, -3153.99f); //near crystal, with Caitlin
+        Vector3 SenánCoords = new Vector3(3554.74f, 21.3f, -3153.99f); //near crystal, with Caoimhe
         myCharacterManager.Senán.transform.position = SenánCoords;
 
 
@@ -238,8 +238,8 @@ public class CharacterManager : MonoBehaviour
         myCharacterManager.Aoife.transform.position = AoifeCoords;
 
 
-        Vector3 CaitilínCoords = new Vector3(3559.26f, 21.2f, -3148.43f); //near crystal, with senan
-        myCharacterManager.Caitilín.transform.position = CaitilínCoords;
+        Vector3 CaoimheCoords = new Vector3(3559.26f, 21.2f, -3148.43f); //near crystal, with senan
+        myCharacterManager.Caoimhe.transform.position = CaoimheCoords;
 
 
         Vector3 CóemCoords = new Vector3(3401.92f, 27.7f, -3285f); // at house
@@ -248,6 +248,7 @@ public class CharacterManager : MonoBehaviour
 
         Vector3 BrigidCoords = new Vector3(3201.4f, 38.52f, -3278.4f); //in forest, beside pond
         myCharacterManager.Brigid.transform.position = BrigidCoords;
+
 
         Vector3 RuairíCoords = new Vector3(3572.6f, 20.5f, -3226.6f); //at house
         myCharacterManager.Ruairí.transform.position = RuairíCoords;
@@ -307,12 +308,12 @@ public class CharacterManager : MonoBehaviour
         myCharacterManager.Fergus.transform.position = FergusCoords;
 
 
-        Vector3 AoifeCoords = new Vector3(3374.6f, 21.2f, -3177.2f); //at edge of the village, with Caitlin
+        Vector3 AoifeCoords = new Vector3(3374.6f, 21.2f, -3177.2f); //at edge of the village, with Caoimhe
         myCharacterManager.Aoife.transform.position = AoifeCoords;
 
 
-        Vector3 CaitilínCoords = new Vector3(3378.9f, 21.2f, -3185f); //at edge of village, with Aoife
-        myCharacterManager.Caitilín.transform.position = CaitilínCoords;
+        Vector3 CaoimheCoords = new Vector3(3378.9f, 21.2f, -3185f); //at edge of village, with Aoife
+        myCharacterManager.Caoimhe.transform.position = CaoimheCoords;
 
 
         Vector3 CóemCoords = new Vector3(3208.57f, 38.52f, -3272.76f); // in forest, beside pond
@@ -321,6 +322,7 @@ public class CharacterManager : MonoBehaviour
 
         Vector3 BrigidCoords = new Vector3(3201.4f, 38.52f, -3278.4f); //in forest, beside pond
         myCharacterManager.Brigid.transform.position = BrigidCoords;
+
 
         Vector3 RuairíCoords = new Vector3(3572.6f, 20.5f, -3226.6f); //at house
         myCharacterManager.Ruairí.transform.position = RuairíCoords;
@@ -386,8 +388,8 @@ public class CharacterManager : MonoBehaviour
         myCharacterManager.Aoife.transform.position = AoifeCoords;
 
 
-        Vector3 CaitilínCoords = new Vector3(3559.26f, 21.2f, -3148.43f); //near crystal, with Senan and Sadbh
-        myCharacterManager.Caitilín.transform.position = CaitilínCoords;
+        Vector3 CaoimheCoords = new Vector3(3559.26f, 21.2f, -3148.43f); //near crystal, with Senan and Sadbh
+        myCharacterManager.Caoimhe.transform.position = CaoimheCoords;
 
 
         Vector3 CóemCoords = new Vector3(3208.57f, 38.52f, -3272.76f); // in forest, beside pond
@@ -396,6 +398,7 @@ public class CharacterManager : MonoBehaviour
 
         Vector3 BrigidCoords = new Vector3(3201.4f, 38.52f, -3278.4f); //in forest, beside pond
         myCharacterManager.Brigid.transform.position = BrigidCoords;
+
 
         Vector3 RuairíCoords = new Vector3(3568.31f, 20.5f, -3156.3f); //at house
         myCharacterManager.Ruairí.transform.position = RuairíCoords;
