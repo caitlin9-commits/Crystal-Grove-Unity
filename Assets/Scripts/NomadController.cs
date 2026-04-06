@@ -317,6 +317,12 @@ public class NomadController : MonoBehaviour
         }
 
 
+        if (other.CompareTag("NoPlantZone"))
+        {
+            canPlant = false;   
+        }
+
+
         if (other.CompareTag("village"))
         {
             Debug.Log("ENTERING VILLAGE");
@@ -369,6 +375,11 @@ public class NomadController : MonoBehaviour
         if (other.CompareTag("orb"))
         {
             inOrbZone = false;
+        }
+
+        if (other.CompareTag("NoPlantZone"))
+        {
+            canPlant = true;   
         }
 
         if (other.CompareTag("village"))

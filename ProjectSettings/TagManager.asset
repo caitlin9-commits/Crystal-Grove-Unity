@@ -12,6 +12,7 @@ TagManager:
   - bin
   - orb
   - village
+  - NoPlantZone
   layers:
   - Default
   - TransparentFX
