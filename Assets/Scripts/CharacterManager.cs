@@ -1,10 +1,12 @@
 using UnityEngine;
-
+//this class is linked to the characters game object
+// this game object contains all the game objects for the characters in the game
+//this class sets the position for characters each day
 public class CharacterManager : MonoBehaviour
 {
-    private static CharacterManager myCharacterManager;
+    private static CharacterManager myCharacterManager; 
 
-
+// all game objects for the characters
     public GameObject Fachtna;
     public GameObject Bebhinn;
     public GameObject Bláithín;
@@ -24,7 +26,7 @@ public class CharacterManager : MonoBehaviour
 
 
 
-
+//creates instance of the class, so it can be used in other classes
     private void Awake()
     {
         if(myCharacterManager == null)
@@ -36,18 +38,6 @@ public class CharacterManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
 
@@ -79,7 +69,7 @@ public class CharacterManager : MonoBehaviour
         myCharacterManager.Sadbh.transform.position = SadbhCoords;
 
 
-        Vector3 SenánCoords = new Vector3(3417.9f, 21.2f, -3147.3f); //beside Caitlin
+        Vector3 SenánCoords = new Vector3(3417.9f, 21.2f, -3147.3f); //beside Caoimhe
         myCharacterManager.Senán.transform.position = SenánCoords;
 
 

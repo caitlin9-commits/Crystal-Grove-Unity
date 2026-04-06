@@ -3,6 +3,7 @@ using UnityEngine;
 public class VillageTreeController : MonoBehaviour
 {
 
+    public Sprite healthyTree;
     public Sprite crystalTree;
     private SpriteRenderer spriteR;
 
@@ -29,6 +30,10 @@ public class VillageTreeController : MonoBehaviour
             if(envScore >= 3)
             {
                 spriteR.sprite = crystalTree;
+            }
+            else
+            {
+                spriteR.sprite = healthyTree;
             }
         }
     }

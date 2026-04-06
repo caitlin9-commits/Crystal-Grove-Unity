@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//This controller links to the Facthna character
+//This controller was originally created before Global Values, and probably could have all its functionality added there instead
 public class OldManController : MonoBehaviour
 {
     private static OldManController myOldMan;
@@ -8,19 +10,6 @@ public class OldManController : MonoBehaviour
     private int counter;
 
     private bool agreedToHelp;
-
-    // private void Awake()
-    // {
-    //     if(myOldMan == null)
-    //     {
-    //         myOldMan = this;
-    //         DontDestroyOnLoad(gameObject);
-    //     }
-    //     else
-    //     {
-    //         Destroy(gameObject);
-    //     }
-    // }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,10 +20,10 @@ public class OldManController : MonoBehaviour
         myAnim = gameObject.GetComponent<Animator>();  
         counter = 0;
     }
-
-    // Update is called once per frame
  
 
+
+    //Sets and checks if you have agreed to help Fachtna
     public static void agreeToHelp()
     {
         myOldMan.agreedToHelp = true;

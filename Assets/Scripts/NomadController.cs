@@ -2,13 +2,15 @@ using System.IO;
 using UnityEngine;
 using System.Threading.Tasks;
 
+//This controller is linked to the Nomad game object
+//This controller manages the actions the Nomad can take and their movement
 public class NomadController : MonoBehaviour
 {
 
     private static NomadController myNomad;
 
-    public float speed;
-    public float groundDist;
+    public float speed; //Passed in value for movement speed
+    public float groundDist; //Passed in value for distance from ground
     public bool chopping;
 
     private bool fainted;
@@ -16,6 +18,8 @@ public class NomadController : MonoBehaviour
     public LayerMask terrainLayer;
     public Rigidbody rb;
     public SpriteRenderer sr;
+
+    //Different booleans for whether nomad can partake in certain actions or not.
     private bool canChop;
     public bool canWalk;
     public bool canSleep;
@@ -33,6 +37,7 @@ public class NomadController : MonoBehaviour
     private int walkSoundCounter;
 
 
+    //Determines how fast nomad moves
     private float speedMultiplier = 1;
 
 
@@ -42,6 +47,7 @@ public class NomadController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //Sets initial capabilites of Nomad
         rb = gameObject.GetComponent<Rigidbody>();
         myAnim = gameObject.GetComponent<Animator>();
 
@@ -71,8 +77,10 @@ public class NomadController : MonoBehaviour
         if (canWalk)
         {
             // Animation speed based on current velocity
+            //Setting this determines whether to show idle of walking animation
             myAnim.SetFloat("MoveSpeed", rb.linearVelocity.magnitude);
 
+            //Back is turned if walking away from camera, this determines whether to show backwards walking animation or not
             if (rb.linearVelocity.magnitude < 0.1f)
             {
                 backTurned = false;
@@ -83,7 +91,7 @@ public class NomadController : MonoBehaviour
 
             myAnim.SetBool("BackTurned", backTurned);
 
-            // Flip sprite
+            // Flip sprite depending on what direction they are walking  (left or right)
             Vector3 scale = transform.localScale;
 
             if (x > 0)
@@ -95,14 +103,15 @@ public class NomadController : MonoBehaviour
         }
         else
         {
-            // Stop animations when walking disabled
+            // Set to idle animation when walking disabled
             myAnim.SetBool("BackTurned", false);
             myAnim.SetFloat("MoveSpeed", 0);
         }
 
-        // Walking
+        // Sets walking buttons on keyboard
         if (canWalk && Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
+            //Counter to play walking sound every appropriate amount of milliseconds
             walkSoundCounter++;
             if (walkSoundCounter > 90)
             {
@@ -113,8 +122,9 @@ public class NomadController : MonoBehaviour
 
 
         // CHOPPING
-        if (canChop && Input.GetKey(KeyCode.E))
+        if (canChop && Input.GetKey(KeyCode.E)) //If in chopping zone and pressing action button, start chopping
         {
+            //Counter to play chopping sound every appropriate amount of milliseconds
             chopSoundCounter++;
             if (chopSoundCounter > 104)
             {
@@ -123,7 +133,7 @@ public class NomadController : MonoBehaviour
             }
         }
 
-      
+        //Sets chopping boolean in animation controller to display chopping nomad animation
         chopping = canChop && Input.GetKey(KeyCode.E);
         myAnim.SetBool("Chopping", chopping);
 
@@ -133,28 +143,34 @@ public class NomadController : MonoBehaviour
         }
 
         // PLANTING
-        if (canPlant && Input.GetKey(KeyCode.Q))
+        if (canPlant && Input.GetKey(KeyCode.Q)) //If in plant zone and pressing action button, start planting
         {
-                canPlant = false;
+                canPlant = false; //prevent planting multiple seeds at once
                 PlantPinecone();    
         }
+        
+        if (!canPlant && Input.GetKey(KeyCode.Q)) //Display error text if tries to plant in inappropriate location
+        {
+            GlobalValues.setInstructionTextString("You cannot plant here");
+        }
+
 
         //FISHING
-        if (canFish && Input.GetKey(KeyCode.E))
+        if (canFish && Input.GetKey(KeyCode.E)) //If in fishing zone and pressing action button, start fishing
         {
-                canFish = false;
+                canFish = false; //prevent fishing multiple times at once
                 Fish();    
         }
 
         //RECYCLING
-        if (canRecycle && Input.GetKey(KeyCode.E))
+        if (canRecycle && Input.GetKey(KeyCode.E)) //If in recycle zone and pressing action button, start recycling
         {
-                canRecycle = false;
+                canRecycle = false; //prevent recycling multiple times at once
                 Recycle();    
         }
 
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift)) //When holding shift, Nomad moves faster
         {
             speedMultiplier=2f;
         }
@@ -165,14 +181,15 @@ public class NomadController : MonoBehaviour
 
 
         // SLEEP
-        if (canSleep && Input.GetKey(KeyCode.E))
+        if (canSleep && Input.GetKey(KeyCode.E)) //If in sleeping zone and pressing action button, start sleeping
         {
             canSleep = false;
             GoToSleep();
         }
 
-        if(inOrbZone)
+        if(inOrbZone) //If in orb zone, play orb music based on distance from orb
         {
+            //Counter to play orb sound every 4 seconds to prevent audio files overlapping
             orbSoundCounter += Time.deltaTime;
             if (orbSoundCounter > 4)
             {
@@ -180,14 +197,16 @@ public class NomadController : MonoBehaviour
                 float NomadX = myNomad.transform.position.x;
                 float NomadZ = myNomad.transform.position.z;
 
+                //Orb coords
                 float orbX=3542f;
                 float orbY=24f;
                 float orbZ=-3119f;
 
                 
-
+                //Calculate distance from orb
                 float dist = Vector3.Distance(myNomad.transform.position,  new Vector3(orbX,orbY,orbZ));
 
+                //Calculate volume based on distance
                 float volume = 10/dist;
                 if(volume>1f){volume=1f;}
 
@@ -195,7 +214,7 @@ public class NomadController : MonoBehaviour
                 Debug.Log("DISTNACE FROM ORB "+ dist);
                 Debug.Log("VOLUME "+ volume);
 
-
+                //Play orb sound at speific volumee
                 SoundEffectManager.Play("Glowing",volume);
                 orbSoundCounter = 0;
             }
@@ -218,6 +237,7 @@ public class NomadController : MonoBehaviour
         rb.linearVelocity = velocity;
     }
 
+    //As Nomad enters certain trigger zones, it allows them to perform specific actions and displays instructions on screen
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Tree"))
@@ -231,7 +251,6 @@ public class NomadController : MonoBehaviour
                 if(!GlobalValues.checkSeenChopText())
                 {
                     GlobalValues.setInstructionText("Hold","E","chop tree");
-                    
                 }
                 
             }
@@ -245,11 +264,11 @@ public class NomadController : MonoBehaviour
         {
             canSleep = true;
             canPlant = false;
-            if(!GlobalValues.checkSeenSleepText())
-            {
+            // if(!GlobalValues.checkSeenSleepText())
+            // {
                 GlobalValues.setInstructionText("Press","E","sleep");  
                 
-            }
+            // }
             
         }
 
@@ -262,10 +281,10 @@ public class NomadController : MonoBehaviour
             if (hasRod)
             {
                 canFish = true;
-                if(!GlobalValues.checkSeenFishText())
-                {
+                // if(!GlobalValues.checkSeenFishText())
+                // {
                     GlobalValues.setInstructionText("Press","E","fish");   
-                }
+                // }
                 
             }
             else
@@ -279,10 +298,10 @@ public class NomadController : MonoBehaviour
         {
             canRecycle = true;
             canPlant = false;
-            if(!GlobalValues.checkSeenRecycleText())
-            {
+            // if(!GlobalValues.checkSeenRecycleText())
+            // {
                 GlobalValues.setInstructionText("Press","E","recycle");    
-            }
+            // }
             
         }
 
@@ -319,6 +338,7 @@ public class NomadController : MonoBehaviour
 
     }
 
+    //As Nomad exits certain trigger zones, it prevents them from performing specific actions and remnoves instructions from screen
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Tree"))
@@ -359,6 +379,7 @@ public class NomadController : MonoBehaviour
         }
     }
 
+    //When a tree falls, stops nomad chopping and allows them to plant seed in this area
     public void TreeFell()
     {
         canChop = false;
@@ -367,13 +388,14 @@ public class NomadController : MonoBehaviour
     }
 
     
+    //Set whether nomad can walk or not
     public static void setWalk(bool walkingEnabled)
     {
         myNomad.canWalk = walkingEnabled;
     }
 
 
-
+    //When nomad faints, it moves him to the tent and sends him to sleep 
     public static void sendToTent()
     {
         myNomad.fainted = true;
@@ -385,6 +407,7 @@ public class NomadController : MonoBehaviour
         myNomad.GoToSleep();
     }
 
+    //Sets axe and rod level to animation controller to display appropriate animation for chopping/fishing (holding version of correct tool)
     public static void setAxe(int level)
     {
         myNomad.myAnim.SetInteger("AxeLevel", level);
@@ -395,35 +418,42 @@ public class NomadController : MonoBehaviour
         myNomad.myAnim.SetInteger("RodLevel", level);
     }
 
+    //This function is called when Nomad goes to sleep or faints
     async void GoToSleep()
     {
-        GlobalValues.setSeenSleepText();          
-        GlobalValues.clearInstructionText();
-        canWalk = false;
+        GlobalValues.setSeenSleepText(); //Not used anymore         
+        GlobalValues.clearInstructionText(); //Removes instruction text from screen
+        canWalk = false; //Prevents nomad from moving
+        //Fades in black screen
         Debug.Log("FADING: ");
         fading = true;
         await ScreenFader.Instance.FadeOut();
+
+        //Play approriate forest music for degradation level
         playForestMusic();
 
-        GlobalValues.setDayStartEnvScore();
-        TreeSpawner.SpawnTrees();
+        GlobalValues.setDayStartEnvScore(); //Set degredation level for start of the day
+        TreeSpawner.SpawnTrees(); //Spawns trees again with correct degredation level 
         
+        //waits a second
         await Task.Delay(1000); 
-        TimeManager.sleep();
+
+        TimeManager.sleep(); //Runs function to change day
+
+        //Fades out black screen
         await ScreenFader.Instance.FadeIn();
-        
-        
         fading = false;
 
         // if(TimeManager.getDay() == 6)
         // {
         //     GlobalValues.setInstructionTextString("GAME OVER");
         // }
-        if(TimeManager.getDay()<6)
+
+        if(TimeManager.getDay()<6) //If game not over, Nomad can walk again
         {
             
             canWalk = true;
-            if(fainted)
+            if(fainted) //If fainted, display this on screen
             {
                 GlobalValues.setInstructionTextString("You fainted.");
                 fainted = false;
@@ -433,26 +463,26 @@ public class NomadController : MonoBehaviour
         
     }
 
-    async void PlantPinecone()
+    async void PlantPinecone() // function to plant a pinecone (seed)
     {
-        int pineconeAmount = InventoryManager.getPineconeAmount();
+        int pineconeAmount = InventoryManager.getPineconeAmount(); 
+        //First checks in you have any seeds
         if (pineconeAmount > 0)
         {
-
-            canWalk = false;
-            myAnim.SetBool("Planting", true);
-            await Task.Delay(3000); 
-            TreeSpawner.PlantSprout(transform.position.x, transform.position.z);
-            myAnim.SetBool("Planting", false);
-            GlobalValues.setInstructionTextString("You planted a pinecone.");
-            canWalk = true;
+            canWalk = false; //prevent nomad walking whilst planting
+            myAnim.SetBool("Planting", true); //display planting animation
+            await Task.Delay(3000);  //wait 3 seconds as you plant
+            TreeSpawner.PlantSprout(transform.position.x, transform.position.z); //display sprout in planted location
+            myAnim.SetBool("Planting", false); // stop planting animtion
+            GlobalValues.setInstructionTextString("You planted a pinecone."); //display success message
+            canWalk = true; //enable walking again
             await Task.Delay(2000); 
-            canPlant = true;
-            GlobalValues.clearInstructionText();
+            canPlant = true; //enable the ability to plant again
+            GlobalValues.clearInstructionText(); //Remove success message from screen
 
-            GlobalValues.seedsPlantedIncrement();
+            GlobalValues.seedsPlantedIncrement(); //Increase tracker on amount of seeds planted
         }
-        else
+        else //If no seeds, display error text
         {
             GlobalValues.setInstructionTextString("No pinecones to plant");
             await Task.Delay(2000); 
@@ -462,16 +492,18 @@ public class NomadController : MonoBehaviour
     }
 
 
-    async void Fish()
+    async void Fish() //function to go fishing
     {
-        GlobalValues.setSeenFishText();             
+        GlobalValues.setSeenFishText();  //Not used anymore            
 
-        int rodLevel = InventoryManager.getRodLevel();
+        int rodLevel = InventoryManager.getRodLevel(); //Gets what level of rod you have
 
+        //Variables for how long it takes to catch something, how likely it is to catch rubbish, or catch anything at all
         int fishingWaitTime = 7000;
         int trashLikelihood = 3;
         int nothingLikelihood = 30;
 
+        //These variables change depending on rod level and degradation score
         if(rodLevel == 2)
         {
             fishingWaitTime = 5500;
@@ -497,67 +529,73 @@ public class NomadController : MonoBehaviour
         else if(envScore == 4){nothingLikelihood = 1;}
 
 
-        canWalk = false;
-        myAnim.SetBool("Casting", true);
-        await Task.Delay(1000); 
-        SoundEffectManager.Play("Fishing");
-        myAnim.SetBool("Fishing", true);
-        await Task.Delay(fishingWaitTime); 
-        SoundEffectManager.Play("Success");
+
+
+        canWalk = false; //Prevents nomad walking whilst fishing
+        myAnim.SetBool("Casting", true); //dispays casting animation
+        await Task.Delay(1000); //waits a seconds
+        SoundEffectManager.Play("Fishing"); //plays fishing sound
+        myAnim.SetBool("Fishing", true); // displays fishing animation
+        await Task.Delay(fishingWaitTime); //wait appropriate amount of time to catch something
+        
+        //Stops fishing animations
         myAnim.SetBool("Casting", false);
         myAnim.SetBool("Fishing", false);
 
 
-        int trashRandom = Random.Range(0,trashLikelihood);
-        int nothingRandom = Random.Range(0,nothingLikelihood);
+        int trashRandom = Random.Range(0,trashLikelihood); //Use random number to calculate if you caught fish or rubbish
+        int nothingRandom = Random.Range(0,nothingLikelihood); //Use random number to calculate if you caught anything
 
-        if(nothingRandom == 0)
+        if(nothingRandom == 0) //Caught nothing
         {
-            GlobalValues.setInstructionTextString("You didn't catch anything.");
+            GlobalValues.setInstructionTextString("You didn't catch anything.");  //Display erros message
         }
-        if (trashRandom == 2)
+        if (trashRandom == 2) //Caught rubbish
         {
-            InventoryManager.changeTrashAmount(1);
-            GlobalValues.setInstructionTextString("You found some trash.");
+            SoundEffectManager.Play("Success"); //plays success sound effect
+            InventoryManager.changeTrashAmount(1); //Updates inventory
+            GlobalValues.setInstructionTextString("You found some trash."); //Display success message
         }
-        else
+        else //Caught fish
         {
-            GlobalValues.fishCaughtIncrememt();
-            InventoryManager.changeFishAmount(1);
-            GlobalValues.setInstructionTextString("You caught a fish.");    
+            SoundEffectManager.Play("Success"); //plays success sound effect
+            GlobalValues.fishCaughtIncrememt(); //Increments fish caught total
+            InventoryManager.changeFishAmount(1); //Updates inventory
+            GlobalValues.setInstructionTextString("You caught a fish.");  //Display success message   
         }
 
         
         canFish = true;
         canWalk = true;
         await Task.Delay(2000); 
-        GlobalValues.clearInstructionText();
+        GlobalValues.clearInstructionText(); //Remove message from the screen
     }
 
-    async void Recycle()
+    async void Recycle() //function called when recycling rubbish
     {
-        GlobalValues.setSeenRecycleText();                  
-        int trashAmount = InventoryManager.getTrashAmount();
+        GlobalValues.setSeenRecycleText(); //No longer used                 
+        int trashAmount = InventoryManager.getTrashAmount(); //Check if you have any rubbish
 
-        if (trashAmount == 0)
+        if (trashAmount == 0) //If no rubbish, display error message
         {
             GlobalValues.setInstructionTextString("You do not have any trash to recycle.");    
         }
         else
         {
-            InventoryManager.changeTrashAmount(-trashAmount);
-            GlobalValues.changeRecycledAmount(trashAmount);
-            InventoryManager.changeCoinsAmount(trashAmount*5);
-            GlobalValues.setInstructionTextString("You recycled your trash.");
-            canRecycle = false;
+            canRecycle = false; 
+            InventoryManager.changeTrashAmount(-trashAmount); //Remove all rubbish from inventory
+            GlobalValues.changeRecycledAmount(trashAmount); //Update recycled amount
+            InventoryManager.changeCoinsAmount(trashAmount*5); //Get coins for each piece rubbish
+            GlobalValues.setInstructionTextString("You recycled your trash."); //Show success message
+            canRecycle = true; 
             await Task.Delay(2000); 
-            GlobalValues.clearInstructionText();
+            GlobalValues.clearInstructionText(); //Remove message from screen
         }
 
         
     }
 
-    private void playForestMusic()
+    private void playForestMusic() //Depending on degredation value, play appropriate version of forest song
     {
         if(GlobalValues.getDayStartEnvScore()==1)
         {

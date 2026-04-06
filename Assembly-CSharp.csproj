@@ -76,7 +76,6 @@
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\ConversationNode.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\NPCConversation.cs" />
-    <Compile Include="Assets\Scripts\OldManDialogue.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\Conversation.cs" />
     <Compile Include="Assets\Scripts\TreeController.cs" />
     <Compile Include="Assets\Scripts\MusicManager.cs" />

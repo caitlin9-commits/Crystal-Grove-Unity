@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//This controller is linked the music manager game object (non-visible game object)
+//This controller manages the music played in background
 public class MusicManager : MonoBehaviour
 {
 
@@ -11,12 +13,10 @@ public class MusicManager : MonoBehaviour
     public AudioClip ForestMusic;
     public AudioClip Forest2;
     public AudioClip Forest3;
-
-
-
     // [SerializeField] private Slider mucisSlider;
 
 
+//creates instance of the class, so it can be used in other classes
     private void Awake()
     {
         if(myMusicManager == null)

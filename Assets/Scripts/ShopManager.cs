@@ -71,7 +71,10 @@ public class ShopManager : MonoBehaviour
 
         Button btn = closeText.GetComponent<Button>();
         btn.onClick.RemoveAllListeners();
-		btn.onClick.AddListener(()=>GlobalValues.toggleShop(false));
+		btn.onClick.AddListener(()=>{
+            GlobalValues.toggleShop(false);
+            mainText.text = "\"Welcome to the forge! What can we do ya for?\"";
+        });
     }
 
     void SetupOption(int number,Canvas option){

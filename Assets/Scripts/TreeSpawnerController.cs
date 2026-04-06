@@ -258,17 +258,20 @@ public class TreeSpawner : MonoBehaviour
                 float pineconeX = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
                 float pineconeZ = Random.Range(-myTreeSpawner.spawnRadiusZ, myTreeSpawner.spawnRadiusZ);
 
-                foundAppropriateCoordinates = IsAppropriateSpawnLocation(pineconeX,pineconeZ);
+                
+                 Vector3 randomPos = myTreeSpawner.transform.position +
+                    new Vector3(
+                        pineconeX,
+                        0,
+                        pineconeZ
+                    );
+
+                foundAppropriateCoordinates = IsAppropriateSpawnLocation(randomPos.x,randomPos.z);
 
 
                 if(foundAppropriateCoordinates)
                 {
-                    Vector3 randomPos = myTreeSpawner.transform.position +
-                        new Vector3(
-                            pineconeX,
-                            0,
-                            pineconeZ
-                        );
+                   
 
                     RaycastHit hit;
                     int groundLayer = LayerMask.GetMask("Terrain");

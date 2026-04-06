@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//This controller is linked to the invetory game object
+//This controller keeps track of Nomad's inventory and displays it appropriately on screen
 public class InventoryManager : MonoBehaviour
 {
     private static InventoryManager myInventoryManager;
@@ -21,6 +23,7 @@ public class InventoryManager : MonoBehaviour
     private bool hasFishingRod;
 
 
+    //Linked game objects for the different text and images in the inventory 
     public Image axeImage;
     public Image rodImage;
 
@@ -46,6 +49,7 @@ public class InventoryManager : MonoBehaviour
 
 
 
+//creates instance of the class, so it can be used in other classes
     private void Awake()
     {
         if(myInventoryManager == null)
@@ -63,6 +67,8 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         
+        //Sets initial inventory values (everyhing starts at 0 or lowest value)
+
         woodAmount = 0;
         coinsAmount = 0;
         trashAmount = 0;
@@ -93,6 +99,7 @@ public class InventoryManager : MonoBehaviour
         
     }
 
+    //Below functions checks for and adds specific items to inventory 
     public static bool checkForAxe()
     {
         return myInventoryManager.hasAxe;
@@ -127,6 +134,8 @@ public class InventoryManager : MonoBehaviour
         myInventoryManager.rodLevel = 1;
     }
 
+
+    //Upgrades your axe when purchased from store and updates image in inventory
     public static void upgradeAxe()
     {
         Debug.Log ("Upgrading axe " );
@@ -139,6 +148,8 @@ public class InventoryManager : MonoBehaviour
         NomadController.setAxe(myInventoryManager.axeLevel);
     }
 
+
+    //Upgrades your rod when purchased from store and updates image in inventory
     public static void upgradeRod()
     {
         myInventoryManager.rodLevel++;
@@ -149,6 +160,8 @@ public class InventoryManager : MonoBehaviour
         NomadController.setRod(myInventoryManager.rodLevel);
     }
 
+
+    //Below functions checks for specific item amounts in inventory 
     public static int getWoodAmount()
     {
         return myInventoryManager.woodAmount;
@@ -173,6 +186,7 @@ public class InventoryManager : MonoBehaviour
 
 
 
+    //Changes the amount of wood you have in inventory
     public static void changeWoodAmount(int change)
     {
         myInventoryManager.woodAmount+=change;
@@ -181,14 +195,16 @@ public class InventoryManager : MonoBehaviour
     }
 
 
+    //Changes the amount of seeds you have in inventory (can go up or down)
     public static void changePineconeAmount(int change)
     {
         myInventoryManager.pineconeAmount+=change;
 
-        myInventoryManager.pineconeAmountText.text = myInventoryManager.pineconeAmount==0?"":myInventoryManager.pineconeAmount.ToString();
-        myInventoryManager.pineconeImage.enabled = myInventoryManager.pineconeAmount==0?false:true;
+        myInventoryManager.pineconeAmountText.text = myInventoryManager.pineconeAmount==0?"":myInventoryManager.pineconeAmount.ToString(); //Hides counter text if you have none
+        myInventoryManager.pineconeImage.enabled = myInventoryManager.pineconeAmount==0?false:true; //Hides image if you have none
     }
 
+    //Changes the amount of fish you have in inventory (can go up or down)
     public static void changeFishAmount(int change)
     {
         myInventoryManager.fishAmount+=change;
@@ -197,6 +213,7 @@ public class InventoryManager : MonoBehaviour
         myInventoryManager.fishImage.enabled = myInventoryManager.fishAmount==0?false:true;
     }
 
+    //Changes the amount of rubbish you have in inventory (can go up or down)
     public static void changeTrashAmount(int change)
     {
         myInventoryManager.trashAmount+=change;
@@ -206,6 +223,7 @@ public class InventoryManager : MonoBehaviour
     }
     
 
+    //Changes the amount of coins you have in inventory (can go up or down)
     public static void changeCoinsAmount(int change)
     {
         myInventoryManager.coinsAmount+=change;
@@ -214,16 +232,18 @@ public class InventoryManager : MonoBehaviour
     }
     
 
+    //Sell wood to Fachtna
     public static void sellWood()
     {
-        myInventoryManager.coinsAmount+=myInventoryManager.woodAmount;
-        myInventoryManager.woodAmount=0;
-        myInventoryManager.woodImage.enabled = false;
-        myInventoryManager.woodAmountText.text = "";
-        myInventoryManager.coinAmountText.text = myInventoryManager.coinsAmount.ToString();
+        myInventoryManager.coinsAmount+=myInventoryManager.woodAmount; //converts wood into coins
+        myInventoryManager.woodAmount=0; //removes all wood
+        myInventoryManager.woodImage.enabled = false; //hides wood image
+        myInventoryManager.woodAmountText.text = ""; //clears wood amount text
+        myInventoryManager.coinAmountText.text = myInventoryManager.coinsAmount.ToString(); //updates coin amount text
     }
 
 
+    //Sell fish to Fachtna (similar logic as above, just for fish)
     public static void sellFish()
     {
         myInventoryManager.coinsAmount+=myInventoryManager.fishAmount;
@@ -234,6 +254,7 @@ public class InventoryManager : MonoBehaviour
     }
    
 
+    //Donate fish to Ruairi (similar to above however you do not get coins, just increases donation counter)
     public static void donateFish()
     {
         GlobalValues.fishDonatedIncrement(myInventoryManager.fishAmount);
@@ -242,6 +263,7 @@ public class InventoryManager : MonoBehaviour
         myInventoryManager.fishAmountText.text = "";
     }
 
+    //Donate wood to Bebhinn (similar to above, just for wood)
      public static void donateWood()
     {
         GlobalValues.woodDonatedIncrement(myInventoryManager.woodAmount);
