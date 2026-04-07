@@ -1,4 +1,6 @@
 using UnityEngine;
+//start of code from Game Code Library  on YouTube, video link: https://www.youtube.com/watch?v=rAX_r0yBwzQ
+
 
 //This controller is linked to the SoundEffectManager game object (invisible object)
 //This controller plays a specific sound effect
@@ -49,3 +51,4 @@ public class SoundEffectManager : MonoBehaviour
 
    
 }
+//end of code from Game Code Library  on YouTube, video link: https://www.youtube.com/watch?v=rAX_r0yBwzQ

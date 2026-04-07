@@ -131,6 +131,7 @@ public class TimeManager : MonoBehaviour
 
  
     //Called as hours change, based on hour of day, shows appropriate skybox
+    //start of code from ThatOneUnityDev on YouTube, video link: https://www.youtube.com/watch?v=ihurRMKz2es&t=1s - but altered
     private void OnHoursChange(int value)
     {
         // Debug.Log("HOURS CHANGE "+ value);
@@ -155,6 +156,7 @@ public class TimeManager : MonoBehaviour
             StartCoroutine(TransitionSkybox(skyboxSunset, skyboxNight, 10f));
             // StartCoroutine(LerpLight(graddientSunsetToNight, 10f));
         }
+        //end of code from ThatOneUnityDev on YouTube, video link: https://www.youtube.com/watch?v=ihurRMKz2es&t=1s - but altered
         else if (value == 22)
         {
             //Plays bell to remind Nomad to go to sleep

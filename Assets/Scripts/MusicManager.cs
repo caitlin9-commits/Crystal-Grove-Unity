@@ -5,6 +5,7 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
 
+    //Passes in specific audio files
     private static MusicManager myMusicManager;
     private AudioSource audioSource;
     public AudioClip backgroundMusic;
@@ -34,7 +35,7 @@ public class MusicManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(ForestMusic != null)
+        if(ForestMusic != null) //Initially plays forest background music
         {
             Debug.Log("THERE IS MUSIC");
             PlayBackgroundMusic(false,ForestMusic);
@@ -51,6 +52,8 @@ public class MusicManager : MonoBehaviour
         
     // }
 
+
+    //Selects one of the linked songs, based on name passed in
     public static void PlayNewSong(string songName)
     {
         AudioClip audioClip = null;
@@ -65,14 +68,16 @@ public class MusicManager : MonoBehaviour
         PlayBackgroundMusic(true,audioClip);
     }
 
+
+    //function that actually plays the music and loops it
     public static void PlayBackgroundMusic(bool resetSong, AudioClip audioClip = null)
     {
         if(audioClip != null)
         {
-            myMusicManager.audioSource.clip = audioClip;
-            myMusicManager.audioSource.Play();
+            myMusicManager.audioSource.clip = audioClip; //sets audio clip to play
+            myMusicManager.audioSource.Play(); //plays audio clip
         }
-        else if(myMusicManager.audioSource.clip != null)
+        else if(myMusicManager.audioSource.clip != null) 
         {
             if (resetSong)
             {
@@ -83,7 +88,7 @@ public class MusicManager : MonoBehaviour
         
     }
 
-    public static void PauseBackgroundMusic()
+    public static void PauseBackgroundMusic() // function to pause background music
     {
         myMusicManager.audioSource.Pause();
     }

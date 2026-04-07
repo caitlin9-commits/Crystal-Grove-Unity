@@ -9,15 +9,19 @@ public class NomadController : MonoBehaviour
 
     private static NomadController myNomad;
 
+// start of code from ThatOneUnityDev on YouTube, video link: https://www.youtube.com/watch?v=cqNBA9Pslg8
     public float speed; //Passed in value for movement speed
     public float groundDist; //Passed in value for distance from ground
+    // end of code from ThatOneUnityDev on YouTube, video link: https://www.youtube.com/watch?v=cqNBA9Pslg8
     public bool chopping;
 
     private bool fainted;
 
+// code from ThatOneUnityDev on YouTube, video link: https://www.youtube.com/watch?v=cqNBA9Pslg8
     public LayerMask terrainLayer;
     public Rigidbody rb;
     public SpriteRenderer sr;
+    // end of code from ThatOneUnityDev on Youtube, video link: https://www.youtube.com/watch?v=cqNBA9Pslg8
 
     //Different booleans for whether nomad can partake in certain actions or not.
     private bool canChop;
@@ -49,7 +53,9 @@ public class NomadController : MonoBehaviour
     void Start()
     {
         //Sets initial capabilites of Nomad
+        // start of code from ThatOneUnityDev on YouTube, video link: https://www.youtube.com/watch?v=cqNBA9Pslg8
         rb = gameObject.GetComponent<Rigidbody>();
+        // end of code from ThatOneUnityDev on YouTube, video link: https://www.youtube.com/watch?v=cqNBA9Pslg8
         myAnim = gameObject.GetComponent<Animator>();
 
         chopSoundCounter = 300;
@@ -73,8 +79,10 @@ public class NomadController : MonoBehaviour
    void Update()
     {
         // Read input ONLY
+        // start of code from ThatOneUnityDev on YouTube, video link: https://www.youtube.com/watch?v=cqNBA9Pslg8
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
+        // end of code from ThatOneUnityDev on YouTube, video link: https://www.youtube.com/watch?v=cqNBA9Pslg8
 
         if (canWalk)
         {
@@ -96,12 +104,14 @@ public class NomadController : MonoBehaviour
             // Flip sprite depending on what direction they are walking  (left or right)
             Vector3 scale = transform.localScale;
 
+// start of code from ThatOneUnityDev on YouTube, video link: https://www.youtube.com/watch?v=cqNBA9Pslg8 - but altered
             if (x > 0)
                 scale.x = -Mathf.Abs(scale.x);
             else if (x < 0)
                 scale.x = Mathf.Abs(scale.x);
 
             transform.localScale = scale;
+            // end of code from ThatOneUnityDev on YouTube, video link: https://www.youtube.com/watch?v=cqNBA9Pslg8 - but altered
         }
         else
         {

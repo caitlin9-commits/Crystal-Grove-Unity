@@ -15,6 +15,8 @@ public class ShopManager : MonoBehaviour
 {
 
     //Passed in game objects representing the different shop purchase buttons and the stock to appear
+     //learned how to use UI Game Objects from Christina Creates Games on Youtube, video link: https://www.youtube.com/watch?v=1OwQflHq5kg
+
     public Canvas option1;
     public Canvas option2;
     public Canvas option3;
@@ -248,3 +250,4 @@ public class HoverEvent : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         onHoverExit?.Invoke();
     }
 }
+ //learned how to use UI Game Objects from Christina Creates Games on Youtube, video link: https://www.youtube.com/watch?v=1OwQflHq5kg

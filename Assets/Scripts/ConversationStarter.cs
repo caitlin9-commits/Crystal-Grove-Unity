@@ -1,4 +1,7 @@
 using UnityEngine;
+//used this library for managing conversations following intergration from this video, from SpeedTutor on YouTube, video link: https://www.youtube.com/watch?v=QPJHY6MPag4
+//expanded on this intergration by following documentation for this library, Grass Hopper Dev documentation pdf: https://grasshopdev.github.io/docs/DialogueEditorDocumentation.pdf
+
 using DialogueEditor;
 //this class is linked to the conversation managers for each character
 //it controls the starting and ending of conversations, as well as managing the logic for the conversations
@@ -60,6 +63,8 @@ public class ConversationStarter : MonoBehaviour
         int fishAmount = InventoryManager.getFishAmount(); //gets how much fish the nomad has
         bool agreedToHelp = OldManController.checkIfAgreedToHelp(); //checks if you agreed to help fachtna
 
+//used this library for managing conversations following intergration from this video, from SpeedTutor on YouTube, video link: https://www.youtube.com/watch?v=QPJHY6MPag4
+//expanded on this intergration by following documentation for this library, Grass Hopper Dev documentation pdf: https://grasshopdev.github.io/docs/DialogueEditorDocumentation.pdf
         NPCConversation todayConversation; //Creates variable for conversation instance (uses imported DialogEditor library)
 
         int day = TimeManager.getDay(); //gets current in game day
@@ -76,6 +81,8 @@ public class ConversationStarter : MonoBehaviour
         bool hasSpokenToBebhinnAboutFairy = GlobalValues.getHasSpokenToBebhinnAboutFairy(); // checks if you have spoked to Bebhinn about Blaithin
         bool hasWaterwheel = GlobalValues.checkForWaterwheel(); //checks if you have purchased the waterwheel
 
+//used this library for managing conversations following intergration from this video, from SpeedTutor on YouTube, video link: https://www.youtube.com/watch?v=QPJHY6MPag4
+//expanded on this intergration by following documentation for this library, Grass Hopper Dev documentation pdf: https://grasshopdev.github.io/docs/DialogueEditorDocumentation.pdf
 
         ConversationManager.Instance.StartConversation(todayConversation); //Uses dialog editor library to create new conversation manager
         ConversationManager.OnConversationEnded = ConversationEnd; //Adds hook to call once conversation has ended
@@ -112,3 +119,5 @@ public class ConversationStarter : MonoBehaviour
     }
 
 }
+//used this library for managing conversations following intergration from this video, from SpeedTutor on YouTube, video link: https://www.youtube.com/watch?v=QPJHY6MPag4
+//expanded on this intergration by following documentation for this library, Grass Hopper Dev documentation pdf: https://grasshopdev.github.io/docs/DialogueEditorDocumentation.pdf

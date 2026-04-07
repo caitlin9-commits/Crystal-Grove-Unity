@@ -9,6 +9,7 @@ public class TitleScreensController : MonoBehaviour
 
     private static TitleScreensController myTitleScreens;
 
+ //learned how to use UI Game Objects from Christina Creates Games on Youtube, video link: https://www.youtube.com/watch?v=1OwQflHq5kg
 
     //Different canvases for the different title screens and the buttons on them
     public Canvas startCanvas;
@@ -139,3 +140,5 @@ public class TitleScreensController : MonoBehaviour
         showingEnd = false;
     }
 }
+ //learned how to use UI Game Objects from Christina Creates Games on Youtube, video link: https://www.youtube.com/watch?v=1OwQflHq5kg
+

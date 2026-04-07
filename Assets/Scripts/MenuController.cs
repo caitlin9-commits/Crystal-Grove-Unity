@@ -25,6 +25,7 @@ public class MenuController : MonoBehaviour
     
 
     private int selectedTab;
+    // inspired start of code from Game Code Library on YouTube, video link: https://www.youtube.com/watch?v=liba3xGI4gM&t=682ss
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -70,12 +71,15 @@ public class MenuController : MonoBehaviour
         coinAmountText.text = coinsAmount.ToString();
 
     }
-
+    // inspired end of code from Game Code Library on YouTube, video link: https://www.youtube.com/watch?v=liba3xGI4gM&t=682ss
     // Update is called once per frame
     void Update()
     {
         
     }
+    //learned how to use UI Game Objects from Christina Creates Games on Youtube, video link: https://www.youtube.com/watch?v=1OwQflHq5kg
+
+    // start of code from Game Code Library on YouTube, video link: https://www.youtube.com/watch?v=liba3xGI4gM&t=682ss
 
     //Called when a tab is clicked
     void SelectTab(int tabNum)
@@ -112,6 +116,7 @@ public class MenuController : MonoBehaviour
             mapTabBtn.color = Color.white;
             mapTab.enabled = true;
         }
-
+    // end of code from Game Code Library on YouTube, video link: https://www.youtube.com/watch?v=liba3xGI4gM&t=682ss
     }
 }
+ //learned how to use UI Game Objects from Christina Creates Games on Youtube, video link: https://www.youtube.com/watch?v=1OwQflHq5kg

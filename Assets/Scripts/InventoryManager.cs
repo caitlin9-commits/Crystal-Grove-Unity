@@ -22,7 +22,8 @@ public class InventoryManager : MonoBehaviour
     private bool hasAxe;
     private bool hasFishingRod;
 
-
+ //learned how to use UI Game Objects from Christina Creates Games on Youtube, video link: https://www.youtube.com/watch?v=1OwQflHq5kg - no code copied
+  
     //Linked game objects for the different text and images in the inventory 
     public Image axeImage;
     public Image rodImage;
@@ -273,6 +274,7 @@ public class InventoryManager : MonoBehaviour
         myInventoryManager.woodAmountText.text = "";
     }
    
+ //learned how to use UI Game Objects from Christina Creates Games on Youtube, video link: https://www.youtube.com/watch?v=1OwQflHq5kg
 
 
 }

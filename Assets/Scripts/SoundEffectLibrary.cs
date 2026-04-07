@@ -1,3 +1,4 @@
+//start of code from Game Code Library  on YouTube, video link: https://www.youtube.com/watch?v=rAX_r0yBwzQ
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -49,3 +50,4 @@ public struct SoundEffectGroup
     public string name;
     public List<AudioClip> audioClips;
 }
+//end of code from Game Code Library  on YouTube, video link: https://www.youtube.com/watch?v=rAX_r0yBwzQ
