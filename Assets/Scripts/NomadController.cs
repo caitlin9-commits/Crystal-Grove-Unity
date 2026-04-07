@@ -573,7 +573,7 @@ public class NomadController : MonoBehaviour
         {
             GlobalValues.setInstructionTextString("You didn't catch anything.");  //Display erros message
         }
-        if (trashRandom == 2) //Caught rubbish
+        else if (trashRandom == 2) //Caught rubbish
         {
             SoundEffectManager.Play("Success"); //plays success sound effect
             InventoryManager.changeTrashAmount(1); //Updates inventory
