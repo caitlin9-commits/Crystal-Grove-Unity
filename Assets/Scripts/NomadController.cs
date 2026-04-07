@@ -201,9 +201,9 @@ public class NomadController : MonoBehaviour
                 float NomadZ = myNomad.transform.position.z;
 
                 //Orb coords
-                float orbX=3542f;
-                float orbY=24f;
-                float orbZ=-3119f;
+                float orbX=3541.65f;
+                float orbY=27.84f;
+                float orbZ=-3120.48f;
 
                 
                 //Calculate distance from orb
