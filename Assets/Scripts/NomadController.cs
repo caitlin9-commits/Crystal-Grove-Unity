@@ -24,6 +24,7 @@ public class NomadController : MonoBehaviour
     public bool canWalk;
     public bool canSleep;
     public bool canPlant;
+    public bool currentlyPlanting;
     public bool canFish;
     public bool canRecycle;
 
@@ -56,6 +57,7 @@ public class NomadController : MonoBehaviour
         orbSoundCounter = 0;
         canWalk = true;
         canPlant = true;
+        currentlyPlanting = false;
         canSleep = false;
         canRecycle = false;
         fading = false;
@@ -145,13 +147,14 @@ public class NomadController : MonoBehaviour
         // PLANTING
         if (canPlant && Input.GetKey(KeyCode.Q)) //If in plant zone and pressing action button, start planting
         {
-                canPlant = false; //prevent planting multiple seeds at once
+            //prevent planting multiple seeds at once
+                canPlant = false;
                 PlantPinecone();    
         }
         
-        if (!canPlant && Input.GetKey(KeyCode.Q)) //Display error text if tries to plant in inappropriate location
+        if (!canPlant && !currentlyPlanting && Input.GetKeyDown(KeyCode.Q)) //Display error text if tries to plant in inappropriate location
         {
-            GlobalValues.setInstructionTextString("You cannot plant here");
+           DisplayPineconeError();
         }
 
 
@@ -480,6 +483,7 @@ public class NomadController : MonoBehaviour
         //First checks in you have any seeds
         if (pineconeAmount > 0)
         {
+            currentlyPlanting = true;
             canWalk = false; //prevent nomad walking whilst planting
             myAnim.SetBool("Planting", true); //display planting animation
             await Task.Delay(3000);  //wait 3 seconds as you plant
@@ -492,6 +496,7 @@ public class NomadController : MonoBehaviour
             GlobalValues.clearInstructionText(); //Remove success message from screen
 
             GlobalValues.seedsPlantedIncrement(); //Increase tracker on amount of seeds planted
+            currentlyPlanting = false;
         }
         else //If no seeds, display error text
         {
@@ -502,6 +507,13 @@ public class NomadController : MonoBehaviour
         }
     }
 
+    async void DisplayPineconeError()
+    {
+        GlobalValues.setInstructionTextString("You cannot plant here");
+        await Task.Delay(2000); 
+        GlobalValues.clearInstructionText(); //Remove error message from screen
+
+    }
 
     async void Fish() //function to go fishing
     {
