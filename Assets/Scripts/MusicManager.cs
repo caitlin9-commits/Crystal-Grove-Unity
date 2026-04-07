@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//start of code from Game Code Library on YouTube, video link: https://www.youtube.com/watch?v=Kg7Ix9tpPYg
 //This controller is linked the music manager game object (non-visible game object)
 //This controller manages the music played in background
 public class MusicManager : MonoBehaviour
@@ -93,3 +93,4 @@ public class MusicManager : MonoBehaviour
         myMusicManager.audioSource.Pause();
     }
 }
+//end of code from Game Code Library on YouTube, video link: https://www.youtube.com/watch?v=Kg7Ix9tpPYg
