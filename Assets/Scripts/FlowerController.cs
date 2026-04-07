@@ -7,7 +7,7 @@ public class FlowerController : MonoBehaviour
 {
     public Sprite deadFlowers; //asset for dead flowers
     public Sprite aliveFlowers; //asset for healthy flowers
-    private SpriteRenderer spriteR; // the sprite renderer for the flower game objet
+    private SpriteRenderer spriteR; // the sprite renderer for the flower game object
 
     private int currentDay; // variable representing current in game day
     

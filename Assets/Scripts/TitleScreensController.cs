@@ -2,11 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
+//This controller is linked to the TitleScreen game object which contains all the title screen canvases as children
+//This controller manages what title screen appears at the start and end 
 public class TitleScreensController : MonoBehaviour
 {
 
     private static TitleScreensController myTitleScreens;
 
+
+    //Different canvases for the different title screens and the buttons on them
     public Canvas startCanvas;
     public Image startCanvasImg;
 
@@ -31,6 +35,7 @@ public class TitleScreensController : MonoBehaviour
     private float tempSecond;
     private bool showingEnd;
 
+//creates instance of the class, so it can be used in other classes
     private void Awake()
     {
         if(myTitleScreens == null)
@@ -47,7 +52,7 @@ public class TitleScreensController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        //Sets which title screen to originally show (Start screen), hides the others
         myTitleScreens = this;
         // startCanvas.enabled = false;
         aboutCanvas.enabled = false;
@@ -57,13 +62,16 @@ public class TitleScreensController : MonoBehaviour
         showingEnd = false;
         
 
+        //Adds on click listeners to the buttons on the start and about screens
 		startGameButton.onClick.AddListener(()=>StartGame());
         aboutGameButton.onClick.AddListener(()=>AboutGame());
         startGameButtonAbout.onClick.AddListener(()=>StartGame());
 
 
+        //Gets current time of device
         int hourNow = DateTime.Now.Hour;
         
+        //If nighttime, shows night time versions of start and about screen background images
         if(hourNow<6 || hourNow>19)
         {
             startCanvasImg.sprite = nightStart;    
@@ -79,7 +87,7 @@ public class TitleScreensController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //If showing end screen, changes to 2nd end screen after 10 seconds
         if(showingEnd)
         {
             tempSecond += Time.deltaTime;
@@ -94,7 +102,7 @@ public class TitleScreensController : MonoBehaviour
 
 
 
-
+    //Called when start game button is clicked, hides start and about screens
     void StartGame()
     {
         Debug.Log("START GAME");
@@ -102,12 +110,14 @@ public class TitleScreensController : MonoBehaviour
         aboutCanvas.enabled = false;
     }
     
+    //Called when about game button is clicked, hides start screen and shows about screen
     void AboutGame()
     {
         startCanvas.enabled = false;
         aboutCanvas.enabled = true;
     }
 
+    //Called when game is ended, shows appropriate end screen based on environment score
     public static void ShowEnding()
     {
         myTitleScreens.showingEnd = true;
@@ -118,6 +128,7 @@ public class TitleScreensController : MonoBehaviour
     }
 
 
+    //Called 10 seconds after when game hass ended, shows appropriate final end screen based on environment score
     public void show2ndEndScreen()
     {
         int envScore = GlobalValues.calculateEnvironmentScore();

@@ -1,7 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+
+//This controller is linked to the tree spawner game object
+//This controller manages the spawn of multiple trees and pinecones
+//In retrospect, this seemed a quicker way to generate lots of choppable trees in the forest,
+//however we may have been better suited just manually placing them in the scene like with the non choppable background trees
 public class TreeSpawner : MonoBehaviour
 {
+    //Receives game objects for the different health level of trees, this are prefabs
     public GameObject healthyTree;
     public GameObject brownTree;
     public GameObject deadTree;
@@ -9,6 +15,7 @@ public class TreeSpawner : MonoBehaviour
     public GameObject pineconePrefab;
     public GameObject sproutPrefab;
 
+    //Passed in values for how many trees to spawn and how big a radius to spawn them
     public int treeCount = 5;
     public float spawnRadius = 10f;
     public float spawnRadiusZ = 10f;
@@ -19,11 +26,13 @@ public class TreeSpawner : MonoBehaviour
 
     private int treeHealthState = 4;
 
+    //Arrays representing tree locations, spawened trees and where seeds have planted
     private List<TreeObject> trees = new List<TreeObject>();
     private List<TreeObject> sprouts = new List<TreeObject>();
     private List<GameObject> spawnedTrees = new List<GameObject>();
     
 
+//creates instance of the class, so it can be used in other classes
      private void Awake()
     {
         if(myTreeSpawner == null)
@@ -37,6 +46,8 @@ public class TreeSpawner : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+        //Before it starts, set all the positions for trees
          GenerateTreeLocations();
 
 
@@ -46,21 +57,25 @@ public class TreeSpawner : MonoBehaviour
     void Start()
     {
        
-        SpawnTrees();
-        // SpawnPineCones();
+        SpawnTrees(); //Add all trees to the scene
+        // SpawnPineCones(); //Previously added all pinecones to scene, but now do that on day 2
     }
 
+    //This function sets all the random locations for the trees
+    //It spawns the trees in these locations each day so tree remaining in same space a degradation changes
     private void GenerateTreeLocations()
     {
-        int amountOfTrees = myTreeSpawner.treeCount;
+        int amountOfTrees = myTreeSpawner.treeCount; //Get amount of trees to spawn from input
 
-        for (int i = 0; i < amountOfTrees; i++)
+        for (int i = 0; i < amountOfTrees; i++) //Loops through this amount of trees
         {
 
             bool foundAppropriateCoordinates = false;
 
+            //Keeps looping until it finds an appropriate location to place tree
             while(!foundAppropriateCoordinates)
             {
+                //Gets random position for tree based on the passed in bounds for the radius
                 float randomX = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
                 float randomZ = Random.Range(-myTreeSpawner.spawnRadiusZ, myTreeSpawner.spawnRadiusZ);
 
@@ -71,8 +86,10 @@ public class TreeSpawner : MonoBehaviour
                     randomZ
                 );
 
+                //Checks if this is appopriate place to position the tree
                 foundAppropriateCoordinates = IsAppropriateSpawnLocation(newPos.x,newPos.z);
             
+                //If appropriate location, adds tree to array
                 if(foundAppropriateCoordinates)
                 {
                     trees.Add(new TreeObject{x=randomX,z=randomZ,isChopped = false});
@@ -84,25 +101,27 @@ public class TreeSpawner : MonoBehaviour
     }
 
 
+    //This function spawns the trees in the generated locations
     public static void SpawnTrees()
     {   
-        // Wipe trees from before
+        // Wipe trees objects from before
         foreach (GameObject tree in myTreeSpawner.spawnedTrees)
         {
             Destroy(tree);
         }
         myTreeSpawner.spawnedTrees.Clear();
 
-        
+        //Goes through seeds planted and spawns trees in these locations
         foreach (TreeObject sprout in myTreeSpawner.sprouts)
         {
             myTreeSpawner.trees.Add(sprout);
             Debug.Log("BUDDED SRPOUT: "+sprout.x+" "+sprout.z);
         }
 
-        myTreeSpawner.sprouts.Clear();
+        myTreeSpawner.sprouts.Clear(); //Removes sprouts from scene
 
 
+        //Goes through list of trees and adds game objects here
         for (int i = 0; i < myTreeSpawner.trees.Count; i++)
         {
            
@@ -115,6 +134,8 @@ public class TreeSpawner : MonoBehaviour
             int netTrees = treesPlanted-treesCut;
             int day = TimeManager.getDay();
 
+
+            //Old logic for determining what version of tree to display
 
             // if(myTreeSpawner.treeHealthState == 4)
             // {
@@ -136,6 +157,8 @@ public class TreeSpawner : MonoBehaviour
             //     else if(netTrees>-15){myTreeSpawner.treeHealthState++;}
             // }
 
+
+            //Use environment score to determine which version of tree to add
             
             int envScore = GlobalValues.calculateEnvironmentScore();
 
@@ -160,6 +183,7 @@ public class TreeSpawner : MonoBehaviour
             );
 
 
+            //Attempts to set Y position of tree to be at ground level by making it relative to objects with 'terrain' tag
             RaycastHit hit;
             int groundLayer = LayerMask.GetMask("Terrain");
 
@@ -167,14 +191,13 @@ public class TreeSpawner : MonoBehaviour
             {
                 randomPos.y = hit.point.y;
             }
-
-            
             randomPos.y += myTreeSpawner.treeHeight / 2f;
             
 
+            //Create tree game object and adds to scene
             GameObject newTree = Instantiate(treePrefab, randomPos, Quaternion.identity);
             Tree treeComponent = newTree.GetComponent<Tree>();
-            treeComponent.treeData = myTreeSpawner.trees[i];
+            treeComponent.treeData = myTreeSpawner.trees[i]; //This is added so tree controller class can mark tree as chopped
 
             myTreeSpawner.spawnedTrees.Add(newTree);
 
@@ -182,6 +205,8 @@ public class TreeSpawner : MonoBehaviour
     }
 
 
+    //This function changes if coordinates are appropriate location to spawn tree or pinecone
+    // We want to avoid spawning them in water or in buildings
     public static bool IsAppropriateSpawnLocation(float x, float z)
     {
 
@@ -241,20 +266,25 @@ public class TreeSpawner : MonoBehaviour
         }
     }
 
+    //Function to add pinecones to the scene
     public static void SpawnPineCones()
     {   
 
         Debug.Log("TREE SPAWNER LOC" + myTreeSpawner.transform.position.x + "   " +  myTreeSpawner.transform.position.z);
 
+        //Adds 50 pinecones
         for (int i = 0; i < 50; i++)
         {
         
+            //Gets prefab for pinecone (linked in scene)
             GameObject pineconePrefab = myTreeSpawner.pineconePrefab;
             
             bool foundAppropriateCoordinates = false;
             
+            //Keeps looping until it finds an appropriate location to place pinecone
             while(!foundAppropriateCoordinates)
             {
+                //Gets random position for pinecone based on the passed in bounds for the radius
                 float pineconeX = Random.Range(-myTreeSpawner.spawnRadius, myTreeSpawner.spawnRadius);
                 float pineconeZ = Random.Range(-myTreeSpawner.spawnRadiusZ, myTreeSpawner.spawnRadiusZ);
 
@@ -266,13 +296,15 @@ public class TreeSpawner : MonoBehaviour
                         pineconeZ
                     );
 
+                //Checks if this is appopriate place to position the pinecone
                 foundAppropriateCoordinates = IsAppropriateSpawnLocation(randomPos.x,randomPos.z);
 
 
+                //If appropriate location, adds pinecone to scene
                 if(foundAppropriateCoordinates)
                 {
                    
-
+                    //Attempts to set Y position of pinecone to be at ground level by making it relative to objects with 'terrain' tag
                     RaycastHit hit;
                     int groundLayer = LayerMask.GetMask("Terrain");
 
@@ -296,10 +328,11 @@ public class TreeSpawner : MonoBehaviour
     }
 
 
+    //Function called when nomad has planted a seed, receives coordinates of where planted
     public static void PlantSprout(float x, float z)
     {   
         
-
+        //Gets prefab for sprout (linked in scene)
         GameObject sproutPrefab = myTreeSpawner.sproutPrefab;
 
         Vector3 plantPos = 
@@ -309,6 +342,7 @@ public class TreeSpawner : MonoBehaviour
             z
         );
 
+        //Attempts to set Y position of sprout to be at ground level by making it relative to objects with 'terrain' tag
         RaycastHit hit;
         int groundLayer = LayerMask.GetMask("Terrain");
 
@@ -322,8 +356,11 @@ public class TreeSpawner : MonoBehaviour
         Debug.Log("SRPOUT PLANTED: "+plantPos.x+" "+plantPos.y+" "+plantPos.z);
 
 
+        //Adds sprout to scene
         GameObject newSprout = Instantiate(sproutPrefab, plantPos, Quaternion.identity);
-        myTreeSpawner.spawnedTrees.Add(newSprout);
+
+        //Saves location to array, so can turn into tree later
+        myTreeSpawner.spawnedTrees.Add(newSprout); 
 
 
         Vector3 local = new Vector3(x,0,z) - myTreeSpawner.transform.position;
@@ -333,7 +370,8 @@ public class TreeSpawner : MonoBehaviour
             z = local.z,
             isChopped = false
         });
-            
+        
+        //Removes seed from inventory
         InventoryManager.changePineconeAmount(-1);
 
 

@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//This controller is linked to the SoundEffectManager game object (invisible object)
+//This controller plays a specific sound effect
 public class SoundEffectManager : MonoBehaviour
 {
 
@@ -8,7 +10,7 @@ public class SoundEffectManager : MonoBehaviour
     private static AudioSource audioSource;
     private static SoundEffectLibrary soundEffectLibrary;
     
-
+    //creates instance of the class, so it can be used in other classes
     private void Awake()
     {
         if(managerInstance == null)
@@ -24,14 +26,17 @@ public class SoundEffectManager : MonoBehaviour
         }
     }
 
+    //Takes in specific sound effect name and volume and plays it at this volume
     public static void Play(string soundName, float volume = 1f)
     {
+        //Finds sound effect under this name
         AudioClip audioClip = soundEffectLibrary.GetRandomClip(soundName);
         if(audioClip != null)
         {
         
-            audioSource.PlayOneShot(audioClip);
+            audioSource.PlayOneShot(audioClip); //If found, plays sound effect
 
+            //For certain sound effects, you can set volume
             if(soundName=="Footsteps" || soundName=="Glowing")
             {
                 audioSource.volume = volume;    
@@ -42,15 +47,5 @@ public class SoundEffectManager : MonoBehaviour
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

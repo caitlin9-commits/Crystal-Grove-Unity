@@ -4,27 +4,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
- 
+ //This controller is linked to the time manager game object (invisible game object)
+ //This controller manages in game passing of time and changing of days
 public class TimeManager : MonoBehaviour
 {
+    //Skybox assets passed in
     [SerializeField] private Material skyboxNight;
     [SerializeField] private Material skyboxSunrise;
     [SerializeField] private Material skyboxDay;
     [SerializeField] private Material skyboxSunset;
 
+    //Game objects for the day and time in top right corner of screen
     public TMP_Text dayText;
     public TMP_Text timeText;
  
+    //Attempted to follow tutorial for transitioning between skyboxes however this library seems outdated and didn't work
+
     // [SerializeField] private Gradient graddientNightToSunrise;
     // [SerializeField] private Gradient graddientSunriseToDay;
     // [SerializeField] private Gradient graddientDayToSunset;
     // [SerializeField] private Gradient graddientSunsetToNight;
  
+    //The main light source for tha game
     [SerializeField] private Light globalLight;
 
     private static TimeManager myTimeManager;
 
  
+ //Getters and setters for the days,hours and minutes
     private double minutes;
  
     public double Minutes
@@ -45,6 +52,7 @@ public class TimeManager : MonoBehaviour
     private bool clockActive ;
     private bool spokenToOldMan ;
 
+//creates instance of the class, so it can be used in other classes
     private void Awake()
     {
         if(myTimeManager == null)
@@ -58,16 +66,18 @@ public class TimeManager : MonoBehaviour
         }
     }
  
+ //Starts first day of game
     private void Start()
     {
-        clockActive = true;
-        spokenToOldMan = false;
-        Days = 1;
-        RenderSettings.skybox = skyboxNight;
-        DynamicGI.UpdateEnvironment();
-        displayDay();
-        displayTime(); 
+        clockActive = true; //Clock is active
+        spokenToOldMan = false; //Haven't spoken to Fachtna yet
+        Days = 1; //Day is monday
+        RenderSettings.skybox = skyboxNight; //Game starts at 5am, so is night time sky
+        DynamicGI.UpdateEnvironment(); //Updates scene to have correctly set skybox
+        displayDay(); //Display current day
+        displayTime(); //Display current time
 
+        //MOve characters in position for Day 1
         if(Days == 1){CharacterManager.setCharacterPositionsDay1(); }
     }
 
@@ -75,8 +85,7 @@ public class TimeManager : MonoBehaviour
     public void Update()
     {
 
-        // Debug.Log("Time Manager: ",clockActive,spokenToOldMan);
-
+        //Time only starts moving once you have spoken to Fachtna
         if(clockActive && spokenToOldMan)
         {
             tempSecond += Time.deltaTime;
@@ -84,44 +93,49 @@ public class TimeManager : MonoBehaviour
             if (tempSecond >= 1)
             {
                 Minutes += 1.6; //1 second equals to 1.6 minutes in game
-                //this equates to the day being 15min long
+                //this equates to the day being ~15min long
                 tempSecond = 0;
             }
         }
     }
  
+    //Triggered as minutes change
     private void OnMinutesChange(double value)
     {
 
-        // Debug.Log("MINUTES CHANGE " +value);
 
+        //This main light position rotates as minutes to almost replicate the sun moving
         globalLight.transform.Rotate(Vector3.up, (1f / (1440f / 4f)) * 360f, Space.World);
+
+        //As minutes hit 60, new hour
         if (value >= 60)
         {
             Hours++;
             minutes = 0;
         }
+        //As hours hits 24, new day
         if (Hours >= 24)
         {
             // Hours = 0;
             // Days++;
 
-            displayDay();
+            displayDay();//Show new days
             //collapse
-            clockActive = false;
-            NomadController.sendToTent();
+            clockActive = false;//Clock not active as we transition between days
+            NomadController.sendToTent();//Send nomad to tent at end of day, if not already there
 
         }
 
-        displayTime();
+        displayTime(); //Show new time
     }
 
  
+    //Called as hours change, based on hour of day, shows appropriate skybox
     private void OnHoursChange(int value)
     {
         // Debug.Log("HOURS CHANGE "+ value);
 
-        if (value == 5)
+        if (value == 5) 
         {
             StartCoroutine(TransitionSkybox(skyboxNight, skyboxSunrise, 10f));
             // StartCoroutine(LerpLight(graddientNightToSunrise, 10f));
@@ -143,6 +157,7 @@ public class TimeManager : MonoBehaviour
         }
         else if (value == 22)
         {
+            //Plays bell to remind Nomad to go to sleep
             SoundEffectManager.Play("Bell");
         }
 
@@ -150,6 +165,7 @@ public class TimeManager : MonoBehaviour
         
     }
  
+    //Was being used for transitioning sky boxes, but didn't work    
     private IEnumerator LerpSkybox(Texture2D a, Texture2D b, float time)
     {
         RenderSettings.skybox.SetTexture("_Texture1", a);
@@ -163,6 +179,7 @@ public class TimeManager : MonoBehaviour
         RenderSettings.skybox.SetTexture("_Texture1", b);
     }
 
+    //Changes current skybox
     private IEnumerator TransitionSkybox(Material from, Material to, float time)
     {
         RenderSettings.skybox = to;
@@ -186,6 +203,7 @@ public class TimeManager : MonoBehaviour
     }
 
  
+    //Was being used for transitioning lighting, but didn't work    
     private IEnumerator LerpLight(Gradient lightGradient, float time)
     {
         for (float i = 0; i < time; i += Time.deltaTime)
@@ -197,7 +215,7 @@ public class TimeManager : MonoBehaviour
     }
 
 
-
+    //Based on the hour and minutes, displays it in the appropriate format
     private void displayTime()
     {
                
@@ -227,6 +245,7 @@ public class TimeManager : MonoBehaviour
 
     }
 
+    //Displays the day in the correct format
     private void displayDay()
     {
         switch (Days)
@@ -242,15 +261,19 @@ public class TimeManager : MonoBehaviour
     }
 
 
+    //Called when nomad goes to sleep (naturally or fainted)
     public static void sleep()
     {
 
         Debug.Log("SLEEPING: ");
 
+        //Sets time to 5am the next dat
         myTimeManager.minutes = 0;
         myTimeManager.Hours = 5;
         myTimeManager.Days++;
 
+        //Spawns pinecones on the 2nd day
+        //Sets characters positions each day
         if(myTimeManager.Days == 2){
             TreeSpawner.SpawnPineCones();
             CharacterManager.setCharacterPositionsDay2(); 
@@ -260,13 +283,14 @@ public class TimeManager : MonoBehaviour
         else if(myTimeManager.Days == 5){CharacterManager.setCharacterPositionsDay5(); }
 
 
-
+        //If within 5 days, clock betcomes active after new day, and new day/time is displayed
         if(myTimeManager.Days<6)
         {
             myTimeManager.displayDay();
             myTimeManager.displayTime();
             myTimeManager.clockActive = true;    
         }
+        //Otherwise, after 5 days, show the end of the game
         else
         {
             TitleScreensController.ShowEnding();
@@ -276,21 +300,25 @@ public class TimeManager : MonoBehaviour
 
     }
 
+    //Sets if clock is active or not 
     public static void setClockActive(bool active)
     {
         myTimeManager.clockActive = active;
     }
 
+    //Sets if you have spoken to Fachtna
    public static void spokeToOldMan()
     {
         myTimeManager.spokenToOldMan = true;
     }
 
+    //Checks if you have spoken to Fachtna
     public static bool hasSpokenToOldMan()
     {
         return myTimeManager.spokenToOldMan;
     }
 
+    //Gets current day
     public static int getDay()
     {
         return myTimeManager.Days;

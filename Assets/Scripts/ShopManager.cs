@@ -8,9 +8,13 @@ using System.Threading.Tasks;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
+
+//This controller is linked to the shop game object which is a canvas for the shop
+// This controller manages what items are avaiable in the shop and manages purchases
 public class ShopManager : MonoBehaviour
 {
 
+    //Passed in game objects representing the different shop purchase buttons and the stock to appear
     public Canvas option1;
     public Canvas option2;
     public Canvas option3;
@@ -33,42 +37,21 @@ public class ShopManager : MonoBehaviour
 
     private int coinsAmount;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-        
-
-        // Button btn = option1.GetComponent<Button>();
-		// btn.onClick.AddListener(()=>TaskOnClick(1,option1));
-
-        // Button btn2 = option2.GetComponent<Button>();
-		// btn2.onClick.AddListener(()=>TaskOnClick(2,option2));
-
-        // Button btn3 = option3.GetComponent<Button>();
-		// btn3.onClick.AddListener(()=>TaskOnClick(3,option3));
-
-        // Button btn4 = option4.GetComponent<Button>();
-		// btn4.onClick.AddListener(()=>TaskOnClick(4,option4));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //Called each time the shop screen is opened
     void OnEnable()
     {
+        //Set up what is available to purchase
         SetupOption(1,option1);
         SetupOption(2,option2);
         SetupOption(3,option3);
         SetupOption(4,option4);
 
+        //Get current amount of coins from inventory
         coinsAmount = InventoryManager.getCoinAmount();
         coinAmountText.text = coinsAmount.ToString();
 
 
+        //Add on click listenet to close button to close the shop menu and reset the text on it
         Button btn = closeText.GetComponent<Button>();
         btn.onClick.RemoveAllListeners();
 		btn.onClick.AddListener(()=>{
@@ -77,20 +60,26 @@ public class ShopManager : MonoBehaviour
         });
     }
 
+    //sets up one of the purchase options
     void SetupOption(int number,Canvas option){
 	
+        //Gets the text and image game objects from the specific option
         TMP_Text itemText = option.transform.Find("ItemText").GetComponent<TMP_Text>();
         Image itemImage = option.transform.Find("ItemImage").GetComponent<Image>();
         TMP_Text costText = option.transform.Find("CostText").GetComponent<TMP_Text>();
 
+        //Gets the amount of wood donated 
         int woodDonated = GlobalValues.getWoodDonated();
         
         string itemName ="";
         int itemCost=0;
 
+        //Based on what option we are setting up and what you have purchases before,
+        //it shows the appropriate item and price to buy in each slot on the shop screen
         if(number == 1)
         {
 
+            //Axe option to purchase is based on what axe you currently have
             int axeLevel = InventoryManager.getAxeLevel();
             Debug.Log("AXE LEVEL" + axeLevel);
 
@@ -121,11 +110,12 @@ public class ShopManager : MonoBehaviour
         else if(number == 2)
         {
 
+            //Rod option to purchase is based on what rod you currently have
             int rodLevel = InventoryManager.getRodLevel();
 
             Debug.Log("ROD LEVEL" + rodLevel);
 
-            if(rodLevel==1)
+            if(rodLevel<2)
             {
                 itemName = "Next Rod: Copper";
                 itemCost = 10;
@@ -146,6 +136,7 @@ public class ShopManager : MonoBehaviour
                 itemImage.sprite = crystalRod;
             }
         }
+        //Wter wheel and windmill are cheaper if you have donated wood
         else if(number == 3)
         {
             itemName = "Water Wheel";
@@ -160,6 +151,7 @@ public class ShopManager : MonoBehaviour
         itemText.text = itemName;
         costText.text = itemCost.ToString();
 
+        //On add click listener to shop option button
         Button btn = option.GetComponent<Button>();
         btn.onClick.RemoveAllListeners();
 		btn.onClick.AddListener(()=>TaskOnClick(number,itemName,itemCost));
@@ -176,27 +168,37 @@ public class ShopManager : MonoBehaviour
 
 	}
 
+    //Triggered when you click on one of the shop purchase options
     async void TaskOnClick(int optionNumber,string item,int cost){
 		Debug.Log ("You have clicked the button! " + item);
 
-        
+        //Maxed out on axe upgrades
         if(optionNumber == 1 && InventoryManager.getAxeLevel()==4)
         {
             mainText.text = "\"You have fully upgraded your axe.\"";
     
         }
+        //Maxed out on rod upgrades
         else if(optionNumber == 2 && InventoryManager.getRodLevel()==4)
         {
              mainText.text = "\"You have fully upgraded your rod.\"";
         }
+        //Already bought waterwheel
+        else if(optionNumber == 3 && GlobalValues.checkForWaterwheel())
+        {
+             mainText.text = "\"You have already purchased the waterwheel.\"";
+        }
+        //Already bought windmill
         else if(optionNumber == 4 && GlobalValues.checkForWindmill())
         {
              mainText.text = "\"You have already purchased the windmill.\"";
         }
+        //Don't have enough money for the item
         else if (cost > coinsAmount)
         {
              mainText.text = "\"You do not have enough money for this item.\"";
         }
+        //No issue, purchases items
         else
         {
             buyItem(optionNumber,item,cost);
@@ -206,19 +208,23 @@ public class ShopManager : MonoBehaviour
         GlobalValues.clearInstructionText();
 	}
 
+
+    //Function to buy item
     async void buyItem(int optionNumber,string item,int cost)
     {
 
         Debug.Log ("BOUGHT ITEM! " + item);
 
-
+        //Removes coins from inventory
         InventoryManager.changeCoinsAmount(-cost);
 
+        //Based on what you bought, updates your inventory or environment
         if(optionNumber == 1){InventoryManager.upgradeAxe();}
         else if(optionNumber == 2){InventoryManager.upgradeRod();}
         else if(optionNumber == 3){GlobalValues.buyWaterwheel();}
         else if(optionNumber == 4){GlobalValues.buyWindmill();}
 
+        //Show success message and closes show menu
         GlobalValues.setInstructionTextString("You have just purchased: "+ item);
         GlobalValues.toggleShop(false);
     }
@@ -226,6 +232,7 @@ public class ShopManager : MonoBehaviour
 
 
 
+//Attempted to create hover listener for shop option buttons, based on unity documentation, however it didn't work, so not used
 public class HoverEvent : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public UnityEvent onHover;
